@@ -3406,7 +3406,7 @@ input, select, textarea {
 
 :root {
 	--blog-cover-ratio: 353 / 326;
-	--blog-cover-max-width: 22rem;
+	--blog-cover-max-width: 14.75rem;
 }
 
 .blog-shell {
@@ -3455,7 +3455,7 @@ input, select, textarea {
 
 .blog-featured-link {
 	display: grid;
-	grid-template-columns: minmax(18rem, 22rem) minmax(0, 1fr);
+	grid-template-columns: minmax(12rem, var(--blog-cover-max-width)) minmax(0, 1fr);
 	align-items: start;
 }
 
