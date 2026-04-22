@@ -85,6 +85,8 @@
     }
 
     list.classList.add("blog-list-compact");
+    featured.hidden = true;
+    featured.innerHTML = "";
 
     if (!sectionPosts.length) {
       count.textContent = `${section.label} 글 0개`;
@@ -100,10 +102,7 @@
 
     count.textContent = `${section.label} 글 ${sectionPosts.length}개`;
 
-    const [latest, ...rest] = sectionPosts;
-    featured.innerHTML = renderFeatured(latest, sections);
-    featured.hidden = false;
-    list.innerHTML = rest.map((post) => renderCompactCard(post, sections)).join("");
+    list.innerHTML = sectionPosts.map((post) => renderCompactCard(post, sections)).join("");
     empty.hidden = true;
   }
 
