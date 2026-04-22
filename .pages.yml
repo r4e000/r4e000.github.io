@@ -1,0 +1,43 @@
+media:
+  input: images/blog
+  output: /images/blog
+  categories: [image]
+  rename: true
+
+content:
+  - name: posts
+    label: 게시글
+    type: file
+    path: data/posts.json
+    format: json
+    list: true
+    fields:
+      - name: slug
+        label: 고유주소
+        type: string
+
+      - name: title
+        label: 제목
+        type: string
+
+      - name: date
+        label: 작성일
+        type: date
+
+      - name: excerpt
+        label: 요약
+        type: text
+
+      - name: cover
+        label: 커버 이미지
+        type: image
+
+      - name: coverAlt
+        label: 이미지 설명
+        type: string
+
+      - name: body
+        label: 본문
+        type: rich-text
+        options:
+          format: html
