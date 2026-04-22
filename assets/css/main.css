@@ -2639,7 +2639,7 @@ input, select, textarea {
 					-ms-transition: opacity 0.5s ease;
 					transition: opacity 0.5s ease;
 					content: '';
-					display: block;
+					display: none; /* X 표시 숨김 */
 					position: absolute;
 					top: 0;
 					left: 0;
