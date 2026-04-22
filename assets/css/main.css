@@ -1,6 +1,17 @@
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,700,900");
 
+/* 사용자 정의 폰트 정의 */
+@font-face {
+    font-family: 'Hakgyoansim_PosterB';
+    src: url('../webfonts/Hakgyoansim_PosterB.woff2') format('woff2'),
+         url('../webfonts/Hakgyoansim_PosterB.woff') format('woff'),
+         url('../webfonts/Hakgyoansim_PosterB.ttf') format('truetype'),
+         url('../webfonts/Hakgyoansim_PosterB.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -3327,3 +3338,11 @@ input, select, textarea {
 			}
 
 		}
+
+
+
+/* Hakgyoansim_PosterB */
+
+.font-posterB {
+	font-family: 'Hakgyoansim_PosterB', sans-serif;
+}
