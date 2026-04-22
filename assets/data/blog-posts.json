@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "slug": "welcome-to-tab-4",
+      "title": "Welcome to the new journal workflow",
+      "category": "Guide",
+      "date": "2026-04-22",
+      "excerpt": "Tab 4 now reads from a post list file and a separate content file, so you can publish and remove entries without rebuilding the whole page.",
+      "image": "images/pic13.jpg",
+      "imageAlt": "Sample journal cover image",
+      "contentFile": "content/blog/welcome-to-tab-4.html"
+    }
+  ]
+}

@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>HAX | Journal</title>
+		<title>HAX | Post</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -42,28 +42,16 @@
 
 			<div id="main">
 				<div class="inner blog-shell">
-					<header class="blog-page-header">
-						<p class="blog-kicker font-lv1-bold">TAB 4 / JOURNAL</p>
-						<h1><span class="font-lv1-bold">Stories, updates, and archive posts</span></h1>
-						<p><span class="font-lv1">This page now works like a simple blog. Add one cover image, one post file, and one metadata entry, and the post list updates automatically.</span></p>
-					</header>
-
-					<section class="blog-status-bar">
-						<p id="blog-count" class="blog-status font-lv1">Loading posts...</p>
-					</section>
-
-					<section id="blog-featured" class="blog-featured box" hidden></section>
-					<section id="blog-list" class="blog-list-grid"></section>
-
-					<section id="blog-empty" class="box blog-empty" hidden>
-						<h2><span class="font-lv1-bold">No posts yet</span></h2>
-						<p><span class="font-lv1">Create your first entry by adding a post file in <code>content/blog</code> and a matching item in <code>assets/data/blog-posts.json</code>.</span></p>
-					</section>
+					<article id="blog-post-page" class="blog-post-page">
+						<section class="box blog-message">
+							<p class="blog-status font-lv1">Loading post...</p>
+						</section>
+					</article>
 
 					<noscript>
 						<section class="box blog-empty">
 							<h2><span class="font-lv1-bold">JavaScript is required</span></h2>
-							<p><span class="font-lv1">This page loads post data dynamically, so the post list needs JavaScript enabled.</span></p>
+							<p><span class="font-lv1">This page loads post content dynamically, so JavaScript must be enabled.</span></p>
 						</section>
 					</noscript>
 				</div>
