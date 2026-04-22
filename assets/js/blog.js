@@ -3,24 +3,24 @@
   const SECTIONS_URL = "data/blog-sections.json";
 
   const UI = {
-    viewPost: "\uAE00 \uBCF4\uAE30",
-    moveToSection: "\uBD84\uC57C\uB85C \uC774\uB3D9",
+    viewPost: "READ",
+    moveToSection: "OPEN",
     archiveLabel: "ARCHIVE",
-    loadingPosts: "\uAC8C\uC2DC\uAE00\uC744 \uBD88\uB7EC\uC624\uB294 \uC911\uC785\uB2C8\uB2E4...",
-    missingPostTitle: "\uAC8C\uC2DC\uAE00\uC744 \uC120\uD0DD\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4",
+    loadingPosts: "\uBD88\uB7EC\uC624\uB294 \uC911...",
+    missingPostTitle: "POST NOT FOUND",
     missingPostBody:
       '<a href="tab_4.html">ARCHIVE</a>\uC5D0\uC11C \uAE00\uC744 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.',
-    notFoundTitle: "\uAC8C\uC2DC\uAE00\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4",
+    notFoundTitle: "POST NOT FOUND",
     notFoundBody:
-      '\uC694\uCCAD\uD55C \uAE00\uC774 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. <a href="tab_4.html">ARCHIVE</a>\uB85C \uB3CC\uC544\uAC00 \uC8FC\uC138\uC694.',
-    emptyBody: "\uC544\uC9C1 \uBCF8\uBB38\uC774 \uC791\uC131\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.",
-    missingImage: "\uC774\uBBF8\uC9C0 \uC5C6\uC74C",
-    genericError: "\uAC8C\uC2DC\uAE00 \uB370\uC774\uD130\uB97C \uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.",
+      '\uC774 \uAE00\uC740 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. <a href="tab_4.html">ARCHIVE</a>\uB85C \uB3CC\uC544\uAC00 \uC8FC\uC138\uC694.',
+    emptyBody: "\uBCF8\uBB38\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.",
+    missingImage: "NO IMAGE",
+    genericError: "\uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.",
     errorBody:
-      "<code>data/posts.json</code> \uB610\uB294 <code>data/blog-sections.json</code> \uD30C\uC77C\uC744 \uD655\uC778\uD55C \uB4A4 \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694.",
-    fallbackDescriptionSuffix: "\uBD84\uC57C \uAE00\uC744 \uBAA8\uC544\uBCF4\uB294 \uCE74\uD14C\uACE0\uB9AC\uC785\uB2C8\uB2E4.",
+      "\uB370\uC774\uD130 \uD30C\uC77C\uC744 \uD655\uC778\uD574 \uC8FC\uC138\uC694.",
+    fallbackDescriptionSuffix: "\uAD00\uB828 \uAE00 \uBAA8\uC74C\uC785\uB2C8\uB2E4.",
     emptyMessageTemplate:
-      "Pages CMS\uC5D0\uC11C \uBD84\uC57C\uB97C {slug}\uB85C \uC9C0\uC815\uD574 \uAE00\uC744 \uC791\uC131\uD558\uBA74 \uC774 \uBAA9\uB85D\uC5D0 \uC790\uB3D9\uC73C\uB85C \uD45C\uC2DC\uB429\uB2C8\uB2E4."
+      "{slug} \uAE00\uC774 \uC544\uC9C1 \uC5C6\uC2B5\uB2C8\uB2E4."
   };
 
   document.addEventListener("DOMContentLoaded", () => {
@@ -110,11 +110,11 @@
     featured.innerHTML = "";
 
     if (!sectionPosts.length) {
-      count.textContent = `${section.label} \uAE00 0\uAC1C`;
+      count.textContent = `${section.label} / 0 POSTS`;
       list.innerHTML = "";
       empty.hidden = false;
       empty.innerHTML = `
-        <h2><span class="font-lv1-bold">\uC544\uC9C1 ${escapeHtml(section.label)} \uAE00\uC774 \uC5C6\uC2B5\uB2C8\uB2E4</span></h2>
+        <h2><span class="font-lv1-bold">NO POSTS</span></h2>
         <p><span class="font-lv1">${escapeHtml(
           section.emptyMessage || UI.emptyMessageTemplate.replace("{slug}", section.slug)
         )}</span></p>
@@ -122,7 +122,7 @@
       return;
     }
 
-    count.textContent = `${section.label} \uAE00 ${sectionPosts.length}\uAC1C`;
+    count.textContent = `${section.label} / ${formatPostCount(sectionPosts.length)}`;
     list.innerHTML = sectionPosts.map((post) => renderCompactCard(post, sections)).join("");
     empty.hidden = true;
   }
@@ -145,7 +145,7 @@
     list.classList.remove("blog-list-compact");
 
     if (!posts.length) {
-      count.textContent = `\uC804\uCCB4 \uAE00 0\uAC1C`;
+      count.textContent = `0 POSTS`;
       featured.hidden = true;
       featured.innerHTML = "";
       list.innerHTML = "";
@@ -153,7 +153,7 @@
       return;
     }
 
-    count.textContent = `\uBD84\uC57C ${sections.length}\uAC1C \uCD1D \uC804\uCCB4 \uAE00 ${posts.length}\uAC1C`;
+    count.textContent = `${sections.length} SECTIONS / ${formatPostCount(posts.length)}`;
 
     const [latest, ...rest] = posts;
     featured.innerHTML = renderFeatured(latest, sections);
@@ -217,7 +217,6 @@
             ${renderMeta(post, sections)}
             <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
             <p><span class="font-lv1">${escapeHtml(post.excerpt || "")}</span></p>
-            <span class="blog-cta">${UI.viewPost}</span>
           </div>
         </a>
       </article>
@@ -232,7 +231,6 @@
           <div class="blog-list-item-copy">
             ${renderMeta(post, sections)}
             <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
-            <span class="blog-cta">${UI.viewPost}</span>
           </div>
         </a>
       </article>
@@ -266,7 +264,7 @@
       <div class="blog-featured-link blog-section-summary">
         ${section.heroImage ? `<span class="blog-featured-image"><img src="${escapeAttribute(normalizePath(section.heroImage))}" alt="${escapeAttribute(section.heroAlt || section.label)}" /></span>` : ""}
         <div class="blog-featured-copy">
-          <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${count}\uAC1C \uAE00</span></p>
+          <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${formatPostCount(count)}</span></p>
           <h2><span class="font-lv1-bold">${escapeHtml(section.title || `${section.label} \uBE14\uB85C\uADF8`)}</span></h2>
           <p><span class="font-lv1">${escapeHtml(section.description || "")}</span></p>
         </div>
@@ -282,7 +280,7 @@
         <a class="blog-card-link" href="${escapeAttribute(section.page || "tab_4.html")}">
           ${section.heroImage ? `<span class="blog-card-image"><img src="${escapeAttribute(normalizePath(section.heroImage))}" alt="${escapeAttribute(section.heroAlt || section.label)}" loading="lazy" /></span>` : `<span class="blog-card-image"><span class="blog-image-placeholder">${escapeHtml(section.label)}</span></span>`}
           <div class="blog-card-body">
-            <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${count}\uAC1C \uAE00</span></p>
+            <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${formatPostCount(count)}</span></p>
             <h2><span class="font-lv1-bold">${escapeHtml(section.title || `${section.label} \uBE14\uB85C\uADF8`)}</span></h2>
             <p><span class="font-lv1">${escapeHtml(section.description || "")}</span></p>
             <span class="blog-cta">${UI.moveToSection}</span>
@@ -453,6 +451,10 @@
       month: "long",
       day: "numeric"
     }).format(date);
+  }
+
+  function formatPostCount(count) {
+    return `${count} POST${count === 1 ? "" : "S"}`;
   }
 
   function escapeHtml(value) {
