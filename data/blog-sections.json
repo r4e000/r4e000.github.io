@@ -1,0 +1,24 @@
+[
+  {
+    "slug": "aion2",
+    "label": "AION2",
+    "title": "AION2 블로그",
+    "kicker": "FIELD / AION2",
+    "description": "AION2 관련 소식, 메모, 관찰 기록을 모아두는 카테고리입니다.",
+    "emptyMessage": "Pages CMS에서 분야를 aion2로 지정해 글을 작성하면 이 목록에 자동으로 표시됩니다.",
+    "page": "tab_1.html",
+    "heroImage": "images/aion2.png",
+    "heroAlt": "AION2 대표 이미지"
+  },
+  {
+    "slug": "steam",
+    "label": "Steam",
+    "title": "Steam 블로그",
+    "kicker": "FIELD / STEAM",
+    "description": "Steam 관련 소식, 메모, 추천 기록을 모아두는 카테고리입니다.",
+    "emptyMessage": "Pages CMS에서 분야를 steam으로 지정해 글을 작성하면 이 목록에 자동으로 표시됩니다.",
+    "page": "tab_2.html",
+    "heroImage": "images/steam.png",
+    "heroAlt": "Steam 대표 이미지"
+  }
+]

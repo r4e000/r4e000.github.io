@@ -1,26 +1,27 @@
 <!DOCTYPE HTML>
 <!--
-	Phantom by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+	새 분야 블로그를 만들 때 이 파일을 복사해서 사용합니다.
+	1. 파일명을 새 탭 페이지 이름으로 바꿉니다. 예: tab_5.html
+	2. body의 data-blog-section 값을 새 분야 slug로 바꿉니다. 예: diablo4
+	3. blog-section-kicker / title / description 기본 문구를 새 분야에 맞게 수정합니다.
+	4. data/blog-sections.json 에 새 분야 객체를 추가합니다.
+	5. Pages CMS에서 글 작성 시 category 값을 같은 slug로 저장합니다.
 -->
 <html>
 	<head>
-		<title>HAX | Steam</title>
+		<title>HAX | 새 분야 템플릿</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload" data-blog-view="section" data-blog-section="steam">
+	<body class="is-preload" data-blog-view="section" data-blog-section="new-category">
 		<div id="wrapper">
-
 			<header id="header">
 				<div class="inner">
 					<a href="index.html" class="logo">
 						<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">HAX</span>
 					</a>
-
 					<nav>
 						<ul>
 							<li><a href="#menu">메뉴</a></li>
@@ -35,7 +36,6 @@
 					<li><a href="index.html">홈</a></li>
 					<li><a href="tab_1.html">AION2</a></li>
 					<li><a href="tab_2.html">Steam</a></li>
-					<li><a href="tab_3.html">Lab</a></li>
 					<li><a href="tab_4.html">전체 아카이브</a></li>
 				</ul>
 			</nav>
@@ -43,9 +43,9 @@
 			<div id="main">
 				<div class="inner blog-shell">
 					<header class="blog-page-header">
-						<p id="blog-section-kicker" class="blog-kicker font-lv1-bold">FIELD / STEAM</p>
-						<h1><span id="blog-section-title" class="font-lv1-bold">Steam 블로그</span></h1>
-						<p><span id="blog-section-description" class="font-lv1">Steam 관련 소식, 메모, 추천 기록을 모아두는 카테고리입니다.</span></p>
+						<p id="blog-section-kicker" class="blog-kicker font-lv1-bold">FIELD / NEW CATEGORY</p>
+						<h1><span id="blog-section-title" class="font-lv1-bold">새 분야 블로그</span></h1>
+						<p><span id="blog-section-description" class="font-lv1">새로운 분야의 글을 모아두는 카테고리 페이지 템플릿입니다.</span></p>
 					</header>
 
 					<section id="blog-section-summary" class="blog-featured box" hidden></section>
@@ -58,16 +58,9 @@
 					<section id="blog-list" class="blog-list-grid"></section>
 
 					<section id="blog-empty" class="box blog-empty" hidden>
-						<h2><span class="font-lv1-bold">아직 Steam 글이 없습니다</span></h2>
-						<p><span class="font-lv1">Pages CMS에서 분야를 <code>steam</code>으로 지정해 글을 작성하면 이 목록에 자동으로 표시됩니다.</span></p>
+						<h2><span class="font-lv1-bold">아직 게시글이 없습니다</span></h2>
+						<p><span class="font-lv1">Pages CMS에서 같은 slug를 분야 값으로 사용해 글을 작성하면 자동으로 표시됩니다.</span></p>
 					</section>
-
-					<noscript>
-						<section class="box blog-empty">
-							<h2><span class="font-lv1-bold">JavaScript가 필요합니다</span></h2>
-							<p><span class="font-lv1">이 페이지는 게시글 데이터를 동적으로 불러오므로 JavaScript가 켜져 있어야 합니다.</span></p>
-						</section>
-					</noscript>
 				</div>
 			</div>
 
@@ -85,7 +78,6 @@
 					</ul>
 				</div>
 			</footer>
-
 		</div>
 
 		<script src="assets/js/jquery.min.js"></script>

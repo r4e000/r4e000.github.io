@@ -6,13 +6,13 @@
 -->
 <html>
 	<head>
-		<title>HAX | 저널</title>
+		<title>HAX | 전체 아카이브</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" data-blog-view="hub">
 		<div id="wrapper">
 
 			<header id="header">
@@ -36,28 +36,36 @@
 					<li><a href="tab_1.html">AION2</a></li>
 					<li><a href="tab_2.html">Steam</a></li>
 					<li><a href="tab_3.html">Lab</a></li>
-					<li><a href="tab_4.html">저널</a></li>
+					<li><a href="tab_4.html">전체 아카이브</a></li>
 				</ul>
 			</nav>
 
 			<div id="main">
 				<div class="inner blog-shell">
 					<header class="blog-page-header">
-						<p class="blog-kicker font-lv1-bold">TAB 4 / 저널</p>
-						<h1><span class="font-lv1-bold">Pages CMS로 관리하는 저널</span></h1>
-						<p><span class="font-lv1">이 페이지는 <code>data/posts.json</code>을 직접 읽습니다. 이제는 HTML 파일을 매번 늘리지 않고, Pages CMS에서 글을 쓰고 이미지를 올리면 목록이 자동으로 갱신됩니다.</span></p>
+						<p class="blog-kicker font-lv1-bold">BLOG / 전체 아카이브</p>
+						<h1><span class="font-lv1-bold">분야별 블로그 허브</span></h1>
+						<p><span class="font-lv1">AION2, Steam, 그리고 앞으로 추가될 다른 분야까지 한 곳에서 정리하는 전체 아카이브입니다. 분야별 블로그로 이동하거나, 아래에서 전체 게시글을 한 번에 볼 수 있습니다.</span></p>
 					</header>
 
-					<section class="blog-status-bar">
-						<p id="blog-count" class="blog-status font-lv1">게시글을 불러오는 중입니다...</p>
+					<section class="blog-list-section">
+						<h2 class="blog-list-heading"><span class="font-lv1-bold">분야별 블로그</span></h2>
+						<div id="blog-section-grid" class="blog-section-grid"></div>
 					</section>
 
-					<section id="blog-featured" class="blog-featured box" hidden></section>
-					<section id="blog-list" class="blog-list-grid"></section>
+					<section class="blog-list-section">
+						<h2 class="blog-list-heading"><span class="font-lv1-bold">전체 게시글</span></h2>
+						<section class="blog-status-bar">
+							<p id="blog-count" class="blog-status font-lv1">게시글을 불러오는 중입니다...</p>
+						</section>
+
+						<section id="blog-featured" class="blog-featured box" hidden></section>
+						<section id="blog-list" class="blog-list-grid"></section>
+					</section>
 
 					<section id="blog-empty" class="box blog-empty" hidden>
 						<h2><span class="font-lv1-bold">아직 게시글이 없습니다</span></h2>
-						<p><span class="font-lv1">Pages CMS의 <code>Content</code> 탭에서 <code>+ add an item</code>으로 첫 글을 작성하면 여기에 자동으로 표시됩니다.</span></p>
+						<p><span class="font-lv1">Pages CMS에서 새 글을 작성하면 이 아카이브와 분야별 페이지에 자동으로 반영됩니다.</span></p>
 					</section>
 
 					<noscript>

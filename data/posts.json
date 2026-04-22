@@ -1,11 +1,12 @@
 [
   {
     "slug": "first-post",
+    "category": "aion2",
     "title": "첫 게시글 테스트",
     "date": "2026-04-22",
-    "excerpt": "Page CMS testing",
+    "excerpt": "Pages CMS에서 등록한 첫 테스트 게시글입니다.",
     "cover": "/images/blog/testing.png",
-    "coverAlt": "testing png",
-    "body": "<p>Page CMS 를 이용한 첫 업로딩 테스트입니다.</p>"
+    "coverAlt": "테스트용 커버 이미지",
+    "body": "<p>Pages CMS를 이용한 첫 업로드 테스트입니다.</p>"
   }
 ]

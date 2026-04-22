@@ -3512,6 +3512,27 @@ input, select, textarea {
 	gap: 2em;
 }
 
+.blog-list-section {
+	margin-bottom: 2.5em;
+}
+
+.blog-list-heading {
+	margin-bottom: 1em;
+}
+
+.blog-section-grid {
+	display: grid;
+	grid-template-columns: repeat(2, minmax(0, 1fr));
+	gap: 2em;
+	margin-bottom: 2.5em;
+}
+
+.blog-section-card {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+}
+
 .blog-card {
 	margin: 0;
 	padding: 0;
@@ -3578,6 +3599,11 @@ input, select, textarea {
 	border-bottom: 0;
 }
 
+.blog-back-divider {
+	margin: 0 0.7em;
+	color: #a1a1a1;
+}
+
 .blog-post-header {
 	margin-bottom: 2em;
 }
@@ -3633,6 +3659,10 @@ input, select, textarea {
 	}
 
 	.blog-list-grid {
+		grid-template-columns: 1fr;
+	}
+
+	.blog-section-grid {
 		grid-template-columns: 1fr;
 	}
 

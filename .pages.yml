@@ -20,6 +20,17 @@ content:
         label: 제목
         type: string
 
+      - name: category
+        label: 분야
+        type: select
+        options:
+          creatable: true
+          values:
+            - value: aion2
+              label: AION2
+            - value: steam
+              label: Steam
+
       - name: date
         label: 작성일
         type: date
