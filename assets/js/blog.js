@@ -2,6 +2,27 @@
   const POSTS_URL = "data/posts.json";
   const SECTIONS_URL = "data/blog-sections.json";
 
+  const UI = {
+    viewPost: "\uAE00 \uBCF4\uAE30",
+    moveToSection: "\uBD84\uC57C\uB85C \uC774\uB3D9",
+    archiveLabel: "\uC804\uCCB4 \uC544\uCE74\uC774\uBE0C",
+    loadingPosts: "\uAC8C\uC2DC\uAE00\uC744 \uBD88\uB7EC\uC624\uB294 \uC911\uC785\uB2C8\uB2E4...",
+    missingPostTitle: "\uAC8C\uC2DC\uAE00\uC744 \uC120\uD0DD\uD558\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4",
+    missingPostBody:
+      '<a href="tab_4.html">\uC804\uCCB4 \uAC8C\uC2DC\uAE00 \uBAA9\uB85D</a>\uC5D0\uC11C \uAE00\uC744 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.',
+    notFoundTitle: "\uAC8C\uC2DC\uAE00\uC744 \uCC3E\uC744 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4",
+    notFoundBody:
+      '\uC694\uCCAD\uD55C \uAE00\uC774 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. <a href="tab_4.html">\uC804\uCCB4 \uC544\uCE74\uC774\uBE0C</a>\uB85C \uB3CC\uC544\uAC00 \uC8FC\uC138\uC694.',
+    emptyBody: "\uC544\uC9C1 \uBCF8\uBB38\uC774 \uC791\uC131\uB418\uC9C0 \uC54A\uC558\uC2B5\uB2C8\uB2E4.",
+    missingImage: "\uC774\uBBF8\uC9C0 \uC5C6\uC74C",
+    genericError: "\uAC8C\uC2DC\uAE00 \uB370\uC774\uD130\uB97C \uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.",
+    errorBody:
+      "<code>data/posts.json</code> \uB610\uB294 <code>data/blog-sections.json</code> \uD30C\uC77C\uC744 \uD655\uC778\uD55C \uB4A4 \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694.",
+    fallbackDescriptionSuffix: "\uBD84\uC57C \uAE00\uC744 \uBAA8\uC544\uBCF4\uB294 \uCE74\uD14C\uACE0\uB9AC\uC785\uB2C8\uB2E4.",
+    emptyMessageTemplate:
+      "Pages CMS\uC5D0\uC11C \uBD84\uC57C\uB97C {slug}\uB85C \uC9C0\uC815\uD574 \uAE00\uC744 \uC791\uC131\uD558\uBA74 \uC774 \uBAA9\uB85D\uC5D0 \uC790\uB3D9\uC73C\uB85C \uD45C\uC2DC\uB429\uB2C8\uB2E4."
+  };
+
   document.addEventListener("DOMContentLoaded", () => {
     const hasList = Boolean(document.getElementById("blog-list"));
     const hasDetail = Boolean(document.getElementById("blog-post-page"));
@@ -30,7 +51,7 @@
     const response = await fetch(POSTS_URL, { cache: "no-store" });
 
     if (!response.ok) {
-      throw new Error("게시글 메타데이터를 불러오지 못했습니다.");
+      throw new Error(UI.genericError);
     }
 
     const payload = await response.json();
@@ -45,7 +66,7 @@
     const response = await fetch(SECTIONS_URL, { cache: "no-store" });
 
     if (!response.ok) {
-      throw new Error("분야 설정 데이터를 불러오지 못했습니다.");
+      throw new Error(UI.genericError);
     }
 
     const payload = await response.json();
@@ -89,19 +110,19 @@
     featured.innerHTML = "";
 
     if (!sectionPosts.length) {
-      count.textContent = `${section.label} 글 0개`;
-      featured.hidden = true;
+      count.textContent = `${section.label} \uAE00 0\uAC1C`;
       list.innerHTML = "";
       empty.hidden = false;
       empty.innerHTML = `
-        <h2><span class="font-lv1-bold">아직 ${escapeHtml(section.label)} 글이 없습니다</span></h2>
-        <p><span class="font-lv1">${escapeHtml(section.emptyMessage || `Pages CMS에서 분야를 ${section.slug}로 지정해 글을 작성하면 이 목록에 표시됩니다.`)}</span></p>
+        <h2><span class="font-lv1-bold">\uC544\uC9C1 ${escapeHtml(section.label)} \uAE00\uC774 \uC5C6\uC2B5\uB2C8\uB2E4</span></h2>
+        <p><span class="font-lv1">${escapeHtml(
+          section.emptyMessage || UI.emptyMessageTemplate.replace("{slug}", section.slug)
+        )}</span></p>
       `;
       return;
     }
 
-    count.textContent = `${section.label} 글 ${sectionPosts.length}개`;
-
+    count.textContent = `${section.label} \uAE00 ${sectionPosts.length}\uAC1C`;
     list.innerHTML = sectionPosts.map((post) => renderCompactCard(post, sections)).join("");
     empty.hidden = true;
   }
@@ -124,14 +145,15 @@
     list.classList.remove("blog-list-compact");
 
     if (!posts.length) {
-      count.textContent = "전체 글 0개";
+      count.textContent = `\uC804\uCCB4 \uAE00 0\uAC1C`;
       featured.hidden = true;
+      featured.innerHTML = "";
       list.innerHTML = "";
       empty.hidden = false;
       return;
     }
 
-    count.textContent = `분야 ${sections.length}개 · 전체 글 ${posts.length}개`;
+    count.textContent = `\uBD84\uC57C ${sections.length}\uAC1C \uCD1D \uC804\uCCB4 \uAE00 ${posts.length}\uAC1C`;
 
     const [latest, ...rest] = posts;
     featured.innerHTML = renderFeatured(latest, sections);
@@ -151,25 +173,21 @@
     const slug = params.get("slug");
 
     if (!slug) {
-      page.innerHTML = renderMessage(
-        "게시글이 선택되지 않았습니다",
-        '<a href="tab_4.html">전체 게시글 목록</a>에서 글을 선택해 주세요.'
-      );
+      page.innerHTML = renderMessage(UI.missingPostTitle, UI.missingPostBody);
       return;
     }
 
     const post = posts.find((item) => item.slug === slug);
 
     if (!post) {
-      page.innerHTML = renderMessage(
-        "게시글을 찾을 수 없습니다",
-        '요청한 글이 존재하지 않습니다. <a href="tab_4.html">전체 아카이브</a>로 돌아가 주세요.'
-      );
+      page.innerHTML = renderMessage(UI.notFoundTitle, UI.notFoundBody);
       return;
     }
 
     const section = findSection(sections, post.category);
-    const bodyHtml = post.body || '<section class="box blog-message"><p><span class="font-lv1">아직 본문이 작성되지 않았습니다.</span></p></section>';
+    const bodyHtml =
+      post.body ||
+      `<section class="box blog-message"><p><span class="font-lv1">${UI.emptyBody}</span></p></section>`;
 
     document.title = `HAX | ${post.title}`;
     page.innerHTML = renderDetailPage(post, section, bodyHtml);
@@ -184,7 +202,7 @@
           ${renderMeta(post, sections)}
           <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
           <p><span class="font-lv1">${escapeHtml(post.excerpt || "")}</span></p>
-          <span class="blog-cta">글 보기</span>
+          <span class="blog-cta">${UI.viewPost}</span>
         </div>
       </a>
     `;
@@ -199,7 +217,7 @@
             ${renderMeta(post, sections)}
             <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
             <p><span class="font-lv1">${escapeHtml(post.excerpt || "")}</span></p>
-            <span class="blog-cta">글 보기</span>
+            <span class="blog-cta">${UI.viewPost}</span>
           </div>
         </a>
       </article>
@@ -214,7 +232,7 @@
           <div class="blog-list-item-copy">
             ${renderMeta(post, sections)}
             <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
-            <span class="blog-cta">湲 蹂닿린</span>
+            <span class="blog-cta">${UI.viewPost}</span>
           </div>
         </a>
       </article>
@@ -223,10 +241,14 @@
 
   function renderDetailPage(post, section, bodyHtml) {
     const backHref = section && section.page ? section.page : "tab_4.html";
-    const backLabel = section ? `${section.label} 목록으로 돌아가기` : "전체 목록으로 돌아가기";
+    const backLabel = section
+      ? `${section.label} \uBAA9\uB85D\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30`
+      : `\uC804\uCCB4 \uBAA9\uB85D\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30`;
 
     return `
-      <p class="blog-back-link"><a href="${escapeAttribute(backHref)}">${escapeHtml(backLabel)}</a><span class="blog-back-divider">/</span><a href="tab_4.html">전체 아카이브</a></p>
+      <p class="blog-back-link"><a href="${escapeAttribute(backHref)}">${escapeHtml(
+        backLabel
+      )}</a><span class="blog-back-divider">/</span><a href="tab_4.html">${UI.archiveLabel}</a></p>
       <header class="blog-post-header">
         ${renderMeta(post, section ? [section] : [])}
         <h1><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h1>
@@ -244,8 +266,8 @@
       <div class="blog-featured-link blog-section-summary">
         ${section.heroImage ? `<span class="blog-featured-image"><img src="${escapeAttribute(normalizePath(section.heroImage))}" alt="${escapeAttribute(section.heroAlt || section.label)}" /></span>` : ""}
         <div class="blog-featured-copy">
-          <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${count}개 글</span></p>
-          <h2><span class="font-lv1-bold">${escapeHtml(section.title || `${section.label} 블로그`)}</span></h2>
+          <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${count}\uAC1C \uAE00</span></p>
+          <h2><span class="font-lv1-bold">${escapeHtml(section.title || `${section.label} \uBE14\uB85C\uADF8`)}</span></h2>
           <p><span class="font-lv1">${escapeHtml(section.description || "")}</span></p>
         </div>
       </div>
@@ -260,10 +282,10 @@
         <a class="blog-card-link" href="${escapeAttribute(section.page || "tab_4.html")}">
           ${section.heroImage ? `<span class="blog-card-image"><img src="${escapeAttribute(normalizePath(section.heroImage))}" alt="${escapeAttribute(section.heroAlt || section.label)}" loading="lazy" /></span>` : `<span class="blog-card-image"><span class="blog-image-placeholder">${escapeHtml(section.label)}</span></span>`}
           <div class="blog-card-body">
-            <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${count}개 글</span></p>
-            <h2><span class="font-lv1-bold">${escapeHtml(section.title || `${section.label} 블로그`)}</span></h2>
+            <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${count}\uAC1C \uAE00</span></p>
+            <h2><span class="font-lv1-bold">${escapeHtml(section.title || `${section.label} \uBE14\uB85C\uADF8`)}</span></h2>
             <p><span class="font-lv1">${escapeHtml(section.description || "")}</span></p>
-            <span class="blog-cta">분야로 이동</span>
+            <span class="blog-cta">${UI.moveToSection}</span>
           </div>
         </a>
       </article>
@@ -286,7 +308,7 @@
 
   function renderImage(post, className) {
     if (!post.cover) {
-      return `<span class="${className}"><span class="blog-image-placeholder">이미지 없음</span></span>`;
+      return `<span class="${className}"><span class="blog-image-placeholder">${UI.missingImage}</span></span>`;
     }
 
     return `
@@ -334,11 +356,12 @@
     const sectionGrid = document.getElementById("blog-section-grid");
 
     if (count) {
-      count.textContent = "게시글 데이터를 불러오지 못했습니다";
+      count.textContent = UI.genericError;
     }
 
     if (featured) {
       featured.hidden = true;
+      featured.innerHTML = "";
     }
 
     if (sectionGrid) {
@@ -352,22 +375,22 @@
     if (empty) {
       empty.hidden = false;
       empty.innerHTML = `
-        <h2><span class="font-lv1-bold">게시글을 불러오지 못했습니다</span></h2>
-        <p><span class="font-lv1"><code>data/posts.json</code> 또는 <code>data/blog-sections.json</code> 파일을 확인한 뒤 다시 시도해 주세요.</span></p>
+        <h2><span class="font-lv1-bold">${UI.genericError}</span></h2>
+        <p><span class="font-lv1">${UI.errorBody}</span></p>
       `;
     }
 
     if (page) {
-      page.innerHTML = renderMessage(
-        "게시글을 불러오지 못했습니다",
-        'Pages CMS에 저장된 글 데이터와 분야 설정을 확인한 뒤 <a href="tab_4.html">전체 아카이브</a>로 돌아가 주세요.'
-      );
+      page.innerHTML = renderMessage(UI.genericError, `${UI.errorBody} <a href="tab_4.html">${UI.archiveLabel}</a>`);
     }
   }
 
   function applySectionHeader(section) {
-    setText("blog-section-kicker", section.kicker || `FIELD / ${section.label || section.slug.toUpperCase()}`);
-    setText("blog-section-title", section.title || `${section.label} 블로그`);
+    const label = section && section.label ? section.label : "";
+    const slug = section && section.slug ? section.slug : "";
+
+    setText("blog-section-kicker", section.kicker || `FIELD / ${(label || slug).toUpperCase()}`);
+    setText("blog-section-title", section.title || `${label || slug.toUpperCase()} \uBE14\uB85C\uADF8`);
     setText("blog-section-description", section.description || "");
   }
 
@@ -394,12 +417,15 @@
       return null;
     }
 
+    const upper = slug.toUpperCase();
+
     return {
       slug,
-      label: slug.toUpperCase(),
-      title: `${slug.toUpperCase()} 블로그`,
-      kicker: `FIELD / ${slug.toUpperCase()}`,
-      description: `${slug} 분야 글을 모아보는 카테고리입니다.`
+      label: upper,
+      title: `${upper} \uBE14\uB85C\uADF8`,
+      kicker: `FIELD / ${upper}`,
+      description: `${slug} ${UI.fallbackDescriptionSuffix}`,
+      emptyMessage: UI.emptyMessageTemplate.replace("{slug}", slug)
     };
   }
 
@@ -412,7 +438,7 @@
   }
 
   function normalizePath(value) {
-    return String(value).replace(/^\/+/, "");
+    return String(value || "").replace(/^\/+/, "");
   }
 
   function formatDate(value) {
