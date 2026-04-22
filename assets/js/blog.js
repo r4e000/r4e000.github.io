@@ -84,6 +84,8 @@
       return;
     }
 
+    list.classList.add("blog-list-compact");
+
     if (!sectionPosts.length) {
       count.textContent = `${section.label} 글 0개`;
       featured.hidden = true;
@@ -101,7 +103,7 @@
     const [latest, ...rest] = sectionPosts;
     featured.innerHTML = renderFeatured(latest, sections);
     featured.hidden = false;
-    list.innerHTML = rest.map((post) => renderCard(post, sections)).join("");
+    list.innerHTML = rest.map((post) => renderCompactCard(post, sections)).join("");
     empty.hidden = true;
   }
 
@@ -119,6 +121,8 @@
     if (!count || !featured || !list || !empty) {
       return;
     }
+
+    list.classList.remove("blog-list-compact");
 
     if (!posts.length) {
       count.textContent = "전체 글 0개";
@@ -197,6 +201,21 @@
             <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
             <p><span class="font-lv1">${escapeHtml(post.excerpt || "")}</span></p>
             <span class="blog-cta">글 보기</span>
+          </div>
+        </a>
+      </article>
+    `;
+  }
+
+  function renderCompactCard(post, sections) {
+    return `
+      <article class="blog-list-item box">
+        <a class="blog-list-item-link" href="blog-post.html?slug=${encodeURIComponent(post.slug)}">
+          ${renderImage(post, "blog-list-thumb")}
+          <div class="blog-list-item-copy">
+            ${renderMeta(post, sections)}
+            <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
+            <span class="blog-cta">湲 蹂닿린</span>
           </div>
         </a>
       </article>
