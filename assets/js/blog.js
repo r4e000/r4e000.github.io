@@ -29,7 +29,7 @@
     const response = await fetch(DATA_URL, { cache: "no-store" });
 
     if (!response.ok) {
-      throw new Error("Failed to load post metadata.");
+      throw new Error("게시글 메타데이터를 불러오지 못했습니다.");
     }
 
     const payload = await response.json();
@@ -51,14 +51,14 @@
     }
 
     if (!posts.length) {
-      count.textContent = "0 posts published";
+      count.textContent = "게시글 0개";
       featured.hidden = true;
       list.innerHTML = "";
       empty.hidden = false;
       return;
     }
 
-    count.textContent = `${posts.length} post${posts.length === 1 ? "" : "s"} published`;
+    count.textContent = `게시글 ${posts.length}개`;
 
     const [latest, ...rest] = posts;
     featured.innerHTML = renderFeatured(latest);
@@ -80,8 +80,8 @@
 
     if (!slug) {
       page.innerHTML = renderMessage(
-        "Post not selected",
-        'Open a post from the journal page, or go back to <a href="tab_4.html">all posts</a>.'
+        "게시글이 선택되지 않았습니다",
+        '<a href="tab_4.html">게시글 목록</a>에서 글을 선택해 주세요.'
       );
       return;
     }
@@ -90,8 +90,8 @@
 
     if (!post) {
       page.innerHTML = renderMessage(
-        "Post not found",
-        'The requested post does not exist. Return to <a href="tab_4.html">the journal page</a>.'
+        "게시글을 찾을 수 없습니다",
+        '요청한 글이 존재하지 않습니다. <a href="tab_4.html">저널 페이지</a>로 돌아가 주세요.'
       );
       return;
     }
@@ -103,13 +103,13 @@
         const response = await fetch(post.contentFile, { cache: "no-store" });
 
         if (!response.ok) {
-          throw new Error("Failed to load the post body.");
+          throw new Error("게시글 본문을 불러오지 못했습니다.");
         }
 
         bodyHtml = await response.text();
       } catch (error) {
         console.error(error);
-        bodyHtml = '<section class="box blog-message"><p>Post body could not be loaded.</p></section>';
+        bodyHtml = '<section class="box blog-message"><p><span class="font-lv1">게시글 본문을 불러오지 못했습니다.</span></p></section>';
       }
     }
 
@@ -125,7 +125,7 @@
           ${renderMeta(post)}
           <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
           <p><span class="font-lv1">${escapeHtml(post.excerpt || "")}</span></p>
-          <span class="blog-cta">Read post</span>
+          <span class="blog-cta">글 보기</span>
         </div>
       </a>
     `;
@@ -140,7 +140,7 @@
             ${renderMeta(post)}
             <h2><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h2>
             <p><span class="font-lv1">${escapeHtml(post.excerpt || "")}</span></p>
-            <span class="blog-cta">Read post</span>
+            <span class="blog-cta">글 보기</span>
           </div>
         </a>
       </article>
@@ -149,7 +149,7 @@
 
   function renderDetailPage(post, bodyHtml) {
     return `
-      <p class="blog-back-link"><a href="tab_4.html">Back to all posts</a></p>
+      <p class="blog-back-link"><a href="tab_4.html">목록으로 돌아가기</a></p>
       <header class="blog-post-header">
         ${renderMeta(post)}
         <h1><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h1>
@@ -164,7 +164,7 @@
 
   function renderImage(post, className) {
     if (!post.image) {
-      return `<span class="${className}"><span class="blog-image-placeholder">No image</span></span>`;
+      return `<span class="${className}"><span class="blog-image-placeholder">이미지 없음</span></span>`;
     }
 
     return `
@@ -209,7 +209,7 @@
     const page = document.getElementById("blog-post-page");
 
     if (count) {
-      count.textContent = "Post data could not be loaded";
+      count.textContent = "게시글 데이터를 불러오지 못했습니다";
     }
 
     if (featured) {
@@ -223,15 +223,15 @@
     if (empty) {
       empty.hidden = false;
       empty.innerHTML = `
-        <h2><span class="font-lv1-bold">Could not load posts</span></h2>
-        <p><span class="font-lv1">Check <code>assets/data/blog-posts.json</code> and try again.</span></p>
+        <h2><span class="font-lv1-bold">게시글을 불러오지 못했습니다</span></h2>
+        <p><span class="font-lv1"><code>assets/data/blog-posts.json</code> 파일을 확인한 뒤 다시 시도해 주세요.</span></p>
       `;
     }
 
     if (page) {
       page.innerHTML = renderMessage(
-        "Could not load the post",
-        'Check the metadata file and the post content path, then return to <a href="tab_4.html">the journal page</a>.'
+        "게시글을 불러오지 못했습니다",
+        '메타데이터와 본문 파일 경로를 확인한 뒤 <a href="tab_4.html">저널 페이지</a>로 돌아가 주세요.'
       );
     }
   }

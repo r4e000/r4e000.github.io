@@ -2,12 +2,12 @@
   "posts": [
     {
       "slug": "welcome-to-tab-4",
-      "title": "Welcome to the new journal workflow",
-      "category": "Guide",
+      "title": "tab_4 블로그 구조 안내",
+      "category": "안내",
       "date": "2026-04-22",
-      "excerpt": "Tab 4 now reads from a post list file and a separate content file, so you can publish and remove entries without rebuilding the whole page.",
+      "excerpt": "tab_4는 이제 목록 파일과 본문 파일을 분리해서 읽기 때문에, 페이지 전체를 다시 만들지 않고도 글을 추가하거나 삭제할 수 있습니다.",
       "image": "images/pic13.jpg",
-      "imageAlt": "Sample journal cover image",
+      "imageAlt": "샘플 저널 커버 이미지",
       "contentFile": "content/blog/welcome-to-tab-4.html"
     }
   ]
