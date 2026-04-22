@@ -12,6 +12,20 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'font-mj';
+    src: url('../webfonts/ChosunMJ.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'font-gs';
+    src: url('../webfonts/ChosunGs.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -3345,4 +3359,12 @@ input, select, textarea {
 
 .font-posterB {
 	font-family: 'Hakgyoansim_PosterB', sans-serif;
+}
+
+.font-mj {
+    font-family: 'font-mj', sans-serif;
+}
+
+.font-gs {
+    font-family: 'font-gs', sans-serif;
 }
