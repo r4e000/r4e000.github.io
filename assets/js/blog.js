@@ -1,5 +1,5 @@
 (function () {
-  const DATA_URL = "assets/data/blog-posts.json";
+  const DATA_URL = "data/posts.json";
 
   document.addEventListener("DOMContentLoaded", () => {
     const hasIndex = Boolean(document.getElementById("blog-list"));
@@ -33,7 +33,7 @@
     }
 
     const payload = await response.json();
-    const posts = Array.isArray(payload.posts) ? payload.posts.slice() : [];
+    const posts = Array.isArray(payload) ? payload.slice() : [];
 
     return posts
       .filter((post) => post && post.slug && post.title)
@@ -96,22 +96,7 @@
       return;
     }
 
-    let bodyHtml = "";
-
-    if (post.contentFile) {
-      try {
-        const response = await fetch(post.contentFile, { cache: "no-store" });
-
-        if (!response.ok) {
-          throw new Error("게시글 본문을 불러오지 못했습니다.");
-        }
-
-        bodyHtml = await response.text();
-      } catch (error) {
-        console.error(error);
-        bodyHtml = '<section class="box blog-message"><p><span class="font-lv1">게시글 본문을 불러오지 못했습니다.</span></p></section>';
-      }
-    }
+    const bodyHtml = post.body || '<section class="box blog-message"><p><span class="font-lv1">아직 본문이 작성되지 않았습니다.</span></p></section>';
 
     document.title = `HAX | ${post.title}`;
     page.innerHTML = renderDetailPage(post, bodyHtml);
@@ -155,7 +140,7 @@
         <h1><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h1>
         ${post.excerpt ? `<p class="blog-post-excerpt"><span class="font-lv1">${escapeHtml(post.excerpt)}</span></p>` : ""}
       </header>
-      ${post.image ? `<span class="image main blog-hero"><img src="${escapeAttribute(post.image)}" alt="${escapeAttribute(post.imageAlt || post.title)}" /></span>` : ""}
+      ${post.cover ? `<span class="image main blog-hero"><img src="${escapeAttribute(normalizePath(post.cover))}" alt="${escapeAttribute(post.coverAlt || post.title)}" /></span>` : ""}
       <div class="blog-content">
         ${bodyHtml}
       </div>
@@ -163,13 +148,13 @@
   }
 
   function renderImage(post, className) {
-    if (!post.image) {
+    if (!post.cover) {
       return `<span class="${className}"><span class="blog-image-placeholder">이미지 없음</span></span>`;
     }
 
     return `
       <span class="${className}">
-        <img src="${escapeAttribute(post.image)}" alt="${escapeAttribute(post.imageAlt || post.title)}" loading="lazy" />
+        <img src="${escapeAttribute(normalizePath(post.cover))}" alt="${escapeAttribute(post.coverAlt || post.title)}" loading="lazy" />
       </span>
     `;
   }
@@ -224,16 +209,20 @@
       empty.hidden = false;
       empty.innerHTML = `
         <h2><span class="font-lv1-bold">게시글을 불러오지 못했습니다</span></h2>
-        <p><span class="font-lv1"><code>assets/data/blog-posts.json</code> 파일을 확인한 뒤 다시 시도해 주세요.</span></p>
+        <p><span class="font-lv1"><code>data/posts.json</code> 파일을 확인한 뒤 다시 시도해 주세요.</span></p>
       `;
     }
 
     if (page) {
       page.innerHTML = renderMessage(
         "게시글을 불러오지 못했습니다",
-        '메타데이터와 본문 파일 경로를 확인한 뒤 <a href="tab_4.html">저널 페이지</a>로 돌아가 주세요.'
+        'Pages CMS에서 저장된 데이터와 이미지 경로를 확인한 뒤 <a href="tab_4.html">저널 페이지</a>로 돌아가 주세요.'
       );
     }
+  }
+
+  function normalizePath(value) {
+    return String(value).replace(/^\/+/, "");
   }
 
   function formatDate(value) {
