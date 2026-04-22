@@ -26,6 +26,27 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'font-lv1';
+    src: url("../webfonts/NEXON Lv1 Gothic OTF.otf") format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'font-lv1-light';
+    src: url("../webfonts/NEXON Lv1 Gothic OTF Light.otf") format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'font-lv1-bold';
+    src: url("../webfonts/NEXON Lv1 Gothic OTF Bold.otf") format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
 /*
 	Phantom by HTML5 UP
 	html5up.net | @ajlkn
@@ -3367,4 +3388,16 @@ input, select, textarea {
 
 .font-gs {
     font-family: 'font-gs', sans-serif;
+}
+
+.font-lv1 {
+    font-family: 'font-lv1', sans-serif;
+}
+
+.font-lv1-light {
+    font-family: 'font-lv1-light', sans-serif;
+}
+
+.font-lv1-bold {
+    font-family: 'font-lv1-bold', sans-serif;
 }
