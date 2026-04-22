@@ -1,6 +1,6 @@
 param(
-  [Parameter(Mandatory = $true, Position = 0)]
-  [string]$Message,
+  [Parameter(ValueFromRemainingArguments = $true, Position = 0)]
+  [string[]]$MessageParts,
 
   [string]$Remote = "origin",
 
@@ -8,6 +8,12 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+
+$Message = ($MessageParts | Where-Object { -not [string]::IsNullOrWhiteSpace($_) }) -join " "
+if ([string]::IsNullOrWhiteSpace($Message)) {
+  Write-Error "Usage: qp your commit message"
+  exit 1
+}
 
 function Invoke-Git {
   param(
