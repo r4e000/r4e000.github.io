@@ -1,0 +1,11 @@
+[
+  {
+    "slug": "first-post",
+    "title": "첫 게시글 테스트",
+    "date": "2026-04-22",
+    "excerpt": "Page CMS testing",
+    "cover": "/images/blog/testing.png",
+    "coverAlt": "testing png",
+    "body": "<p>Page CMS 를 이용한 첫 업로딩 테스트입니다.</p>"
+  }
+]
