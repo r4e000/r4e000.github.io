@@ -3654,6 +3654,30 @@ input, select, textarea {
 	margin-bottom: 1.5em;
 }
 
+.blog-content figure {
+	margin: 2.25em 0;
+}
+
+.blog-content img {
+	display: block;
+	width: auto;
+	max-width: min(100%, 42rem);
+	height: auto;
+	margin: 2em auto;
+	border-radius: 0.4em;
+}
+
+.blog-content figure img {
+	margin: 0 auto 0.8em auto;
+}
+
+.blog-content figcaption {
+	font-size: 0.9em;
+	line-height: 1.7;
+	text-align: center;
+	color: #7c7c7c;
+}
+
 .blog-content code {
 	background: rgba(88, 88, 88, 0.06);
 	padding: 0.1em 0.45em;

@@ -170,6 +170,7 @@
 
     document.title = `HAX | ${post.title}`;
     page.innerHTML = renderDetailPage(post, section, bodyHtml);
+    enhanceContentMedia(page);
   }
 
   function renderFeatured(post, sections) {
@@ -249,6 +250,20 @@
         </a>
       </article>
     `;
+  }
+
+  function enhanceContentMedia(container) {
+    const images = container.querySelectorAll(".blog-content img");
+
+    images.forEach((image) => {
+      if (!image.getAttribute("loading")) {
+        image.setAttribute("loading", "lazy");
+      }
+
+      if (!image.getAttribute("decoding")) {
+        image.setAttribute("decoding", "async");
+      }
+    });
   }
 
   function renderImage(post, className) {
