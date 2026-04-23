@@ -14,10 +14,6 @@ content:
     format: json
     list: true
     fields:
-      - name: slug
-        label: "\uACE0\uC720\uC8FC\uC18C"
-        type: string
-
       - name: title
         label: "\uC81C\uBAA9"
         type: string
@@ -36,6 +32,13 @@ content:
       - name: date
         label: "\uC791\uC131\uC77C"
         type: date
+
+      - name: postNo
+        label: "\uB0A0\uC9DC\uBCC4 \uBC88\uD638"
+        type: number
+        options:
+          min: 1
+          step: 1
 
       - name: excerpt
         label: "\uC694\uC57D"

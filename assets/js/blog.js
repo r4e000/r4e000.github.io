@@ -58,8 +58,8 @@
     const posts = Array.isArray(payload) ? payload.slice() : [];
 
     return posts
-      .filter((post) => post && post.slug && post.title)
-      .sort((left, right) => String(right.date || "").localeCompare(String(left.date || "")));
+      .filter((post) => post && post.title && getPostSlug(post))
+      .sort(sortPosts);
   }
 
   async function loadSections() {
@@ -177,7 +177,7 @@
       return;
     }
 
-    const post = posts.find((item) => item.slug === slug);
+    const post = findPostBySlug(posts, slug);
 
     if (!post) {
       page.innerHTML = renderMessage(UI.notFoundTitle, UI.notFoundBody);
@@ -194,7 +194,7 @@
 
   function renderFeatured(post, sections) {
     return `
-      <a class="blog-featured-link" href="blog-post.html?slug=${encodeURIComponent(post.slug)}">
+      <a class="blog-featured-link" href="blog-post.html?slug=${encodeURIComponent(getPostSlug(post))}">
         ${renderImage(post, "blog-featured-image")}
         <div class="blog-featured-copy">
           ${renderMeta(post, sections)}
@@ -209,7 +209,7 @@
   function renderCard(post, sections) {
     return `
       <article class="blog-card box">
-        <a class="blog-card-link" href="blog-post.html?slug=${encodeURIComponent(post.slug)}">
+        <a class="blog-card-link" href="blog-post.html?slug=${encodeURIComponent(getPostSlug(post))}">
           ${renderImage(post, "blog-card-image")}
           <div class="blog-card-body">
             ${renderMeta(post, sections)}
@@ -224,7 +224,7 @@
   function renderCompactCard(post, sections) {
     return `
       <article class="blog-list-item box">
-        <a class="blog-list-item-link" href="blog-post.html?slug=${encodeURIComponent(post.slug)}">
+        <a class="blog-list-item-link" href="blog-post.html?slug=${encodeURIComponent(getPostSlug(post))}">
           ${renderImage(post, "blog-list-thumb")}
           <div class="blog-list-item-copy">
             ${renderMeta(post, sections)}
@@ -481,6 +481,62 @@
     if (page) {
       page.innerHTML = renderMessage(UI.genericError, `${UI.errorBody} <a href="tab_4.html">${UI.archiveLabel}</a>`);
     }
+  }
+
+  function findPostBySlug(posts, slug) {
+    return posts.find((item) => {
+      if (!item) {
+        return false;
+      }
+
+      return item.slug === slug || getPostSlug(item) === slug;
+    });
+  }
+
+  function getPostSlug(post) {
+    if (!post || typeof post !== "object") {
+      return "";
+    }
+
+    const category = normalizeValue(post.category);
+    const shortDate = formatSlugDate(post.date);
+    const postNo = formatPostNo(post.postNo);
+
+    if (category && shortDate && postNo) {
+      return `${category}-${shortDate}-${postNo}`;
+    }
+
+    return typeof post.slug === "string" ? post.slug.trim() : "";
+  }
+
+  function formatSlugDate(value) {
+    const matched = String(value || "").match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+    if (!matched) {
+      return "";
+    }
+
+    return `${matched[1].slice(-2)}${matched[2]}${matched[3]}`;
+  }
+
+  function formatPostNo(value) {
+    const number = Number.parseInt(value, 10);
+
+    if (!Number.isFinite(number) || number < 1) {
+      return "";
+    }
+
+    return String(number);
+  }
+
+  function sortPosts(left, right) {
+    const dateCompare = String(right.date || "").localeCompare(String(left.date || ""));
+
+    if (dateCompare !== 0) {
+      return dateCompare;
+    }
+
+    return (Number(right.postNo) || 0) - (Number(left.postNo) || 0);
   }
 
   function applySectionHeader(section) {

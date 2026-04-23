@@ -1,9 +1,9 @@
 [
   {
-    "slug": "tmp-post",
     "title": "AION2 \uAC00\uC774\uB4DC \uC608\uC2DC \uAE00",
     "category": "aion2",
     "date": "2026-04-22",
+    "postNo": 1,
     "excerpt": "\uAC04\uB2E8\uD55C \uC548\uB0B4\uC640 \uC774\uBBF8\uC9C0 \uBC30\uCE58 \uC608\uC2DC\uC785\uB2C8\uB2E4.",
     "cover": "/images/blog/cover/aion2-sample-cover.png",
     "coverAlt": "AION2 sample cover image",
@@ -25,10 +25,10 @@
     ]
   },
   {
-    "slug": "steam-guide-sample",
     "title": "Steam \uAC00\uC774\uB4DC \uC608\uC2DC \uAE00",
     "category": "steam",
     "date": "2026-04-23",
+    "postNo": 1,
     "excerpt": "Steam \uD0DC\uADF8\uC6A9 \uC774\uBBF8\uC9C0 \uBCF8\uBB38 \uC608\uC2DC\uC785\uB2C8\uB2E4.",
     "cover": "/images/blog/cover/steam-sample-cover.png",
     "coverAlt": "Steam sample cover image",
