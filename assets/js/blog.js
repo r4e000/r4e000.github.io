@@ -185,9 +185,7 @@
     }
 
     const section = findSection(sections, post.category);
-    const bodyHtml =
-      post.body ||
-      `<section class="box blog-message"><p><span class="font-lv1">${UI.emptyBody}</span></p></section>`;
+    const bodyHtml = renderPostContent(post);
 
     document.title = `HAX | ${post.title}`;
     page.innerHTML = renderDetailPage(post, section, bodyHtml);
@@ -255,6 +253,75 @@
       <div class="blog-content">
         ${bodyHtml}
       </div>
+    `;
+  }
+
+  function renderPostContent(post) {
+    const sectionsHtml = renderPostSections(post.sections);
+
+    if (sectionsHtml) {
+      return sectionsHtml;
+    }
+
+    if (post.body) {
+      return post.body;
+    }
+
+    return `<section class="box blog-message"><p><span class="font-lv1">${UI.emptyBody}</span></p></section>`;
+  }
+
+  function renderPostSections(blocks) {
+    if (!Array.isArray(blocks) || !blocks.length) {
+      return "";
+    }
+
+    return blocks.map((block) => renderContentBlock(block)).filter(Boolean).join("");
+  }
+
+  function renderContentBlock(block) {
+    if (!block || typeof block !== "object") {
+      return "";
+    }
+
+    if (block.type === "text") {
+      return renderTextBlock(block);
+    }
+
+    if (block.type === "image") {
+      return renderImageBlock(block);
+    }
+
+    return "";
+  }
+
+  function renderTextBlock(block) {
+    const content = typeof block.content === "string" ? block.content.trim() : "";
+
+    if (!content) {
+      return "";
+    }
+
+    return `<section class="blog-content-block blog-content-text">${content}</section>`;
+  }
+
+  function renderImageBlock(block) {
+    const imagePath = typeof block.image === "string" ? block.image.trim() : "";
+
+    if (!imagePath) {
+      return "";
+    }
+
+    const alt = block.alt || block.caption || "";
+    const caption =
+      typeof block.caption === "string" && block.caption.trim()
+        ? `<figcaption>${escapeHtml(block.caption.trim())}</figcaption>`
+        : "";
+
+    return `
+      <figure class="blog-content-block blog-content-figure">
+        <img src="${escapeAttribute(normalizePath(imagePath))}" alt="${escapeAttribute(alt)}" />
+        ${caption}
+      </figure>
     `;
   }
 
