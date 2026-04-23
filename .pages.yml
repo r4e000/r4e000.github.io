@@ -8,7 +8,7 @@ media:
 
 content:
   - name: posts
-    label: "\uAC8C\uC2DC\uAE00"
+    label: Articles
     type: file
     path: data/posts.json
     format: json
@@ -53,13 +53,13 @@ content:
         type: string
 
       - name: sections
-        label: "\uBCF8\uBB38"
+        label: Block
         type: block
         list: true
         blockKey: type
         blocks:
           - name: text
-            label: "\uD14D\uC2A4\uD2B8"
+            label: Text Block
             fields:
               - name: content
                 label: "\uB0B4\uC6A9"
@@ -69,7 +69,7 @@ content:
                   media: false
                   switcher: true
           - name: image
-            label: "\uC774\uBBF8\uC9C0"
+            label: Image Block
             fields:
               - name: image
                 label: "\uC774\uBBF8\uC9C0"
