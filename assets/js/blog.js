@@ -6,21 +6,21 @@
     viewPost: "READ",
     moveToSection: "OPEN",
     archiveLabel: "ARCHIVE",
-    loadingPosts: "\uBD88\uB7EC\uC624\uB294 \uC911...",
+    loadingPosts: "Loading...",
     missingPostTitle: "POST NOT FOUND",
     missingPostBody:
-      '<a href="tab_4.html">ARCHIVE</a>\uC5D0\uC11C \uAE00\uC744 \uC120\uD0DD\uD574 \uC8FC\uC138\uC694.',
+      'Choose a post from <a href="tab_4.html">ARCHIVE</a>.',
     notFoundTitle: "POST NOT FOUND",
     notFoundBody:
-      '\uC774 \uAE00\uC740 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4. <a href="tab_4.html">ARCHIVE</a>\uB85C \uB3CC\uC544\uAC00 \uC8FC\uC138\uC694.',
-    emptyBody: "\uBCF8\uBB38\uC774 \uC5C6\uC2B5\uB2C8\uB2E4.",
+      'This post does not exist. Return to <a href="tab_4.html">ARCHIVE</a>.',
+    emptyBody: "No content.",
     missingImage: "NO IMAGE",
-    genericError: "\uBD88\uB7EC\uC624\uC9C0 \uBABB\uD588\uC2B5\uB2C8\uB2E4.",
+    genericError: "Failed to load posts.",
     errorBody:
-      "\uB370\uC774\uD130 \uD30C\uC77C\uC744 \uD655\uC778\uD574 \uC8FC\uC138\uC694.",
-    fallbackDescriptionSuffix: "\uAD00\uB828 \uAE00 \uBAA8\uC74C\uC785\uB2C8\uB2E4.",
+      "Check the data files and try again.",
+    fallbackDescriptionSuffix: "news and guides.",
     emptyMessageTemplate:
-      "{slug} \uAE00\uC774 \uC544\uC9C1 \uC5C6\uC2B5\uB2C8\uB2E4."
+      "No posts yet."
   };
 
   document.addEventListener("DOMContentLoaded", () => {

@@ -4,8 +4,8 @@
     "label": "AION2",
     "title": "AION2",
     "kicker": "FIELD / AION2",
-    "description": "AION2 기록과 메모.",
-    "emptyMessage": "아직 글이 없습니다.",
+    "description": "News, updates, and guides.",
+    "emptyMessage": "No posts yet.",
     "page": "tab_1.html",
     "heroImage": "images/aion2.png",
     "heroAlt": "AION2"
@@ -15,8 +15,8 @@
     "label": "Steam",
     "title": "Steam",
     "kicker": "FIELD / STEAM",
-    "description": "Steam 기록과 메모.",
-    "emptyMessage": "아직 글이 없습니다.",
+    "description": "News, picks, and guides.",
+    "emptyMessage": "No posts yet.",
     "page": "tab_2.html",
     "heroImage": "images/steam.png",
     "heroAlt": "Steam"
