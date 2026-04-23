@@ -6,13 +6,13 @@
 -->
 <html>
 	<head>
-		<title>HAX | POST</title>
+		<title>HAX | AION2</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" data-blog-view="section" data-blog-section="aion2">
 		<div id="wrapper">
 
 			<header id="header">
@@ -33,22 +33,36 @@
 				<h2>MENU</h2>
 				<ul>
 					<li><a href="index.html">HOME</a></li>
-					<li><a href="tab_4.html">ARCHIVE</a></li>
+					<li><a href="archive.html">ARCHIVE</a></li>
 				</ul>
 			</nav>
 
 			<div id="main">
 				<div class="inner blog-shell">
-					<article id="blog-post-page" class="blog-post-page">
-						<section class="box blog-message">
-							<p class="blog-status font-lv1">Loading...</p>
-						</section>
-					</article>
+					<header class="blog-page-header">
+						<p id="blog-section-kicker" class="blog-kicker font-lv1-bold">FIELD / AION2</p>
+						<h1><span id="blog-section-title" class="font-lv1-bold">AION2</span></h1>
+						<p><span id="blog-section-description" class="font-lv1">Guidelines, Information, Consulting.</span></p>
+					</header>
+
+					<section id="blog-section-summary" class="blog-featured box" hidden></section>
+
+					<section class="blog-status-bar">
+						<p id="blog-count" class="blog-status font-lv1">Loading...</p>
+					</section>
+
+					<section id="blog-featured" class="blog-featured box" hidden></section>
+					<section id="blog-list" class="blog-list-grid"></section>
+
+					<section id="blog-empty" class="box blog-empty" hidden>
+						<h2><span class="font-lv1-bold">NO MORE POSTS</span></h2>
+						<p><span class="font-lv1">MORE POSTS WILL BE ADDED SOON.</span></p>
+					</section>
 
 					<noscript>
 						<section class="box blog-empty">
 							<h2><span class="font-lv1-bold">JavaScript Required</span></h2>
-							<p><span class="font-lv1">Enable JavaScript to view this page.</span></p>
+							<p><span class="font-lv1">Enable JavaScript to view posts.</span></p>
 						</section>
 					</noscript>
 				</div>
@@ -64,7 +78,7 @@
 						</ul>
 					</section>
 					<ul class="copyright">
-						<li>&copy; HAX. All rights reserved</li><li>디자인 템플릿 제공: <a href="http://html5up.net">HTML5 UP</a></li>
+						<li>&copy; HAX. All rights reserved</li><li>Design Template Provided: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
 				</div>
 			</footer>

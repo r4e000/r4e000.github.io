@@ -9,10 +9,10 @@
     loadingPosts: "Loading...",
     missingPostTitle: "POST NOT FOUND",
     missingPostBody:
-      'Choose a post from <a href="tab_4.html">ARCHIVE</a>.',
+      'Choose a post from <a href="archive.html">ARCHIVE</a>.',
     notFoundTitle: "POST NOT FOUND",
     notFoundBody:
-      'This post does not exist. Return to <a href="tab_4.html">ARCHIVE</a>.',
+      'This post does not exist. Return to <a href="archive.html">ARCHIVE</a>.',
     emptyBody: "No content.",
     missingImage: "NO IMAGE",
     genericError: "Failed to load posts.",
@@ -194,7 +194,7 @@
 
   function renderFeatured(post, sections) {
     return `
-      <a class="blog-featured-link" href="blog-post.html?slug=${encodeURIComponent(getPostSlug(post))}">
+      <a class="blog-featured-link" href="post.html?slug=${encodeURIComponent(getPostSlug(post))}">
         ${renderImage(post, "blog-featured-image")}
         <div class="blog-featured-copy">
           ${renderMeta(post, sections)}
@@ -209,7 +209,7 @@
   function renderCard(post, sections) {
     return `
       <article class="blog-card box">
-        <a class="blog-card-link" href="blog-post.html?slug=${encodeURIComponent(getPostSlug(post))}">
+        <a class="blog-card-link" href="post.html?slug=${encodeURIComponent(getPostSlug(post))}">
           ${renderImage(post, "blog-card-image")}
           <div class="blog-card-body">
             ${renderMeta(post, sections)}
@@ -224,7 +224,7 @@
   function renderCompactCard(post, sections) {
     return `
       <article class="blog-list-item box">
-        <a class="blog-list-item-link" href="blog-post.html?slug=${encodeURIComponent(getPostSlug(post))}">
+        <a class="blog-list-item-link" href="post.html?slug=${encodeURIComponent(getPostSlug(post))}">
           ${renderImage(post, "blog-list-thumb")}
           <div class="blog-list-item-copy">
             ${renderMeta(post, sections)}
@@ -236,7 +236,7 @@
   }
 
   function renderDetailPage(post, section, bodyHtml) {
-    const backHref = section && section.page ? section.page : "tab_4.html";
+    const backHref = section && section.page ? section.page : "archive.html";
     const backLabel = section
       ? `${section.label} \uBAA9\uB85D\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30`
       : `\uC804\uCCB4 \uBAA9\uB85D\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30`;
@@ -244,7 +244,7 @@
     return `
       <p class="blog-back-link"><a href="${escapeAttribute(backHref)}">${escapeHtml(
         backLabel
-      )}</a><span class="blog-back-divider">/</span><a href="tab_4.html">${UI.archiveLabel}</a></p>
+      )}</a><span class="blog-back-divider">/</span><a href="archive.html">${UI.archiveLabel}</a></p>
       <header class="blog-post-header">
         ${renderMeta(post, section ? [section] : [])}
         <h1><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h1>
@@ -377,7 +377,7 @@
 
     return `
       <article class="blog-section-card box">
-        <a class="blog-card-link" href="${escapeAttribute(section.page || "tab_4.html")}">
+        <a class="blog-card-link" href="${escapeAttribute(section.page || "archive.html")}">
           ${section.heroImage ? `<span class="blog-card-image"><img src="${escapeAttribute(normalizePath(section.heroImage))}" alt="${escapeAttribute(section.heroAlt || section.label)}" loading="lazy" /></span>` : `<span class="blog-card-image"><span class="blog-image-placeholder">${escapeHtml(section.label)}</span></span>`}
           <div class="blog-card-body">
             <p class="blog-meta"><span class="blog-badge">${escapeHtml(section.label)}</span><span class="blog-meta-divider">/</span><span>${formatPostCount(count)}</span></p>
@@ -479,7 +479,7 @@
     }
 
     if (page) {
-      page.innerHTML = renderMessage(UI.genericError, `${UI.errorBody} <a href="tab_4.html">${UI.archiveLabel}</a>`);
+      page.innerHTML = renderMessage(UI.genericError, `${UI.errorBody} <a href="archive.html">${UI.archiveLabel}</a>`);
     }
   }
 

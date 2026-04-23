@@ -6,7 +6,7 @@
     "kicker": "FIELD / AION2",
     "description": "Guidelines, Information, Directing.",
     "emptyMessage": "No posts yet.",
-    "page": "tab_1.html",
+    "page": "aion2.html",
     "heroImage": "images/aion2.png",
     "heroAlt": "AION2"
   },
@@ -17,7 +17,7 @@
     "kicker": "FIELD / STEAM",
     "description": "Picks, Informations, Guiding.",
     "emptyMessage": "No posts yet.",
-    "page": "tab_2.html",
+    "page": "steam.html",
     "heroImage": "images/steam.png",
     "heroAlt": "Steam"
   }
