@@ -51,10 +51,6 @@ content:
           media: blog_images
           path: cover
 
-      - name: coverAlt
-        label: "\uC774\uBBF8\uC9C0 \uC124\uBA85"
-        type: string
-
       - name: sections
         label: Block
         type: block

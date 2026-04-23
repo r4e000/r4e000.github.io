@@ -1,0 +1,14 @@
+{
+  "explorer.sortOrder": "type",
+  "explorer.openEditors.sortOrder": "alphabetical",
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.compactFolders": true,
+  "files.exclude": {
+    "**/.git": true
+  },
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true
+  }
+}
