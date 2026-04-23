@@ -1,9 +1,10 @@
 media:
-  input: images/blog
-  output: /images/blog
-  categories: [image]
-  extensions: [png, jpg, jpeg, webp, gif]
-  rename: true
+  - name: blog_images
+    input: images/blog
+    output: /images/blog
+    categories: [image]
+    extensions: [png, jpg, jpeg, webp, gif]
+    rename: true
 
 content:
   - name: posts
@@ -43,6 +44,9 @@ content:
       - name: cover
         label: "\uCEE4\uBC84 \uC774\uBBF8\uC9C0"
         type: image
+        options:
+          media: blog_images
+          path: cover
 
       - name: coverAlt
         label: "\uC774\uBBF8\uC9C0 \uC124\uBA85"
@@ -53,6 +57,8 @@ content:
         type: rich-text
         options:
           format: html
+          media: blog_images
+          path: inline
           switcher: true
           categories: [image]
           extensions: [png, jpg, jpeg, webp, gif]
