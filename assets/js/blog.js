@@ -252,7 +252,6 @@
         <h1><span class="font-lv1-bold">${escapeHtml(post.title)}</span></h1>
         ${post.excerpt ? `<p class="blog-post-excerpt"><span class="font-lv1">${escapeHtml(post.excerpt)}</span></p>` : ""}
       </header>
-      ${post.cover ? `<span class="image main blog-hero"><img src="${escapeAttribute(normalizePath(post.cover))}" alt="${escapeAttribute(post.coverAlt || post.title)}" /></span>` : ""}
       <div class="blog-content">
         ${bodyHtml}
       </div>

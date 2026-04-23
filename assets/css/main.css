@@ -3470,8 +3470,7 @@ input, select, textarea {
 }
 
 .blog-featured-image img,
-.blog-card-image img,
-.blog-hero img {
+.blog-card-image img {
 	display: block;
 	width: 100%;
 	height: auto;
@@ -3691,15 +3690,6 @@ input, select, textarea {
 .blog-post-excerpt {
 	font-size: 1.1em;
 	color: #6d6d6d;
-}
-
-.blog-hero {
-	max-width: var(--blog-cover-max-width);
-	margin: 0 auto 2.5em auto;
-}
-
-.blog-hero img {
-	border-radius: 0.4em;
 }
 
 .blog-content {
