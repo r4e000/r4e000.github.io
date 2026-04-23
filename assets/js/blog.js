@@ -291,6 +291,10 @@
       return renderImageBlock(block);
     }
 
+    if (block.type === "powerlink") {
+      return renderPowerLinkBlock(block);
+    }
+
     return "";
   }
 
@@ -320,6 +324,36 @@
     return `
       <figure class="blog-content-block blog-content-figure">
         <img src="${escapeAttribute(normalizePath(imagePath))}" alt="${escapeAttribute(alt)}" />
+        ${caption}
+      </figure>
+    `;
+  }
+
+  function renderPowerLinkBlock(block) {
+    const imagePath = typeof block.image === "string" ? block.image.trim() : "";
+    const href = typeof block.href === "string" ? block.href.trim() : "";
+
+    if (!imagePath) {
+      return "";
+    }
+
+    if (!href) {
+      return renderImageBlock(block);
+    }
+
+    const alt = block.alt || block.caption || "";
+    const caption =
+      typeof block.caption === "string" && block.caption.trim()
+        ? `<figcaption>${escapeHtml(block.caption.trim())}</figcaption>`
+        : "";
+
+    return `
+      <figure class="blog-content-block blog-content-figure blog-content-powerlink">
+        <a class="blog-content-figure-link" href="${escapeAttribute(normalizeHref(href))}"${buildLinkAttributes(
+          block.newTab !== false
+        )}>
+          <img src="${escapeAttribute(normalizePath(imagePath))}" alt="${escapeAttribute(alt)}" />
+        </a>
         ${caption}
       </figure>
     `;
@@ -503,6 +537,18 @@
 
   function normalizePath(value) {
     return String(value || "").replace(/^\/+/, "");
+  }
+
+  function normalizeHref(value) {
+    return String(value || "").trim();
+  }
+
+  function buildLinkAttributes(openInNewTab) {
+    if (!openInNewTab) {
+      return "";
+    }
+
+    return ' target="_blank" rel="noopener noreferrer"';
   }
 
   function formatDate(value) {

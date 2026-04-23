@@ -3717,6 +3717,15 @@ input, select, textarea {
 	margin: 2.25em 0;
 }
 
+.blog-content-figure-link {
+	display: block;
+	border-bottom: 0;
+}
+
+.blog-content-figure-link:hover {
+	color: inherit !important;
+}
+
 .blog-content img {
 	display: block;
 	width: auto;
@@ -3728,6 +3737,16 @@ input, select, textarea {
 
 .blog-content figure img {
 	margin: 0 auto 0.8em auto;
+}
+
+.blog-content-powerlink img {
+	transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.blog-content-figure-link:hover img {
+	transform: translateY(-0.15em);
+	box-shadow: 0 0.8em 1.8em rgba(88, 88, 88, 0.12);
+	opacity: 0.96;
 }
 
 .blog-content figcaption {

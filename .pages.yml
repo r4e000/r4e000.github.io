@@ -83,3 +83,25 @@ content:
               - name: caption
                 label: "\uC124\uBA85"
                 type: string
+          - name: powerlink
+            label: Power Link Block
+            fields:
+              - name: image
+                label: "\uC774\uBBF8\uC9C0"
+                type: image
+                options:
+                  media: blog_images
+                  path: inline
+              - name: alt
+                label: "\uB300\uCCB4 \uD14D\uC2A4\uD2B8"
+                type: string
+              - name: caption
+                label: "\uC124\uBA85"
+                type: string
+              - name: href
+                label: "\uB9C1\uD06C \uC8FC\uC18C"
+                type: string
+              - name: newTab
+                label: "\uC0C8 \uD0ED\uC5D0\uC11C \uC5F4\uAE30"
+                type: boolean
+                default: true
