@@ -15,7 +15,7 @@
         "type": "powerlink",
         "image": "/images/blog/a2icue-powerlink.png",
         "alt": "Github 링크",
-        "caption": "사진을 클릭하시면 Github로 이동됩니다.",
+        "caption": "사진을 클릭하시면 설치를 위해 Github로 이동됩니다.",
         "href": "https://github.com/r4e000/A2ICUE/releases/tag/Package",
         "newTab": true
       },
