@@ -1,51 +1,76 @@
 [
   {
-    "title": "AION2 \uAC00\uC774\uB4DC \uC608\uC2DC \uAE00",
+    "title": "AION2 마우스 매크로 가이드",
     "category": "aion2",
-    "date": "2026-04-22",
+    "date": "2026-04-27",
     "postNo": 1,
-    "excerpt": "\uAC04\uB2E8\uD55C \uC548\uB0B4\uC640 \uC774\uBBF8\uC9C0 \uBC30\uCE58 \uC608\uC2DC\uC785\uB2C8\uB2E4.",
+    "excerpt": "ICUE 프로그램을 사용한 매크로 가이드",
     "cover": "/images/blog/cover/aion2-sample-cover.png",
     "sections": [
       {
         "type": "text",
-        "content": "<p>\uC774 \uAE00\uC740 AION2 \uCE74\uD14C\uACE0\uB9AC \uC608\uC2DC \uAC8C\uC2DC\uAE00\uC785\uB2C8\uB2E4.</p><p>\uC774\uB7F0 \uC2DD\uC73C\uB85C \uC9E7\uACE0 \uBA85\uB8CC\uD558\uAC8C \uC815\uBCF4\uB97C \uC815\uB9AC\uD558\uBA74 \uB429\uB2C8\uB2E4.</p>"
+        "content": "<p>해당 포스트는 Corsair사 지원 iCUE 프로그램의 응용을 기반으로 함을 미리 알립니다.</p><p>통합 가이드 압축 파일 링크는 바로 밑에 있습니다. Github로 연결됩니다.</p>"
       },
       {
-        "type": "image",
-        "image": "/images/blog/inline/aion2-guide-shot.png",
-        "alt": "AION2 body sample image",
-        "caption": "AION2 image sample"
+        "type": "powerlink",
+        "alt": "Github 링크",
+        "caption": "Source code (zip)을 설치하고 압축을 해제합니다.",
+        "href": "https://github.com/r4e000/A2ICUE/releases/tag/Package",
+        "newTab": true
       },
       {
         "type": "text",
-        "content": "<p>\uBCF8\uBB38 \uC911\uAC04\uC5D0 \uC774\uBBF8\uC9C0\uB97C \uB123\uACE0 \uC544\uB798\uC5D0 \uC124\uBA85\uC744 \uBD99\uC774\uB294 \uD615\uD0DC\uB3C4 \uC27D\uAC8C \uAD6C\uC131\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.</p>"
+        "content": "<p>설치가 완료되면, 압축 파일 내부에 있는 가이드라인만 따라가도 기본적인 세팅은 모두 가능합니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/file.png",
+        "alt": "Corsair KATAR PRO (참조 사진)",
+        "caption": "기본적으로 설정되어 있는, 추천 설정입니다."
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/file-1.png",
+        "alt": "인 게임에서의 설정",
+        "caption": "해당 부분은 중요한 부분으로, 직접 커스터마이징을 할 것이 아니라면, 똑같이 따라해주세요."
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/1.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/3.png"
       }
     ]
   },
   {
-    "title": "Steam \uAC00\uC774\uB4DC \uC608\uC2DC \uAE00",
+    "title": "Steam 가이드 예시 글",
     "category": "steam",
     "date": "2026-04-23",
     "postNo": 1,
-    "excerpt": "Steam \uD0DC\uADF8\uC6A9 \uC774\uBBF8\uC9C0 \uBCF8\uBB38 \uC608\uC2DC\uC785\uB2C8\uB2E4.",
+    "excerpt": "Steam 태그용 이미지 본문 예시입니다.",
     "cover": "/images/blog/cover/steam-sample-cover.png",
     "sections": [
       {
         "type": "text",
-        "content": "<p>\uC774 \uAE00\uC740 Steam \uCE74\uD14C\uACE0\uB9AC \uC608\uC2DC \uAC8C\uC2DC\uAE00\uC785\uB2C8\uB2E4.</p><p>\uC77C\uBC18 \uD14D\uC2A4\uD2B8 \uBE14\uB85D \uC0AC\uC774\uC5D0 \uB9C1\uD06C\uD615 \uC774\uBBF8\uC9C0 \uBE14\uB85D\uB3C4 \uB123\uC744 \uC218 \uC788\uC2B5\uB2C8\uB2E4.</p>"
+        "content": "<p>이 글은 Steam 카테고리 예시 게시글입니다.</p><p>일반 텍스트 블록 사이에 링크형 이미지 블록도 넣을 수 있습니다.</p>"
       },
       {
         "type": "powerlink",
         "image": "/images/blog/inline/steam-guide-shot.jpg",
         "alt": "Steam body sample image",
-        "caption": "\uC774\uBBF8\uC9C0\uB97C \uB204\uB974\uBA74 Steam\uC73C\uB85C \uC774\uB3D9\uD569\uB2C8\uB2E4.",
+        "caption": "이미지를 누르면 Steam으로 이동합니다.",
         "href": "https://store.steampowered.com/",
         "newTab": true
       },
       {
         "type": "text",
-        "content": "<p>\uC9E7\uC740 \uC548\uB0B4\uBB38, \uC774\uBBF8\uC9C0, \uBC14\uB85C\uAC00\uAE30 \uB9C1\uD06C\uB97C \uC774\ub7F0 \uC2DD\uC73C\uB85C \uC815\uB9AC\uD558\uBA74 \uB429\uB2C8\uB2E4.</p>"
+        "content": "<p>짧은 안내문, 이미지, 바로가기 링크를 이런 식으로 정리하면 됩니다.</p>"
       }
     ]
   }
