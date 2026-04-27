@@ -8,10 +8,6 @@
     "cover": "/images/blog/cover/aion2-sample-cover.png",
     "sections": [
       {
-        "type": "text",
-        "content": "<p></p>"
-      },
-      {
         "type": "powerlink",
         "image": "/images/blog/a2icue-powerlink.png",
         "alt": "Github 링크",
@@ -31,13 +27,17 @@
         "type": "image",
         "image": "/images/blog/file.png",
         "alt": "Corsair KATAR PRO (참조 사진)",
-        "caption": "기본적으로 설정되어 있는, 추천 설정입니다."
+        "caption": "기본적으로 설정되어 있는 추천 설정"
+      },
+      {
+        "type": "text",
+        "content": "<p>Corsair KATAR PRO 제품이 참조 사진으로 사용되었습니다. 해당 제품은 2만원 후반에서 3만원 초반대로, 매크로 기능을 제외하고 보더라도 매우 뛰어난 마우스입니다.</p>"
       },
       {
         "type": "image",
         "image": "/images/blog/file-1.png",
         "alt": "인 게임에서의 설정",
-        "caption": "해당 부분은 중요한 부분으로, 직접 커스터마이징을 할 것이 아니라면, 똑같이 따라해주세요."
+        "caption": "직접 커스터마이징을 할 것이 아니라면, 똑같이 따라해주세요."
       },
       {
         "type": "text",
