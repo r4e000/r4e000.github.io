@@ -9,10 +9,11 @@
     "sections": [
       {
         "type": "text",
-        "content": "<p>해당 포스트는 Corsair사 지원 iCUE 프로그램의 응용을 기반으로 함을 미리 알립니다.</p><p>통합 가이드 압축 파일 링크는 바로 밑에 있습니다. Github로 연결됩니다.</p>"
+        "content": "<p></p><h1>해당 포스트는 Corsair사 지원 iCUE 프로그램의 응용을 기반으로 함을 미리 알립니다.</h1><p></p><p>통합 가이드 압축 파일 링크는 하단 사진을 클릭하시면 Github로 이동됩니다.</p>"
       },
       {
         "type": "powerlink",
+        "image": "/images/blog/a2icue-powerlink.png",
         "alt": "Github 링크",
         "caption": "Source code (zip)을 설치하고 압축을 해제합니다.",
         "href": "https://github.com/r4e000/A2ICUE/releases/tag/Package",
