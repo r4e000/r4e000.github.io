@@ -36,6 +36,10 @@
         "caption": "해당 부분은 중요한 부분으로, 직접 커스터마이징을 할 것이 아니라면, 똑같이 따라해주세요."
       },
       {
+        "type": "text",
+        "content": "<p>기본적인 설치 가이드라인입니다. 사진과 똑같이 따라해주세요.</p>"
+      },
+      {
         "type": "image",
         "image": "/images/blog/1.png"
       },
@@ -46,11 +50,29 @@
       {
         "type": "image",
         "image": "/images/blog/3.png"
+      },
+      {
+        "type": "text",
+        "content": "<p>설치 후엔, 압축 파일 내부에 스킬배치 폴더를 보면 기본적인 베이스 구성 샘플이 되어 있습니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/file-2.png",
+        "caption": "검성의 스킬 배치 예시도"
+      },
+      {
+        "type": "text",
+        "content": "<p>좌꾹 3연타가 가장 합리적이고 쉬운 고점 수단입니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/skill1.png",
+        "caption": "붉은 박스 내부의 스킬들을 모두 연타해줍니다."
       }
     ]
   },
   {
-    "title": "Steam 가이드 예시 글",
+    "title": "Steam 플레이스홀더",
     "category": "steam",
     "date": "2026-04-23",
     "postNo": 1,
@@ -59,7 +81,7 @@
     "sections": [
       {
         "type": "text",
-        "content": "<p>이 글은 Steam 카테고리 예시 게시글입니다.</p><p>일반 텍스트 블록 사이에 링크형 이미지 블록도 넣을 수 있습니다.</p>"
+        "content": "<p>이 글은 Steam 카테고리의 플레이스 홀더입니다.</p>"
       },
       {
         "type": "powerlink",
@@ -68,10 +90,6 @@
         "caption": "이미지를 누르면 Steam으로 이동합니다.",
         "href": "https://store.steampowered.com/",
         "newTab": true
-      },
-      {
-        "type": "text",
-        "content": "<p>짧은 안내문, 이미지, 바로가기 링크를 이런 식으로 정리하면 됩니다.</p>"
       }
     ]
   }
