@@ -6,13 +6,13 @@
 -->
 <html>
 	<head>
-		<title>HAX | Test</title>
+		<title>HAX | PC</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<body class="is-preload">
+	<body class="is-preload" data-blog-view="section" data-blog-section="pc">
 		<div id="wrapper">
 
 			<header id="header">
@@ -38,11 +38,33 @@
 			</nav>
 
 			<div id="main">
-				<div class="inner">
-					<h1>Test</h1>
-					<span class="image main"><img src="images/pic04.jpg" alt="" /></span>
-					<p>Test space for layout and feature checks.</p>
-					<p>Can expand into a full section later.</p>
+				<div class="inner blog-shell">
+					<header class="blog-page-header">
+						<p id="blog-section-kicker" class="blog-kicker font-lv1-bold">FIELD / PC</p>
+						<h1><span id="blog-section-title" class="font-lv1-bold">PC</span></h1>
+						<p><span id="blog-section-description" class="font-lv1">Hardware, Tools, Troubleshooting.</span></p>
+					</header>
+
+					<section id="blog-section-summary" class="blog-featured box" hidden></section>
+
+					<section class="blog-status-bar">
+						<p id="blog-count" class="blog-status font-lv1">Loading...</p>
+					</section>
+
+					<section id="blog-featured" class="blog-featured box" hidden></section>
+					<section id="blog-list" class="blog-list-grid"></section>
+
+					<section id="blog-empty" class="box blog-empty" hidden>
+						<h2><span class="font-lv1-bold">MORE POSTS WILL BE ADDED SOON.</span></h2>
+						<p><span class="font-lv1">Please check back later for updates.</span></p>
+					</section>
+
+					<noscript>
+						<section class="box blog-empty">
+							<h2><span class="font-lv1-bold">JavaScript Required</span></h2>
+							<p><span class="font-lv1">Enable JavaScript to view posts.</span></p>
+						</section>
+					</noscript>
 				</div>
 			</div>
 
@@ -67,6 +89,7 @@
 		<script src="assets/js/browser.min.js"></script>
 		<script src="assets/js/breakpoints.min.js"></script>
 		<script src="assets/js/util.js"></script>
+		<script src="assets/js/blog.js"></script>
 		<script src="assets/js/main.js"></script>
 	</body>
 </html>

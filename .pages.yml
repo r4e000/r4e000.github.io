@@ -28,6 +28,8 @@ content:
               label: AION2
             - value: steam
               label: Steam
+            - value: pc
+              label: PC
 
       - name: date
         label: "\uC791\uC131\uC77C"

@@ -20,5 +20,16 @@
     "page": "steam.html",
     "heroImage": "images/steam.png",
     "heroAlt": "Steam"
+  },
+  {
+    "slug": "pc",
+    "label": "PC",
+    "title": "PC",
+    "kicker": "FIELD / PC",
+    "description": "Hardware, Tools, Troubleshooting.",
+    "emptyMessage": "No posts yet.",
+    "page": "pc.html",
+    "heroImage": "images/pc.jpg",
+    "heroAlt": "PC"
   }
 ]
