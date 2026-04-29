@@ -291,8 +291,16 @@
       return renderImageBlock(block);
     }
 
+    if (block.type === "gallery") {
+      return renderGalleryBlock(block);
+    }
+
     if (block.type === "powerlink") {
       return renderPowerLinkBlock(block);
+    }
+
+    if (block.type === "file") {
+      return renderFileBlock(block);
     }
 
     return "";
@@ -329,6 +337,36 @@
     `;
   }
 
+  function renderGalleryBlock(block) {
+    const images = normalizeList(block.images).map(getAssetPath).filter(Boolean);
+
+    if (!images.length) {
+      return "";
+    }
+
+    const caption =
+      typeof block.caption === "string" && block.caption.trim()
+        ? `<figcaption>${escapeHtml(block.caption.trim())}</figcaption>`
+        : "";
+
+    return `
+      <figure class="blog-content-block blog-gallery">
+        <div class="blog-gallery-grid">
+          ${images
+            .map(
+              (imagePath, index) => `
+                <img src="${escapeAttribute(normalizePath(imagePath))}" alt="${escapeAttribute(
+                  `${block.caption || "Gallery image"} ${index + 1}`
+                )}" />
+              `
+            )
+            .join("")}
+        </div>
+        ${caption}
+      </figure>
+    `;
+  }
+
   function renderPowerLinkBlock(block) {
     const imagePath = typeof block.image === "string" ? block.image.trim() : "";
     const href = typeof block.href === "string" ? block.href.trim() : "";
@@ -356,6 +394,34 @@
         </a>
         ${caption}
       </figure>
+    `;
+  }
+
+  function renderFileBlock(block) {
+    const filePath = getAssetPath(block.file);
+
+    if (!filePath) {
+      return "";
+    }
+
+    const title =
+      typeof block.title === "string" && block.title.trim()
+        ? block.title.trim()
+        : getFileName(filePath);
+    const description =
+      typeof block.description === "string" && block.description.trim()
+        ? `<span class="blog-file-description">${escapeHtml(block.description.trim())}</span>`
+        : "";
+    const extension = getFileExtension(filePath);
+
+    return `
+      <section class="blog-content-block blog-file-card">
+        <a class="blog-file-link" href="${escapeAttribute(normalizePath(filePath))}" download>
+          <span class="blog-file-kicker">FILE${extension ? ` / ${escapeHtml(extension)}` : ""}</span>
+          <strong>${escapeHtml(title)}</strong>
+          ${description}
+        </a>
+      </section>
     `;
   }
 
@@ -589,6 +655,52 @@
 
   function normalizeValue(value) {
     return String(value || "").trim().toLowerCase();
+  }
+
+  function normalizeList(value) {
+    if (Array.isArray(value)) {
+      return value;
+    }
+
+    if (value) {
+      return [value];
+    }
+
+    return [];
+  }
+
+  function getAssetPath(value) {
+    if (typeof value === "string") {
+      return value.trim();
+    }
+
+    if (value && typeof value === "object") {
+      return String(value.path || value.url || value.src || "").trim();
+    }
+
+    return "";
+  }
+
+  function getFileName(value) {
+    const cleanPath = String(value || "").split(/[?#]/)[0];
+    const fileName = cleanPath.split("/").filter(Boolean).pop();
+
+    if (!fileName) {
+      return "Download file";
+    }
+
+    try {
+      return decodeURIComponent(fileName);
+    } catch {
+      return fileName;
+    }
+  }
+
+  function getFileExtension(value) {
+    const fileName = getFileName(value);
+    const matched = fileName.match(/\.([^.]+)$/);
+
+    return matched ? matched[1].toUpperCase() : "";
   }
 
   function normalizePath(value) {
