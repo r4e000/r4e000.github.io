@@ -228,37 +228,43 @@
         "type": "powerlink",
         "image": "/images/blog/file-11.png",
         "caption": "검성",
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-3",
         "newTab": false
       },
       {
         "type": "powerlink",
         "image": "/images/blog/file-3.png",
         "caption": "궁성",
-        "newTab": true
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-1",
+        "newTab": false
       },
       {
         "type": "powerlink",
         "image": "/images/blog/file-9.png",
         "caption": "살성",
-        "newTab": true
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-6",
+        "newTab": false
       },
       {
         "type": "powerlink",
         "image": "/images/blog/file-8.png",
         "caption": "마도성",
-        "newTab": true
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-5",
+        "newTab": false
       },
       {
         "type": "powerlink",
         "image": "/images/blog/file-7.png",
         "caption": "수호성",
-        "newTab": true
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-4",
+        "newTab": false
       },
       {
         "type": "powerlink",
         "image": "/images/blog/file-4.png",
         "caption": "호법성",
-        "newTab": true
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-2",
+        "newTab": false
       }
     ]
   }
