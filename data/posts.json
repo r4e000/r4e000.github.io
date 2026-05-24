@@ -216,5 +216,50 @@
         "image": "/images/blog/260524-6.png"
       }
     ]
+  },
+  {
+    "title": "직업 별 스킬 세팅 빠른 이동",
+    "category": "aion2",
+    "date": "2026-05-24",
+    "postNo": 7,
+    "excerpt": "직업별 아이콘 클릭 시 해당 글로 빠르게 이동됩니다.",
+    "sections": [
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-11.png",
+        "caption": "검성",
+        "newTab": false
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-3.png",
+        "caption": "궁성",
+        "newTab": true
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-9.png",
+        "caption": "살성",
+        "newTab": true
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-8.png",
+        "caption": "마도성",
+        "newTab": true
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-7.png",
+        "caption": "수호성",
+        "newTab": true
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-4.png",
+        "caption": "호법성",
+        "newTab": true
+      }
+    ]
   }
 ]
