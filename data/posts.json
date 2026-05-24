@@ -140,10 +140,81 @@
     ]
   },
   {
-    "title": "궁성 스킬 세팅 2026-05-24",
+    "title": "궁성 스킬 세팅",
     "category": "aion2",
     "date": "2026-05-24",
     "postNo": 1,
-    "cover": "/images/blog/260524.png"
+    "cover": "/images/blog/file-3.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260524-1.png"
+      }
+    ]
+  },
+  {
+    "title": "호법성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-24",
+    "postNo": 2,
+    "cover": "/images/blog/file-4.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260524-2.png"
+      }
+    ]
+  },
+  {
+    "title": "검성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-24",
+    "postNo": 3,
+    "cover": "/images/blog/file-6.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260524-3.png"
+      }
+    ]
+  },
+  {
+    "title": "수호성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-24",
+    "postNo": 4,
+    "cover": "/images/blog/file-7.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260524-4.png"
+      }
+    ]
+  },
+  {
+    "title": "마도성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-24",
+    "postNo": 5,
+    "cover": "/images/blog/file-8.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260524-5.png"
+      }
+    ]
+  },
+  {
+    "title": "살성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-24",
+    "postNo": 6,
+    "cover": "/images/blog/file-9.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260524-6.png"
+      }
+    ]
   }
 ]
