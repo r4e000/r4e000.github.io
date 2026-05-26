@@ -265,6 +265,26 @@
         "caption": "호법성",
         "href": "https://r4e000.github.io/post.html?slug=aion2-260524-2",
         "newTab": false
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-12.png",
+        "caption": "치유성",
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260526-1",
+        "newTab": true
+      }
+    ]
+  },
+  {
+    "title": "치유성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-26",
+    "postNo": 1,
+    "cover": "/images/blog/file-12.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260526.png"
       }
     ]
   }
