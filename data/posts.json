@@ -42,9 +42,8 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/keysettings-2.png",
-        "alt": "인 게임에서의 설정",
-        "caption": "ICUE 세팅이 되어있다면, 임시로 해제 또는 다른 프로필 사용하면서 수정하셔야 합니다."
+        "image": "/images/blog/key-settings.png",
+        "caption": "붉은 영역은 필수 영역, 푸른 영역은 잡몹 세팅 전용입니다. 별 다른 이유가 없다면 컬러박스는 그대로 따라해주세요."
       },
       {
         "type": "text",
