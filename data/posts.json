@@ -163,7 +163,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260524-1.png"
+        "image": "/images/blog/260527-7.png"
       }
     ]
   },
@@ -176,7 +176,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260524-2.png"
+        "image": "/images/blog/260527-6.png"
       }
     ]
   },
@@ -185,11 +185,11 @@
     "category": "aion2",
     "date": "2026-05-24",
     "postNo": 3,
-    "cover": "/images/blog/file-6.png",
+    "cover": "/images/blog/file-10.png",
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260524-3.png"
+        "image": "/images/blog/260527-5.png"
       }
     ]
   },
@@ -202,7 +202,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260524-4.png"
+        "image": "/images/blog/260527-4.png"
       }
     ]
   },
@@ -215,7 +215,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260524-5.png"
+        "image": "/images/blog/260527-3.png"
       }
     ]
   },
@@ -228,7 +228,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260524-6.png"
+        "image": "/images/blog/260527-2.png"
       }
     ]
   },
@@ -286,7 +286,14 @@
         "image": "/images/blog/file-12.png",
         "caption": "치유성",
         "href": "https://r4e000.github.io/post.html?slug=aion2-260526-1",
-        "newTab": true
+        "newTab": false
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-17.png",
+        "caption": "정령성",
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260527-1",
+        "newTab": false
       }
     ]
   },
@@ -299,7 +306,20 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260526.png"
+        "image": "/images/blog/260527-1.png"
+      }
+    ]
+  },
+  {
+    "title": "정령성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-05-27",
+    "postNo": 1,
+    "cover": "/images/blog/file-15.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260527.png"
       }
     ]
   }
