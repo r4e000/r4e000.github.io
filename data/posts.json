@@ -17,11 +17,11 @@
       },
       {
         "type": "text",
-        "content": "<p>가장 최근 빌드의 'Source code (zip)' 을 클릭하여 다운로드 해줍니다.</p><p></p>"
+        "content": "<p>가장 최근 빌드의 'Gaming.zip' 을 클릭하여 다운로드 해줍니다.</p><p></p>"
       },
       {
         "type": "text",
-        "content": "<p>설치가 완료되면, 압축 파일 내부에 있는 가이드라인만 따라가도 기본적인 세팅은 모두 가능합니다.</p>"
+        "content": "<p>설치가 완료되면, 하단 설명을 따라 나머지 세팅을 해줍니다.</p>"
       },
       {
         "type": "image",
@@ -65,6 +65,32 @@
         "caption": "이미지 클릭 시, 직업 별 최신 셋팅 링크로 이동됩니다.",
         "href": "https://r4e000.github.io/post.html?slug=aion2-260524-7",
         "newTab": true
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/ct3.png"
+      },
+      {
+        "type": "text",
+        "content": "<p>세팅이 끝나가면, K를 눌러, 스킬 창으로 들어가서 스킬 매크로를 눌러줍니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/file-14.png",
+        "caption": "궁성 기준의 세팅"
+      },
+      {
+        "type": "text",
+        "content": "<p>주력1, 롱텀, 주력2를 스킬 매크로에 등록해줍니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/ct4.png",
+        "caption": "궁성 기준 스킬 매크로 세팅"
+      },
+      {
+        "type": "text",
+        "content": "<p>이후, 자신의 직업에 맞는 세팅이 되었다면, 좌꾹 + 마우스 옆 위 아래 버튼을 통해 사용하면 됩니다.</p><p></p><blockquote><p>2026-05-27 패치 이후로는 고점을 위해 2꾹을 베이스로 합니다. 확실한 딜 상승이 있기에, 편의성을 조금 버린 상태입니다.</p></blockquote><p></p>"
       }
     ]
   },
