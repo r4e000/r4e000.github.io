@@ -17,7 +17,14 @@
       },
       {
         "type": "text",
-        "content": "<p>가장 최근 빌드의 'Gaming.zip' 을 클릭하여 다운로드 해줍니다.</p><p>Cursair사의 ICUE 프로그램을 우선 설치해줍니다.</p>"
+        "content": "<p>가장 최근 빌드의 'Gaming.zip' 을 클릭하여 다운로드 해줍니다.</p><p>이후 Cursair사의 ICUE 프로그램을 준비해주세요.</p>"
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/icue.png",
+        "caption": "이미지를 클릭하면 ICUE 설치 링크로 이동됩니다.",
+        "href": "https://www3.corsair.com/software/CUE_V5/public/modules/windows/installer/Install%20iCUE.exe",
+        "newTab": true
       },
       {
         "type": "text",
