@@ -25,7 +25,7 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/file.png",
+        "image": "/images/blog/mousedescs.png",
         "alt": "Corsair KATAR PRO (참조 사진)",
         "caption": "기본적으로 설정되어 있는 추천 설정"
       },
@@ -35,7 +35,7 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/file-1.png",
+        "image": "/images/blog/keysettings.png",
         "alt": "인 게임에서의 설정",
         "caption": "직접 커스터마이징을 할 것이 아니라면, 똑같이 따라해주세요."
       },
@@ -57,25 +57,14 @@
       },
       {
         "type": "text",
-        "content": "<p>설치 후엔, 압축 파일 내부에 스킬배치 폴더를 보면 기본적인 베이스 구성 샘플이 되어 있습니다.<br><br>예시로, 스킬배치 폴더 내부의 검성.png를 가져와보겠습니다.</p>"
+        "content": "<p>설치 후엔, 압축 파일 내부에 스킬배치 폴더를 보면 기본적인 베이스 구성 샘플이 되어 있습니다.<br><br>2026-05-27 빌드 이후론, 밑 게시글을 확인해주세요.</p>"
       },
       {
-        "type": "image",
-        "image": "/images/blog/file-2.png",
-        "caption": "검성의 스킬 배치 예시도"
-      },
-      {
-        "type": "text",
-        "content": "<p>좌꾹 3연타가 가장 합리적이고 쉬운 고점 수단이기에 이렇게 배치되어 있습니다.</p>"
-      },
-      {
-        "type": "image",
-        "image": "/images/blog/skill1-1.png",
-        "caption": "붉은 박스 내부의 스킬들을 연타"
-      },
-      {
-        "type": "text",
-        "content": "<p>예시의 검성은 주력기가 적어, 연타할 스킬이 부족하기 때문에 2연타로도 굴러가지만, 텅 빈 스킬창을 연타한다고 아무런 문제가 발생하지 않으니, 걱정하지 않으셔도 됩니다.</p><p>일반적인 다른 직업은 3연타가 베이스입니다.</p>"
+        "type": "powerlink",
+        "image": "/images/blog/cover/aion2-sample-cover.png",
+        "caption": "이미지 클릭 시, 직업 별 최신 셋팅 링크로 이동됩니다.",
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260524-7",
+        "newTab": true
       }
     ]
   },
