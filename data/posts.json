@@ -17,7 +17,7 @@
       },
       {
         "type": "text",
-        "content": "<p>가장 최근 빌드의 'Gaming.zip' 을 클릭하여 다운로드 해줍니다.</p><p></p>"
+        "content": "<p>가장 최근 빌드의 'Gaming.zip' 을 클릭하여 다운로드 해줍니다.</p><p>Cursair사의 ICUE 프로그램을 우선 설치해줍니다.</p>"
       },
       {
         "type": "text",
@@ -76,8 +76,8 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/file-14.png",
-        "caption": "궁성 기준의 세팅"
+        "image": "/images/blog/patched.png",
+        "caption": "마도성 기준 세팅"
       },
       {
         "type": "text",
@@ -85,12 +85,17 @@
       },
       {
         "type": "image",
+        "image": "/images/blog/2-10.png",
+        "caption": "마도성과 정령성은 에디셔널 슬롯이 있으니, 인게임 매크로에 등록해줍니다."
+      },
+      {
+        "type": "image",
         "image": "/images/blog/ct4.png",
-        "caption": "궁성 기준 스킬 매크로 세팅"
+        "caption": "마도성과는 달리, 매크로 세팅이 3개인 궁성"
       },
       {
         "type": "text",
-        "content": "<p>이후, 자신의 직업에 맞는 세팅이 되었다면, 좌꾹 + 마우스 옆 위 아래 버튼을 통해 사용하면 됩니다.</p><p></p><blockquote><p>2026-05-27 패치 이후로는 고점을 위해 2꾹을 베이스로 합니다. 확실한 딜 상승이 있기에, 편의성을 조금 버린 상태입니다.</p></blockquote><p></p>"
+        "content": "<p></p><blockquote><p>2026-05-27 2차 패치 이후로, 다시 1꾹으로 원복되었습니다. 매크로 키만 눌러주시면 정상작동합니다.</p></blockquote><p></p>"
       }
     ]
   },
