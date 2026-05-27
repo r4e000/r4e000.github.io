@@ -202,7 +202,7 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/260527-4.png"
+        "image": "/images/blog/260527-8.png"
       }
     ]
   },
@@ -320,6 +320,82 @@
       {
         "type": "image",
         "image": "/images/blog/260527.png"
+      }
+    ]
+  },
+  {
+    "title": "매크로 문제 생겼을 때 자가 A/S",
+    "category": "aion2",
+    "date": "2026-05-27",
+    "postNo": 2,
+    "cover": "/images/blog/mousedescs-1.png",
+    "sections": [
+      {
+        "type": "text",
+        "content": "<p>ICUE 세팅을 완전히 초기화부터 합시다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/1-1.png"
+      },
+      {
+        "type": "text",
+        "content": "<p>우측에 사용하지 않는 프로필이 또 있다면 아래 과정을 따라 제거해줍니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2-1.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/3-1.png"
+      },
+      {
+        "type": "text",
+        "content": "<p>이후, 단 하나의 프로필만 남았다면 아래 과정을 다시 따라해줍니다. 하단 이미지는 즉시 최신 링크로 연결됩니다.</p>"
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/a2icue-powerlink-1.png",
+        "caption": "가장 최신의 Gaming.zip 을 다운받으시면 됩니다.",
+        "href": "https://github.com/r4e000/A2ICUE/releases",
+        "newTab": true
+      },
+      {
+        "type": "text",
+        "content": "<p>이후 하단부 첨부 사진을 따라 마무리합니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/1-1.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/1.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2-1.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2.png"
+      },
+      {
+        "type": "text",
+        "content": "<p>ICUE 세팅이 다 됐다면, 환경 설정에서 키 세팅을 제대로 했는지 체크합니다.</p>"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/keysettings-2.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/4.png"
+      },
+      {
+        "type": "text",
+        "content": "<p></p>"
       }
     ]
   }
