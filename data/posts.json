@@ -35,13 +35,13 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/keysettings.png",
+        "image": "/images/blog/keysettings-2.png",
         "alt": "인 게임에서의 설정",
         "caption": "직접 커스터마이징을 할 것이 아니라면, 똑같이 따라해주세요."
       },
       {
         "type": "text",
-        "content": "<p>기본적인 설치 가이드라인입니다. 사진과 똑같이 따라해주세요.</p>"
+        "content": "<p>기본적인 설치 가이드라인입니다.</p>"
       },
       {
         "type": "image",
