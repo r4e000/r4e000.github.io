@@ -217,12 +217,17 @@
     "sections": [
       {
         "type": "text",
-        "content": "<blockquote><p>!주의: 차징이 없는 직업군입니다.</p></blockquote><p></p>"
+        "content": "<blockquote><p>!주의: 차징이 없는 직업군입니다. / 스킬 예약 ON 직업군입니다.</p></blockquote><p></p>"
       },
       {
         "type": "image",
         "image": "/images/blog/7off.png",
         "caption": "빠른 사용 7번 두 번째 칸을 비워주세요."
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/file-18.png",
+        "caption": "스킬 예약을 꼭 ON으로 해주세요. 1분 기준 타수 20회 정도씩 차이납니다."
       },
       {
         "type": "image",
