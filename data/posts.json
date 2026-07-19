@@ -482,5 +482,22 @@
         "content": "<p>붉은 색 영역이 모두 잘 되어 있는지 확인해줍니다.</p>"
       }
     ]
+  },
+  {
+    "title": "권성 스킬 세팅",
+    "category": "aion2",
+    "date": "2026-07-19",
+    "postNo": 1,
+    "cover": "/images/blog/file-19.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/260719.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/sm.png"
+      }
+    ]
   }
 ]
