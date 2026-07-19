@@ -366,6 +366,13 @@
         "caption": "정령성",
         "href": "https://r4e000.github.io/post.html?slug=aion2-260527-1",
         "newTab": false
+      },
+      {
+        "type": "powerlink",
+        "image": "/images/blog/file-19.png",
+        "caption": "권성 26-07-19 UPDATED",
+        "href": "https://r4e000.github.io/post.html?slug=aion2-260719-1",
+        "newTab": true
       }
     ]
   },
