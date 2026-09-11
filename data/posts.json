@@ -507,5 +507,27 @@
         "image": "/images/blog/sm.png"
       }
     ]
+  },
+  {
+    "title": " 파트너 고정 공대 델트라스 트라이 시각 자료",
+    "category": "aion2",
+    "date": "2026-09-11",
+    "postNo": 1,
+    "excerpt": "시각 자료입니다.",
+    "cover": "/images/blog/cover/aion2-sample-cover.png",
+    "sections": [
+      {
+        "type": "image",
+        "image": "/images/blog/1-0.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2-1-1.png"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2-2-1.png"
+      }
+    ]
   }
 ]
