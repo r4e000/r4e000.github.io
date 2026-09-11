@@ -526,7 +526,13 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/2-2-1.png"
+        "image": "/images/blog/95e7d220-eda4-41e5-9c1b-3d49bd1aa210.png",
+        "caption": "1414 빌드"
+      },
+      {
+        "type": "image",
+        "image": "/images/blog/2-2-1.png",
+        "caption": "3332 빌드"
       }
     ]
   }
