@@ -522,7 +522,11 @@
       },
       {
         "type": "image",
-        "image": "/images/blog/2-1-1.png"
+        "image": "/images/blog/2-1-1-1.png",
+        "caption": "2-2 쐐기 진행"
+      },
+      {
+        "type": "image"
       },
       {
         "type": "image",
