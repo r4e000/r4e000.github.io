@@ -518,25 +518,15 @@
     "sections": [
       {
         "type": "image",
-        "image": "/images/blog/1-0.png"
+        "image": "/images/blog/file-20.png"
       },
       {
         "type": "image",
-        "image": "/images/blog/2-1-1-1.png",
-        "caption": "2-2 쐐기 진행"
-      },
-      {
-        "type": "image"
+        "image": "/images/blog/wedgepattern.png"
       },
       {
         "type": "image",
-        "image": "/images/blog/95e7d220-eda4-41e5-9c1b-3d49bd1aa210.png",
-        "caption": "1414 빌드"
-      },
-      {
-        "type": "image",
-        "image": "/images/blog/2-2-1.png",
-        "caption": "3332 빌드"
+        "image": "/images/blog/file-21.png"
       }
     ]
   }
