@@ -1678,3 +1678,59 @@ body.is-raid-dark-page
   }
 
 }
+
+/* 오너 드롭다운 화살표 교체 */
+
+#raid-owner-select {
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(90, 98, 110, 0.45) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(90, 98, 110, 0.45) 50%,
+      transparent 50%
+    ) !important;
+
+  background-repeat:
+    no-repeat !important;
+
+  background-size:
+    0.3rem 0.3rem,
+    0.3rem 0.3rem !important;
+
+  background-position:
+    calc(100% - 0.95rem) 50%,
+    calc(100% - 0.68rem) 50% !important;
+}
+
+
+/* 다크모드 */
+
+body.is-raid-dark-page
+#raid-owner-select {
+  background-image:
+    linear-gradient(
+      45deg,
+      transparent 50%,
+      rgba(205, 212, 222, 0.32) 50%
+    ),
+    linear-gradient(
+      135deg,
+      rgba(205, 212, 222, 0.32) 50%,
+      transparent 50%
+    ) !important;
+
+  background-repeat:
+    no-repeat !important;
+
+  background-size:
+    0.3rem 0.3rem,
+    0.3rem 0.3rem !important;
+
+  background-position:
+    calc(100% - 0.95rem) 50%,
+    calc(100% - 0.68rem) 50% !important;
+}
