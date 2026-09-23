@@ -673,3 +673,11 @@
   padding-left: 0;
   padding-right: 0;
 }
+
+.raid-member-button {
+  letter-spacing: 0;
+}
+
+.raid-member-button.is-name-short {
+  letter-spacing: 0.12em;
+}
