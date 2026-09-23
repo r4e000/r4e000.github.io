@@ -1,4 +1,4 @@
-```javascript
+
 (() => {
 
   "use strict";
@@ -1505,4 +1505,3 @@
   loadSnapshot();
 
 })();
-```
