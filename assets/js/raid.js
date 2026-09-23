@@ -1,4 +1,3 @@
-
 (() => {
 
   "use strict";
@@ -10,6 +9,10 @@
 
   const OWNER_STORAGE_KEY =
     "raid-selected-owner";
+
+
+  const MAIN_CHARACTER_POWER =
+    900000;
 
 
   const JOB_ROLE = {
@@ -316,6 +319,35 @@
     member.classList.add(
       "raid-role-" + role
     );
+
+
+    /*
+     * 전투력 900K 이상:
+     * 본캐 라인으로 자동 분류
+     */
+    const combatPower =
+      Number(
+        character?.combatPower
+      );
+
+
+    if (
+      Number.isFinite(
+        combatPower
+      ) &&
+      combatPower >=
+        MAIN_CHARACTER_POWER
+    ) {
+
+      member.classList.add(
+        "is-main-character"
+      );
+
+
+      member.dataset.mainCharacter =
+        "true";
+
+    }
 
 
     if (slot.emphasis) {
@@ -1140,6 +1172,23 @@
           )
         )
       );
+
+
+      if (
+        Number(
+          character.combatPower
+        ) >=
+        MAIN_CHARACTER_POWER
+      ) {
+
+        tooltip.appendChild(
+          createTooltipRow(
+            "분류",
+            "본캐"
+          )
+        );
+
+      }
 
 
       tooltip.appendChild(
