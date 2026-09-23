@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-23T05:29:55.790Z",
+  "generatedAt": "2026-09-23T05:54:40.151Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -176,13 +176,6 @@
       "job": "궁성",
       "updatedAt": "2026-09-23T01:53:15.945Z",
       "owner": "쥬시쿨"
-    },
-    "햐기": {
-      "server": "지켈",
-      "combatPower": 967580,
-      "job": "호법성",
-      "updatedAt": "2026-09-23T01:53:16.805Z",
-      "owner": "햐기"
     },
     "설상": {
       "server": "지켈",
