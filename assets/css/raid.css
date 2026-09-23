@@ -626,3 +626,32 @@
   opacity: 0.75;
   filter: none;
 }
+
+.raid-member-button {
+  overflow: visible;
+  white-space: nowrap;
+}
+
+
+/* 5~7글자 */
+
+.raid-member-button.is-name-long {
+  font-size: 0.72rem;
+  letter-spacing: -0.04em;
+}
+
+
+/* 8~11글자 */
+
+.raid-member-button.is-name-very-long {
+  font-size: 0.62rem;
+  letter-spacing: -0.06em;
+}
+
+
+/* 12글자 이상 */
+
+.raid-member-button.is-name-xlong {
+  font-size: 0.52rem;
+  letter-spacing: -0.08em;
+}
