@@ -548,3 +548,7 @@
 .raid-tooltip[hidden] {
   display: none !important;
 }
+
+.raid-member[data-character] {
+  cursor: help;
+}
