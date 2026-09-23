@@ -1554,3 +1554,183 @@
   loadSnapshot();
 
 })();
+(() => {
+
+  "use strict";
+
+
+  const DARK_MODE_KEY =
+    "raid-dark-mode";
+
+
+  const raidShell =
+    document.querySelector(
+      ".raid-shell"
+    );
+
+
+  const raidHeader =
+    document.querySelector(
+      ".raid-page-header"
+    );
+
+
+  if (
+    !raidShell ||
+    !raidHeader
+  ) {
+
+    return;
+
+  }
+
+
+  const toggleWrap =
+    document.createElement(
+      "div"
+    );
+
+
+  toggleWrap.className =
+    "raid-dark-toggle";
+
+
+  const label =
+    document.createElement(
+      "span"
+    );
+
+
+  label.className =
+    "raid-dark-toggle-label";
+
+
+  label.textContent =
+    "다크 모드";
+
+
+  const button =
+    document.createElement(
+      "button"
+    );
+
+
+  button.type =
+    "button";
+
+
+  button.className =
+    "raid-dark-toggle-button";
+
+
+  button.setAttribute(
+    "aria-pressed",
+    "false"
+  );
+
+
+  function applyDarkMode(
+    enabled
+  ) {
+
+    raidShell.classList.toggle(
+      "is-raid-dark",
+      enabled
+    );
+
+
+    button.classList.toggle(
+      "is-active",
+      enabled
+    );
+
+
+    button.setAttribute(
+      "aria-pressed",
+      String(enabled)
+    );
+
+
+    button.textContent =
+      enabled
+        ? "ON"
+        : "OFF";
+
+
+    try {
+
+      localStorage.setItem(
+        DARK_MODE_KEY,
+        enabled
+          ? "1"
+          : "0"
+      );
+
+    } catch (error) {
+
+      // 저장 실패는 무시
+
+    }
+
+  }
+
+
+  let initialDarkMode =
+    false;
+
+
+  try {
+
+    initialDarkMode =
+      localStorage.getItem(
+        DARK_MODE_KEY
+      ) === "1";
+
+  } catch (error) {
+
+    initialDarkMode =
+      false;
+
+  }
+
+
+  button.addEventListener(
+    "click",
+    () => {
+
+      const enabled =
+        !raidShell
+          .classList
+          .contains(
+            "is-raid-dark"
+          );
+
+
+      applyDarkMode(
+        enabled
+      );
+
+    }
+  );
+
+
+  toggleWrap.appendChild(
+    label
+  );
+
+
+  toggleWrap.appendChild(
+    button
+  );
+
+
+  raidHeader.appendChild(
+    toggleWrap
+  );
+
+
+  applyDarkMode(
+    initialDarkMode
+  );
+
+})();
