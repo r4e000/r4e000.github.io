@@ -1563,22 +1563,13 @@
     "raid-dark-mode";
 
 
-  const raidShell =
-    document.querySelector(
-      ".raid-shell"
-    );
-
-
   const raidHeader =
     document.querySelector(
       ".raid-page-header"
     );
 
 
-  if (
-    !raidShell ||
-    !raidHeader
-  ) {
+  if (!raidHeader) {
 
     return;
 
@@ -1633,8 +1624,8 @@
     enabled
   ) {
 
-    raidShell.classList.toggle(
-      "is-raid-dark",
+    document.body.classList.toggle(
+      "is-raid-dark-page",
       enabled
     );
 
@@ -1668,7 +1659,7 @@
 
     } catch (error) {
 
-      // 저장 실패는 무시
+      // 저장 실패 무시
 
     }
 
@@ -1699,10 +1690,10 @@
     () => {
 
       const enabled =
-        !raidShell
+        !document.body
           .classList
           .contains(
-            "is-raid-dark"
+            "is-raid-dark-page"
           );
 
 
