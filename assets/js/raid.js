@@ -333,6 +333,30 @@
         slot.name
       );
 
+    const nameLength =
+      Array.from(slot.name).length;
+    
+    
+    if (nameLength >= 12) {
+    
+      button.classList.add(
+        "is-name-xlong"
+      );
+    
+    } else if (nameLength >= 8) {
+    
+      button.classList.add(
+        "is-name-very-long"
+      );
+    
+    } else if (nameLength >= 5) {
+    
+      button.classList.add(
+        "is-name-long"
+      );
+    
+    }
+
 
     button.type =
       "button";
