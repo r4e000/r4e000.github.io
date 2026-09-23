@@ -682,21 +682,25 @@
   letter-spacing: 0.12em;
 }
 
-/* 900K 이상 본캐 */
+/* ==================================================
+   900K 이상 본캐
+   ================================================== */
 
 .raid-member.is-main-character {
+  position: relative;
+
   border-color:
-    rgba(184, 146, 62, 0.78);
+    rgba(201, 157, 68, 0.96);
 
   box-shadow:
-    inset 0 -2px 0
-    rgba(184, 146, 62, 0.48),
+    0 0 0 2px
+    rgba(224, 184, 94, 0.72),
 
-    0 0 0 1px
-    rgba(214, 178, 91, 0.20),
+    0 0 0 4px
+    rgba(224, 184, 94, 0.16),
 
-    0 0 10px
-    rgba(184, 146, 62, 0.14);
+    0 0.35rem 0.8rem
+    rgba(115, 82, 22, 0.12);
 }
 
 
@@ -705,24 +709,48 @@
 
   position: absolute;
 
-  top: 2px;
-  right: 4px;
+  top: -0.42rem;
+  right: 0.15rem;
+
+  padding:
+    0.12rem
+    0.28rem;
+
+  border:
+    1px solid
+    rgba(235, 200, 120, 0.72);
+
+  border-radius:
+    999px;
+
+  background:
+    rgba(91, 68, 28, 0.94);
 
   color:
-    rgba(137, 101, 30, 0.88);
+    rgba(255, 228, 163, 1);
 
-  font-size: 0.48rem;
-  font-weight: 800;
+  font-size:
+    0.46rem;
 
-  line-height: 1;
+  font-weight:
+    900;
 
-  letter-spacing: -0.04em;
+  line-height:
+    1;
 
-  pointer-events: none;
+  letter-spacing:
+    -0.03em;
+
+  box-shadow:
+    0 2px 5px
+    rgba(0, 0, 0, 0.14);
+
+  pointer-events:
+    none;
 }
 
 /* ==================================================
-   공대표 전용 다크 모드 토글
+   페이지 전체 다크 모드 토글
    ================================================== */
 
 .raid-dark-toggle {
@@ -733,11 +761,14 @@
   margin-top: 0.8rem;
 }
 
+
 .raid-dark-toggle-label {
+  color: #777;
+
   font-size: 0.76rem;
   font-weight: 800;
-  color: #777;
 }
+
 
 .raid-dark-toggle-button {
   width: auto;
@@ -746,247 +777,597 @@
 
   padding: 0 0.7rem;
 
-  border: 1px solid #d5d5d5;
-  border-radius: 999px;
+  border:
+    1px solid #d5d5d5;
 
-  background: #f4f4f4;
+  border-radius:
+    999px;
 
-  color: #777;
+  background:
+    #f4f4f4;
 
-  font-size: 0.7rem;
-  font-weight: 800;
+  color:
+    #777;
 
-  line-height: 2rem;
+  font-size:
+    0.7rem;
 
-  box-shadow: none;
+  font-weight:
+    800;
+
+  line-height:
+    2rem;
+
+  box-shadow:
+    none;
 }
+
 
 .raid-dark-toggle-button:hover,
 .raid-dark-toggle-button:focus {
-  background: #eeeeee;
-  color: #444 !important;
+  background:
+    #eaeaea;
+
+  color:
+    #444 !important;
 }
+
 
 .raid-dark-toggle-button.is-active {
   border-color:
-    rgba(120, 135, 160, 0.75);
+    #626c7c;
 
   background:
-    rgba(55, 63, 76, 1);
+    #303640;
 
-  color: #fff;
+  color:
+    #ffffff;
 }
 
 
 /* ==================================================
-   공대표 영역 다크 모드
-   캐릭터 카드 자체의 역할별 색상은 변경하지 않음
+   페이지 전체 다크 모드
    ================================================== */
 
-.raid-shell.is-raid-dark {
-  color: #d9dce2;
+body.is-raid-dark-page {
+  background:
+    #12151a;
+
+  color:
+    #cfd4dc;
 }
 
 
-/* 상단 설명 */
+body.is-raid-dark-page
+#wrapper {
+  background:
+    #12151a;
+}
 
-.raid-shell.is-raid-dark
+
+body.is-raid-dark-page
+#main {
+  background:
+    #12151a;
+}
+
+
+/* 일반 텍스트 / 제목 */
+
+body.is-raid-dark-page
+h1,
+
+body.is-raid-dark-page
+h2,
+
+body.is-raid-dark-page
+h3,
+
+body.is-raid-dark-page
+h4,
+
+body.is-raid-dark-page
+strong {
+
+  color:
+    #edf0f4;
+}
+
+
+body.is-raid-dark-page
+a {
+
+  color:
+    #d7dce4;
+}
+
+
+/* ==================================================
+   헤더
+   ================================================== */
+
+body.is-raid-dark-page
+#header {
+
+  color:
+    #e9edf2;
+}
+
+
+body.is-raid-dark-page
+#header .logo {
+
+  color:
+    #f0f2f5;
+}
+
+
+body.is-raid-dark-page
+#header nav ul li a {
+
+  background-color:
+    rgba(
+      30,
+      35,
+      43,
+      0.92
+    );
+
+  color:
+    #dce1e8;
+}
+
+
+/* ==================================================
+   사이드 메뉴
+   ================================================== */
+
+body.is-raid-dark-page
+#menu {
+
+  background:
+    #181d24;
+
+  color:
+    #f0f2f5;
+}
+
+
+/* ==================================================
+   상단 설명
+   ================================================== */
+
+body.is-raid-dark-page
 .raid-description,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-status,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-dungeon-meta,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-group-count,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-party-count,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-meta-label,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 #raid-owner-summary {
 
-  color: #9298a3;
+  color:
+    #8f98a5;
 }
 
 
-/* 갱신 정보 */
+body.is-raid-dark-page
+.raid-kicker,
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
+.raid-dungeon-kicker {
+
+  color:
+    #707987;
+}
+
+
+/* ==================================================
+   갱신 정보
+   ================================================== */
+
+body.is-raid-dark-page
 .raid-meta {
 
-  border-color: #343943;
+  border-color:
+    #333a45;
 
-  background: #23272e;
+  background:
+    #1e232b;
 
-  color: #e0e3e8;
+  color:
+    #e2e6ec;
 }
 
 
-/* 오너 선택 영역 */
+/* ==================================================
+   오너 선택
+   ================================================== */
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-owner-picker {
 
-  border-color: #343943;
+  border-color:
+    #333a45;
 
-  background: #23272e;
+  background:
+    #1e232b;
 }
 
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-owner-picker label {
 
-  color: #d7dae0;
+  color:
+    #d9dee5;
 }
 
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 #raid-owner-select {
 
-  border-color: #454b56;
+  border-color:
+    #444d5a;
 
-  background: #2c313a;
+  background:
+    #282e37;
 
-  color: #e6e8ec;
+  color:
+    #e6e9ee;
 }
 
 
-/* 던전 전체 박스 */
+/* ==================================================
+   던전 박스
+   ================================================== */
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-dungeon {
 
-  border-color: #343943;
+  border-color:
+    #323944;
 
-  background: #1e2228;
+  background:
+    #191e25;
 
   box-shadow:
-    0 0.4rem 1.4rem
-    rgba(0, 0, 0, 0.20);
+    0 0.45rem 1.4rem
+    rgba(
+      0,
+      0,
+      0,
+      0.28
+    );
 }
 
 
-/* 던전 헤더 */
-
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-dungeon-header {
 
   border-bottom-color:
-    #343943;
+    #323944;
 }
 
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-dungeon-title {
 
-  color: #f0f1f3;
+  color:
+    #f0f2f5;
 }
 
 
-.raid-shell.is-raid-dark
-.raid-dungeon-kicker {
+/* ==================================================
+   공대
+   ================================================== */
 
-  color: #757c87;
-}
-
-
-/* 공대 구분 */
-
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-group {
 
   border-bottom-color:
-    #343943;
+    #303741;
 }
 
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-group-header {
 
   border-right-color:
-    #343943;
+    #303741;
 
   background:
-    #262a31;
+    #222831;
 }
 
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-group-title {
 
-  color: #e8eaed;
+  color:
+    #e9ecf1;
 }
 
 
-/* 파티 */
+/* ==================================================
+   파티
+   ================================================== */
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-party {
 
   border-right-color:
-    #343943;
+    #303741;
 }
 
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-party-title {
 
-  color: #cfd3da;
+  color:
+    #cfd5dd;
+}
+
+
+/* ==================================================
+   캐릭터 카드
+
+   역할별 색상은 의도적으로 변경하지 않음
+   ================================================== */
+
+body.is-raid-dark-page
+.raid-role-tank,
+
+body.is-raid-dark-page
+.raid-role-healer,
+
+body.is-raid-dark-page
+.raid-role-support,
+
+body.is-raid-dark-page
+.raid-role-dealer {
+
+  color:
+    #444;
+}
+
+
+/* 딜러도 기존 밝은 카드 유지 */
+
+body.is-raid-dark-page
+.raid-role-dealer {
+
+  border-color:
+    #d7dbe0;
+
+  background:
+    #f2f3f4;
+}
+
+
+/* 빈 슬롯만 다크 처리 */
+
+body.is-raid-dark-page
+.raid-member.is-empty {
+
+  border-color:
+    #353d48;
+
+  background:
+    #242a32;
+}
+
+
+body.is-raid-dark-page
+.raid-member-empty {
+
+  color:
+    #616b78;
+}
+
+
+/* ==================================================
+   본캐는 다크모드에서도 선명하게
+   ================================================== */
+
+body.is-raid-dark-page
+.raid-member.is-main-character {
+
+  border-color:
+    rgba(
+      232,
+      190,
+      101,
+      0.98
+    );
+
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      232,
+      190,
+      101,
+      0.82
+    ),
+
+    0 0 0 4px
+    rgba(
+      232,
+      190,
+      101,
+      0.18
+    ),
+
+    0 0 12px
+    rgba(
+      232,
+      190,
+      101,
+      0.24
+    );
+}
+
+
+/* ==================================================
+   오너 강조
+   ================================================== */
+
+body.is-raid-dark-page
+.raid-member.is-owner-match {
+
+  box-shadow:
+    0 0 0 3px
+    rgba(
+      242,
+      132,
+      158,
+      0.36
+    ),
+
+    0 0.5rem 1.15rem
+    rgba(
+      0,
+      0,
+      0,
+      0.30
+    );
 }
 
 
 /*
- * 중요:
- *
- * 아래 항목은 일부러 수정하지 않음.
- *
- * .raid-member
- * .raid-role-tank
- * .raid-role-healer
- * .raid-role-support
- * .raid-role-dealer
- *
- * 따라서 캐릭터 카드의 기존 역할별 색상은 그대로 유지됨.
+ * 본캐 + 선택 오너가 동시에 걸릴 경우
+ * 오너 강조가 본캐 링을 완전히 없애지 않게 함
  */
 
+body.is-raid-dark-page
+.raid-member.is-main-character.is-owner-match {
 
-/* 빈 카드만 다크 모드 대응 */
+  box-shadow:
+    0 0 0 2px
+    rgba(
+      232,
+      190,
+      101,
+      0.92
+    ),
 
-.raid-shell.is-raid-dark
-.raid-member.is-empty {
+    0 0 0 5px
+    rgba(
+      242,
+      132,
+      158,
+      0.32
+    ),
 
-  border-color: #3b4049;
-
-  background: #292d34;
+    0 0.55rem 1.2rem
+    rgba(
+      0,
+      0,
+      0,
+      0.32
+    );
 }
 
 
-.raid-shell.is-raid-dark
-.raid-member-empty {
+/* ==================================================
+   범례
+   ================================================== */
 
-  color: #666d78;
-}
-
-
-/* 범례는 카드 색상을 유지 */
-
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
 .raid-legend {
 
-  color: #333;
+  color:
+    #444;
 }
 
 
-/* 다크 모드 버튼 */
+/* ==================================================
+   툴팁
+   ================================================== */
 
-.raid-shell.is-raid-dark
+body.is-raid-dark-page
+.raid-tooltip {
+
+  border-color:
+    rgba(
+      255,
+      255,
+      255,
+      0.16
+    );
+
+  background:
+    rgba(
+      18,
+      21,
+      26,
+      0.98
+    );
+}
+
+
+/* ==================================================
+   푸터
+   ================================================== */
+
+body.is-raid-dark-page
+#footer {
+
+  background:
+    #171b21;
+
+  color:
+    #aeb5c0;
+}
+
+
+body.is-raid-dark-page
+#footer h2 {
+
+  color:
+    #e2e6eb;
+}
+
+
+body.is-raid-dark-page
+#footer > .inner .copyright {
+
+  color:
+    rgba(
+      190,
+      197,
+      207,
+      0.58
+    );
+}
+
+
+body.is-raid-dark-page
+#footer .icons a {
+
+  color:
+    #cbd1da;
+}
+
+
+/* ==================================================
+   토글 텍스트
+   ================================================== */
+
+body.is-raid-dark-page
 .raid-dark-toggle-label {
 
-  color: #aeb3bc;
+  color:
+    #aeb5bf;
 }
