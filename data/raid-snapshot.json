@@ -1,1 +1,734 @@
-
+{
+  "version": 1,
+  "generatedAt": "2026-09-23T03:54:52.663Z",
+  "characters": {
+    "차별": {
+      "server": "이스할겐",
+      "combatPower": 966943,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:52:55.129Z",
+      "owner": "한성"
+    },
+    "웨펀": {
+      "server": "이스할겐",
+      "combatPower": 611969,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:52:55.992Z",
+      "owner": "한성"
+    },
+    "파트너": {
+      "server": "이스할겐",
+      "combatPower": 570347,
+      "job": "마도성",
+      "updatedAt": "2026-09-23T01:52:56.846Z",
+      "owner": "한성"
+    },
+    "빈티지": {
+      "server": "이스할겐",
+      "combatPower": 565044,
+      "job": "살성",
+      "updatedAt": "2026-09-23T01:52:57.710Z",
+      "owner": "한성"
+    },
+    "리볼버": {
+      "server": "이스할겐",
+      "combatPower": 524570,
+      "job": "권성",
+      "updatedAt": "2026-09-23T01:52:58.593Z",
+      "owner": "한성"
+    },
+    "머핀": {
+      "server": "이스할겐",
+      "combatPower": 966599,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:52:59.435Z",
+      "owner": "머핀"
+    },
+    "머글": {
+      "server": "이스할겐",
+      "combatPower": 568851,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:00.296Z",
+      "owner": "머핀"
+    },
+    "특별": {
+      "server": "이스할겐",
+      "combatPower": 406872,
+      "job": "마도성",
+      "updatedAt": "2026-09-23T01:53:01.138Z",
+      "owner": "머핀"
+    },
+    "사랑니": {
+      "server": "이스할겐",
+      "combatPower": 431618,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:01.999Z",
+      "owner": "머핀"
+    },
+    "왓더버억": {
+      "server": "이스할겐",
+      "combatPower": 542432,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:02.865Z",
+      "owner": "머핀"
+    },
+    "시간이쥐깍쥐깍흐른다": {
+      "server": "이스할겐",
+      "combatPower": 451018,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:03.744Z",
+      "owner": "머핀"
+    },
+    "아니에스": {
+      "server": "지켈",
+      "combatPower": 1023272,
+      "job": "수호성",
+      "updatedAt": "2026-09-23T01:53:04.626Z",
+      "owner": "아니에스"
+    },
+    "클로델": {
+      "server": "지켈",
+      "combatPower": 503635,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:53:05.494Z",
+      "owner": "아니에스"
+    },
+    "라인폴트": {
+      "server": "지켈",
+      "combatPower": 601137,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:53:06.375Z",
+      "owner": "아니에스"
+    },
+    "알티나": {
+      "server": "지켈",
+      "combatPower": 564797,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:07.266Z",
+      "owner": "아니에스"
+    },
+    "미스틴": {
+      "server": "지켈",
+      "combatPower": 559605,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:08.167Z",
+      "owner": "아니에스"
+    },
+    "클로제": {
+      "server": "지켈",
+      "combatPower": 584006,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:09.026Z",
+      "owner": "아니에스"
+    },
+    "오클레르": {
+      "server": "지켈",
+      "combatPower": 584670,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:09.882Z",
+      "owner": "아니에스"
+    },
+    "리제트": {
+      "server": "지켈",
+      "combatPower": 573881,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:10.720Z",
+      "owner": "아니에스"
+    },
+    "백서연": {
+      "server": "지켈",
+      "combatPower": 530250,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:11.550Z",
+      "owner": "아니에스"
+    },
+    "백미래": {
+      "server": "지켈",
+      "combatPower": 780578,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:53:12.444Z",
+      "owner": "아니에스"
+    },
+    "쥬시쿨": {
+      "server": "지켈",
+      "combatPower": 965343,
+      "job": "마도성",
+      "updatedAt": "2026-09-23T01:53:13.323Z",
+      "owner": "쥬시쿨"
+    },
+    "아이스아메리카노": {
+      "server": "지켈",
+      "combatPower": 550293,
+      "job": "마도성",
+      "updatedAt": "2026-09-23T01:53:14.192Z",
+      "owner": "쥬시쿨"
+    },
+    "아이스모카": {
+      "server": "지켈",
+      "combatPower": 273404,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:15.061Z",
+      "owner": "쥬시쿨"
+    },
+    "아이스카푸치노": {
+      "server": "지켈",
+      "combatPower": 243188,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:53:15.945Z",
+      "owner": "쥬시쿨"
+    },
+    "햐기": {
+      "server": "지켈",
+      "combatPower": 967580,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:16.805Z",
+      "owner": "햐기"
+    },
+    "설상": {
+      "server": "지켈",
+      "combatPower": 817110,
+      "job": "살성",
+      "updatedAt": "2026-09-23T01:53:17.727Z",
+      "owner": "설상"
+    },
+    "트랙터": {
+      "server": "지켈",
+      "combatPower": 42168,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:18.613Z",
+      "owner": "설상"
+    },
+    "설부": {
+      "server": "지켈",
+      "combatPower": 504388,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:19.563Z",
+      "owner": "설상"
+    },
+    "상단": {
+      "server": "지켈",
+      "combatPower": 323475,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:53:20.472Z",
+      "owner": "설상"
+    },
+    "기로로": {
+      "server": "지켈",
+      "combatPower": 361543,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:21.341Z",
+      "owner": "설상"
+    },
+    "암산": {
+      "server": "지켈",
+      "combatPower": 293877,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:22.293Z",
+      "owner": "설상"
+    },
+    "샤": {
+      "server": "이스할겐",
+      "combatPower": 461180,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:23.170Z",
+      "owner": "샤"
+    },
+    "신": {
+      "server": "이스할겐",
+      "combatPower": 386565,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:53:24.191Z",
+      "owner": "샤"
+    },
+    "샤신": {
+      "server": "이스할겐",
+      "combatPower": 516555,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:53:25.044Z",
+      "owner": "샤"
+    },
+    "샤르": {
+      "server": "이스할겐",
+      "combatPower": 468067,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:25.905Z",
+      "owner": "샤"
+    },
+    "샤로": {
+      "server": "이스할겐",
+      "combatPower": 390558,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:26.775Z",
+      "owner": "샤"
+    },
+    "별빛": {
+      "server": "에레슈키갈",
+      "combatPower": 940357,
+      "job": "수호성",
+      "updatedAt": "2026-09-23T01:53:27.633Z",
+      "owner": "별빛"
+    },
+    "이서불주먹": {
+      "server": "에레슈키갈",
+      "combatPower": 506448,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:28.562Z",
+      "owner": "별빛"
+    },
+    "이서물주먹": {
+      "server": "에레슈키갈",
+      "combatPower": 552275,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:53:29.436Z",
+      "owner": "별빛"
+    },
+    "이서왕주먹": {
+      "server": "에레슈키갈",
+      "combatPower": 553275,
+      "job": "권성",
+      "updatedAt": "2026-09-23T01:53:30.349Z",
+      "owner": "별빛"
+    },
+    "심또깡": {
+      "server": "에레슈키갈",
+      "combatPower": 505764,
+      "job": "살성",
+      "updatedAt": "2026-09-23T01:53:31.212Z",
+      "owner": "별빛"
+    },
+    "유지별": {
+      "server": "에레슈키갈",
+      "combatPower": 420684,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:53:32.064Z",
+      "owner": "별빛"
+    },
+    "박하탄": {
+      "server": "에레슈키갈",
+      "combatPower": 405346,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:32.970Z",
+      "owner": "별빛"
+    },
+    "바린이": {
+      "server": "에레슈키갈",
+      "combatPower": 992713,
+      "job": "정령성",
+      "updatedAt": "2026-09-23T01:53:33.807Z",
+      "owner": "바린이"
+    },
+    "자몽후추": {
+      "server": "에레슈키갈",
+      "combatPower": 559468,
+      "job": "수호성",
+      "updatedAt": "2026-09-23T01:53:34.677Z",
+      "owner": "바린이"
+    },
+    "녹차소금": {
+      "server": "에레슈키갈",
+      "combatPower": 541921,
+      "job": "살성",
+      "updatedAt": "2026-09-23T01:53:35.508Z",
+      "owner": "바린이"
+    },
+    "민초맛녹차": {
+      "server": "에레슈키갈",
+      "combatPower": 554110,
+      "job": "치유성",
+      "updatedAt": "2026-09-23T01:53:36.390Z",
+      "owner": "바린이"
+    },
+    "감귤설탕": {
+      "server": "에레슈키갈",
+      "combatPower": 542407,
+      "job": "궁성",
+      "updatedAt": "2026-09-23T01:53:37.251Z",
+      "owner": "바린이"
+    },
+    "이웃": {
+      "server": "에레슈키갈",
+      "combatPower": 514280,
+      "job": "호법성",
+      "updatedAt": "2026-09-23T01:53:38.136Z",
+      "owner": "바린이"
+    },
+    "베이비걸": {
+      "server": "브리트라",
+      "combatPower": 763829,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:53:38.987Z",
+      "owner": "베이비걸"
+    },
+    "꿀도리": {
+      "server": "브리트라",
+      "combatPower": 595214,
+      "job": "살성",
+      "updatedAt": "2026-09-23T01:53:39.851Z",
+      "owner": "베이비걸"
+    },
+    "췩췩": {
+      "server": "브리트라",
+      "combatPower": 336289,
+      "job": "권성",
+      "updatedAt": "2026-09-23T01:53:40.797Z",
+      "owner": "베이비걸"
+    },
+    "여한": {
+      "server": "이스라펠",
+      "combatPower": 915795,
+      "job": "살성",
+      "updatedAt": "2026-09-23T01:53:41.783Z",
+      "owner": "여한"
+    },
+    "무인": {
+      "server": "이스라펠",
+      "combatPower": 181157,
+      "job": "검성",
+      "updatedAt": "2026-09-23T01:53:42.707Z",
+      "owner": "여한"
+    },
+    "오라이": {
+      "server": "이스라펠",
+      "combatPower": 345595,
+      "job": "권성",
+      "updatedAt": "2026-09-23T01:53:43.570Z",
+      "owner": "여한"
+    }
+  },
+  "dungeons": [
+    {
+      "id": "rudra-main1-sub4",
+      "title": "[루드라 본1부4]",
+      "partySize": 5,
+      "slotCount": 10,
+      "partyCount": 2,
+      "raids": [
+        {
+          "label": "[1공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "캐리어",
+                  "name": "별빛",
+                  "emphasis": false
+                },
+                {
+                  "slot": "페어",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "별빛",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "아니에스",
+                  "name": "라인폴트",
+                  "emphasis": false
+                },
+                {
+                  "slot": "머핀",
+                  "name": "왓더버억",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "쥬시쿨",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "차별",
+                  "name": "리볼버",
+                  "emphasis": false
+                },
+                {
+                  "slot": "여한",
+                  "name": "오라이",
+                  "emphasis": false
+                },
+                {
+                  "slot": "베이비걸",
+                  "name": "베이비걸",
+                  "emphasis": false
+                },
+                {
+                  "slot": "샤",
+                  "name": "샤르",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[2공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "캐리어",
+                  "name": "여한",
+                  "emphasis": false
+                },
+                {
+                  "slot": "페어",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "별빛",
+                  "name": "이서불주먹",
+                  "emphasis": false
+                },
+                {
+                  "slot": "아니에스",
+                  "name": "알티나",
+                  "emphasis": false
+                },
+                {
+                  "slot": "머핀",
+                  "name": "특별",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "쥬시쿨",
+                  "name": "아이스아메리카노",
+                  "emphasis": false
+                },
+                {
+                  "slot": "차별",
+                  "name": "웨펀",
+                  "emphasis": false
+                },
+                {
+                  "slot": "여한",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "베이비걸",
+                  "name": "꿀도리",
+                  "emphasis": false
+                },
+                {
+                  "slot": "샤",
+                  "name": "샤로",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[3공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "캐리어",
+                  "name": "아니에스",
+                  "emphasis": false
+                },
+                {
+                  "slot": "페어",
+                  "name": "머핀",
+                  "emphasis": false
+                },
+                {
+                  "slot": "별빛",
+                  "name": "유지별",
+                  "emphasis": false
+                },
+                {
+                  "slot": "아니에스",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "머핀",
+                  "name": null,
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "쥬시쿨",
+                  "name": "아이스모카",
+                  "emphasis": false
+                },
+                {
+                  "slot": "차별",
+                  "name": "빈티지",
+                  "emphasis": false
+                },
+                {
+                  "slot": "여한",
+                  "name": "무인",
+                  "emphasis": false
+                },
+                {
+                  "slot": "베이비걸",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "샤",
+                  "name": "샤신",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[4공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "캐리어",
+                  "name": "쥬시쿨",
+                  "emphasis": false
+                },
+                {
+                  "slot": "페어",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "별빛",
+                  "name": "심또깡",
+                  "emphasis": false
+                },
+                {
+                  "slot": "아니에스",
+                  "name": "미스틴",
+                  "emphasis": false
+                },
+                {
+                  "slot": "머핀",
+                  "name": "시간이쥐깍쥐깍흐른다",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "쥬시쿨",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "차별",
+                  "name": "파트너",
+                  "emphasis": false
+                },
+                {
+                  "slot": "여한",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "베이비걸",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "샤",
+                  "name": "신",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[5공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "캐리어",
+                  "name": "차별",
+                  "emphasis": false
+                },
+                {
+                  "slot": "페어",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "별빛",
+                  "name": "박하탄",
+                  "emphasis": false
+                },
+                {
+                  "slot": "아니에스",
+                  "name": "클로제",
+                  "emphasis": false
+                },
+                {
+                  "slot": "머핀",
+                  "name": "사랑니",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "쥬시쿨",
+                  "name": "아이스카푸치노",
+                  "emphasis": false
+                },
+                {
+                  "slot": "차별",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "여한",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "베이비걸",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "샤",
+                  "name": "샤",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
