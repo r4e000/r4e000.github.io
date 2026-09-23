@@ -343,16 +343,28 @@
         "is-name-xlong"
       );
     
+      member.classList.add(
+        "has-name-xlong"
+      );
+    
     } else if (nameLength >= 8) {
     
       button.classList.add(
         "is-name-very-long"
       );
     
+      member.classList.add(
+        "has-name-very-long"
+      );
+    
     } else if (nameLength >= 5) {
     
       button.classList.add(
         "is-name-long"
+      );
+    
+      member.classList.add(
+        "has-name-long"
       );
     
     }
