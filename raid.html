@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE HTML>
 <!--
 	Phantom by HTML5 UP
@@ -11,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<link rel="stylesheet" href="assets/css/raid.css?v=1" />
+		<link rel="stylesheet" href="assets/css/raid.css?v=2" />
 
 		<noscript>
 			<link rel="stylesheet" href="assets/css/noscript.css" />
@@ -58,6 +59,7 @@
 				</h2>
 
 				<ul>
+
 					<li>
 						<a href="index.html">
 							HOME
@@ -75,6 +77,7 @@
 							ARCHIVE
 						</a>
 					</li>
+
 				</ul>
 
 			</nav>
@@ -97,10 +100,11 @@
 
 						<p class="raid-description">
 							최신 스프레드시트 스냅샷을 기준으로 표시합니다.
-							캐릭터 이름에 마우스를 올리면 상세 정보를 확인할 수 있습니다.
+							캐릭터 카드에 마우스를 올리면 상세 정보를 확인할 수 있습니다.
 						</p>
 
 
+						<!-- 사이트 데이터 갱신 시각 -->
 						<div class="raid-meta">
 
 							<span class="raid-meta-label">
@@ -110,6 +114,29 @@
 							<strong id="raid-generated-at">
 								불러오는 중...
 							</strong>
+
+						</div>
+
+
+						<!-- 캐릭터 오너 선택 -->
+						<div class="raid-owner-picker">
+
+							<label for="raid-owner-select">
+								캐릭터 오너
+							</label>
+
+							<select
+								id="raid-owner-select"
+								disabled
+							>
+								<option value="">
+									전체 보기
+								</option>
+							</select>
+
+							<span id="raid-owner-summary">
+								오너를 선택하면 해당 캐릭터를 강조합니다.
+							</span>
 
 						</div>
 
@@ -265,8 +292,8 @@
 
 
 		<!--
-			캐릭터 이름에 마우스를 올렸을 때
-			raid.js가 이 요소에 정보를 채웁니다.
+			캐릭터 카드에 마우스를 올렸을 때
+			raid.js가 이 요소에 상세 정보를 채웁니다.
 		-->
 		<div
 			id="raid-tooltip"
@@ -284,7 +311,8 @@
 		<script src="assets/js/main.js"></script>
 
 		<!-- 공대표 전용 -->
-		<script src="assets/js/raid.js?v=1"></script>
+		<script src="assets/js/raid.js?v=2"></script>
 
 	</body>
 </html>
+```
