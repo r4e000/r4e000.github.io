@@ -249,7 +249,7 @@
 
 .raid-member-button {
   display: block;
-  text-align: center;
+
   width: 100%;
   height: auto;
 
@@ -272,7 +272,7 @@
 
   line-height: 1.3;
 
-  text-align: left;
+  text-align: center;
 
   text-transform: none;
 
