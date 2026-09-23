@@ -1,3 +1,4 @@
+```javascript
 (() => {
 
   "use strict";
@@ -333,40 +334,52 @@
         slot.name
       );
 
+
     const nameLength =
-      Array.from(slot.name).length;
-    
-    
-    if (nameLength >= 12) {
-    
+      Array.from(
+        slot.name
+      ).length;
+
+
+    if (nameLength <= 2) {
+
+      button.classList.add(
+        "is-name-short"
+      );
+
+    } else if (nameLength >= 12) {
+
       button.classList.add(
         "is-name-xlong"
       );
-    
+
+
       member.classList.add(
         "has-name-xlong"
       );
-    
+
     } else if (nameLength >= 8) {
-    
+
       button.classList.add(
         "is-name-very-long"
       );
-    
+
+
       member.classList.add(
         "has-name-very-long"
       );
-    
+
     } else if (nameLength >= 5) {
-    
+
       button.classList.add(
         "is-name-long"
       );
-    
+
+
       member.classList.add(
         "has-name-long"
       );
-    
+
     }
 
 
@@ -1492,3 +1505,4 @@
   loadSnapshot();
 
 })();
+```
