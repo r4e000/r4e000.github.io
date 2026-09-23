@@ -552,3 +552,77 @@
 .raid-member[data-character] {
   cursor: help;
 }
+
+/* 오너 선택 */
+
+.raid-owner-picker {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+
+  margin: 1rem 0 1.2rem;
+  padding: 0.8rem 1rem;
+
+  border: 1px solid #e5e5e5;
+  border-radius: 0.6rem;
+
+  background: #fafafa;
+}
+
+.raid-owner-picker label {
+  margin: 0;
+
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+#raid-owner-select {
+  width: auto;
+  min-width: 10rem;
+  margin: 0;
+}
+
+#raid-owner-summary {
+  color: #999;
+  font-size: 0.76rem;
+}
+
+
+/* 선택 오너 캐릭터 */
+
+.raid-member.is-owner-match {
+  position: relative;
+
+  z-index: 2;
+
+  transform: translateY(-2px);
+
+  border-width: 2px;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(242, 132, 158, 0.18),
+    0 0.45rem 1rem
+    rgba(0, 0, 0, 0.12);
+}
+
+
+/* 선택되지 않은 오너 */
+
+.raid-member.is-owner-dim {
+  opacity: 0.32;
+
+  filter:
+    saturate(0.4);
+
+  transition:
+    opacity 0.15s ease,
+    filter 0.15s ease;
+}
+
+.raid-member.is-owner-dim:hover,
+.raid-member.is-owner-dim:focus-within {
+  opacity: 0.75;
+  filter: none;
+}
