@@ -279,6 +279,10 @@
   white-space: nowrap;
 
   cursor: help;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .raid-member-button:hover,
