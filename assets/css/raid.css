@@ -659,3 +659,20 @@
   font-size: 0.52rem;
   letter-spacing: -0.08em;
 }
+
+/* 긴 닉네임일수록 카드 좌우 여백을 더 사용 */
+
+.raid-member.has-name-long {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.raid-member.has-name-very-long {
+  padding-left: 0.12rem;
+  padding-right: 0.12rem;
+}
+
+.raid-member.has-name-xlong {
+  padding-left: 0.03rem;
+  padding-right: 0.03rem;
+}
