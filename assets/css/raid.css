@@ -540,3 +540,11 @@
   }
 
 }
+
+/* hidden 속성이 기존 main.css에 의해 풀리는 문제 방지 */
+
+#raid-root[hidden],
+#raid-error[hidden],
+.raid-tooltip[hidden] {
+  display: none !important;
+}
