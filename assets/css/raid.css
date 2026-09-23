@@ -1,1 +1,539 @@
+.raid-page-header {
+  margin-bottom: 1.5rem;
+}
 
+.raid-kicker,
+.raid-dungeon-kicker {
+  margin-bottom: 0.4rem;
+  color: #999;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.raid-description {
+  margin-bottom: 1rem;
+}
+
+.raid-meta {
+  display: inline-flex;
+  gap: 0.6rem;
+  padding: 0.55rem 0.8rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  background: #f7f7f7;
+  font-size: 0.85rem;
+}
+
+.raid-meta-label {
+  color: #888;
+}
+
+
+/* 역할 범례 */
+
+.raid-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.raid-legend-item {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+
+/* 상태 */
+
+.raid-status {
+  margin-bottom: 1rem;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+
+/* 전체 던전 영역 */
+
+.raid-root {
+  display: grid;
+  gap: 2rem;
+}
+
+
+/* 던전 */
+
+.raid-dungeon {
+  overflow: hidden;
+  border: 1px solid #e3e3e3;
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow:
+    0 0.35rem 1.2rem
+    rgba(0, 0, 0, 0.04);
+}
+
+.raid-dungeon-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+
+  padding: 1rem 1.2rem;
+
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.raid-dungeon-title {
+  margin: 0;
+  font-size: 1.35rem;
+}
+
+.raid-dungeon-meta {
+  flex-shrink: 0;
+  color: #999;
+  font-size: 0.8rem;
+}
+
+
+/* 공대 */
+
+.raid-group {
+  display: grid;
+  grid-template-columns:
+    7rem minmax(0, 1fr);
+
+  border-bottom: 1px solid #ededed;
+}
+
+.raid-group:last-child {
+  border-bottom: 0;
+}
+
+.raid-group-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+
+  padding: 1rem;
+
+  border-right: 1px solid #ededed;
+
+  background: #f8f8f8;
+}
+
+.raid-group-title {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.raid-group-count {
+  color: #aaa;
+  font-size: 0.72rem;
+}
+
+
+/* 파티 */
+
+.raid-parties {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(20rem, 1fr)
+    );
+}
+
+.raid-party {
+  min-width: 0;
+  padding: 0.8rem;
+
+  border-right: 1px solid #ededed;
+}
+
+.raid-party:last-child {
+  border-right: 0;
+}
+
+.raid-party-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 0.5rem;
+}
+
+.raid-party-title {
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.raid-party-count {
+  color: #aaa;
+  font-size: 0.72rem;
+}
+
+
+/* 캐릭터 슬롯 */
+
+.raid-party-members {
+  display: grid;
+
+  grid-template-columns:
+    repeat(
+      auto-fit,
+      minmax(7rem, 1fr)
+    );
+
+  gap: 0.4rem;
+}
+
+.raid-member {
+  min-width: 0;
+
+  padding:
+    0.4rem
+    0.5rem
+    0.5rem;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 0.45rem;
+
+  background: #fafafa;
+
+  transition:
+    transform 0.12s ease,
+    box-shadow 0.12s ease,
+    border-color 0.12s ease;
+}
+
+.raid-member:not(.is-empty):hover,
+.raid-member:focus-within {
+  transform:
+    translateY(-1px);
+
+  box-shadow:
+    0 0.3rem 0.8rem
+    rgba(0, 0, 0, 0.08);
+}
+
+
+/* 슬롯 이름 */
+
+.raid-slot-label {
+  display: block;
+
+  overflow: hidden;
+
+  margin-bottom: 0.15rem;
+
+  color: #aaa;
+
+  font-size: 0.62rem;
+  font-weight: 700;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+
+/* 캐릭터 이름 버튼 */
+
+.raid-member-button {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  padding: 0;
+
+  overflow: hidden;
+
+  border: 0;
+
+  background: transparent;
+
+  box-shadow: none;
+
+  color: #444;
+
+  font: inherit;
+
+  font-size: 0.85rem;
+  font-weight: 800;
+
+  line-height: 1.3;
+
+  text-align: left;
+
+  text-overflow: ellipsis;
+  text-transform: none;
+
+  white-space: nowrap;
+
+  cursor: help;
+}
+
+.raid-member-button:hover,
+.raid-member-button:focus {
+  background: transparent;
+  color: inherit !important;
+  box-shadow: none;
+}
+
+.raid-member-button:focus-visible {
+  outline:
+    2px solid #999;
+
+  outline-offset:
+    2px;
+}
+
+
+/* 빈 슬롯 */
+
+.raid-member-empty {
+  display: block;
+
+  color: #ccc;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.raid-member.is-empty {
+  border-style: dashed;
+  background: #fbfbfb;
+}
+
+
+/* 강조 캐릭터 */
+
+.raid-member.is-emphasis
+.raid-member-button::after {
+  content: " *";
+}
+
+
+/* 캐릭터DB 미등록 */
+
+.raid-member-button.is-missing {
+  text-decoration:
+    underline dotted;
+}
+
+
+/* ==================================================
+   역할별 색상
+   ================================================== */
+
+
+/* 탱커
+   수호성 / 검성
+*/
+
+.raid-role-tank {
+  border-color: #9fd9f5;
+  background: #e2f4fd;
+}
+
+
+/* 힐러
+   치유성
+*/
+
+.raid-role-healer {
+  border-color: #9ad8ad;
+  background: #e4f7e9;
+}
+
+
+/* 버퍼
+   호법성
+*/
+
+.raid-role-support {
+  border-color: #efbd7b;
+  background: #ffedd6;
+}
+
+
+/* 딜러 */
+
+.raid-role-dealer {
+  border-color: #e4e4e4;
+  background: #fafafa;
+}
+
+
+/* ==================================================
+   마우스오버 툴팁
+   ================================================== */
+
+.raid-tooltip {
+  position: fixed;
+
+  z-index: 99999;
+
+  width: 230px;
+
+  padding: 0.8rem 0.9rem;
+
+  border:
+    1px solid
+    rgba(255, 255, 255, 0.14);
+
+  border-radius: 0.65rem;
+
+  background:
+    rgba(
+      28,
+      28,
+      32,
+      0.97
+    );
+
+  color: #fff;
+
+  box-shadow:
+    0 0.8rem 2rem
+    rgba(
+      0,
+      0,
+      0,
+      0.25
+    );
+
+  pointer-events: none;
+}
+
+.raid-tooltip[hidden] {
+  display: none;
+}
+
+.raid-tooltip-name {
+  display: block;
+
+  margin-bottom: 0.55rem;
+
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+.raid-tooltip-row {
+  display: flex;
+
+  align-items: flex-start;
+
+  justify-content:
+    space-between;
+
+  gap: 1rem;
+
+  margin-top: 0.28rem;
+
+  font-size: 0.75rem;
+}
+
+.raid-tooltip-label {
+  flex-shrink: 0;
+
+  color:
+    rgba(
+      255,
+      255,
+      255,
+      0.56
+    );
+}
+
+.raid-tooltip-value {
+  color: #fff;
+
+  font-weight: 700;
+
+  text-align: right;
+
+  overflow-wrap: anywhere;
+}
+
+
+/* ==================================================
+   모바일 / 좁은 화면
+   ================================================== */
+
+@media screen and (max-width: 980px) {
+
+  .raid-group {
+    grid-template-columns: 1fr;
+  }
+
+  .raid-group-header {
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content:
+      space-between;
+
+    border-right: 0;
+
+    border-bottom:
+      1px solid #ededed;
+  }
+
+  .raid-parties {
+    grid-template-columns: 1fr;
+  }
+
+  .raid-party {
+    border-right: 0;
+
+    border-bottom:
+      1px solid #ededed;
+  }
+
+  .raid-party:last-child {
+    border-bottom: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 640px) {
+
+  .raid-dungeon-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+  .raid-party-members {
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      );
+  }
+
+  .raid-member-button {
+    font-size: 0.8rem;
+  }
+
+  .raid-tooltip {
+    width:
+      min(
+        230px,
+        calc(
+          100vw - 24px
+        )
+      );
+  }
+
+}
