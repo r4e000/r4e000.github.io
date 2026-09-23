@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<!--
+	Phantom by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>HAX | AION2 Raid</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/raid.css" />
+
+		<noscript>
+			<link rel="stylesheet" href="assets/css/noscript.css" />
+		</noscript>
+	</head>
+
+	<body class="is-preload">
+
+		<div id="wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<div class="inner">
+
+					<a href="index.html" class="logo">
+						<span class="symbol">
+							<img src="images/logo.svg" alt="" />
+						</span>
+
+						<span class="title">
+							HAX
+						</span>
+					</a>
+
+					<nav>
+						<ul>
+							<li>
+								<a href="#menu">
+									MENU
+								</a>
+							</li>
+						</ul>
+					</nav>
+
+				</div>
+			</header>
+
+
+			<!-- Menu -->
+			<nav id="menu">
+
+				<h2>
+					MENU
+				</h2>
+
+				<ul>
+					<li>
+						<a href="index.html">
+							HOME
+						</a>
+					</li>
+
+					<li>
+						<a href="aion2.html">
+							AION2
+						</a>
+					</li>
+
+					<li>
+						<a href="archive.html">
+							ARCHIVE
+						</a>
+					</li>
+				</ul>
+
+			</nav>
+
+
+			<!-- Main -->
+			<div id="main">
+
+				<div class="inner raid-shell">
+
+					<header class="raid-page-header">
+
+						<p class="raid-kicker">
+							AION2 / FIXED RAID
+						</p>
+
+						<h1>
+							고정공대 진행표
+						</h1>
+
+						<p class="raid-description">
+							최신 스프레드시트 스냅샷을 기준으로 표시합니다.
+							캐릭터 이름에 마우스를 올리면 상세 정보를 확인할 수 있습니다.
+						</p>
+
+
+						<div class="raid-meta">
+
+							<span class="raid-meta-label">
+								사이트 데이터 갱신
+							</span>
+
+							<strong id="raid-generated-at">
+								불러오는 중...
+							</strong>
+
+						</div>
+
+					</header>
+
+
+					<!-- 직업 역할 색상 안내 -->
+					<section
+						class="raid-legend"
+						aria-label="직업군 색상 안내"
+					>
+
+						<span class="raid-legend-item raid-role-tank">
+							탱커 · 수호성 / 검성
+						</span>
+
+						<span class="raid-legend-item raid-role-healer">
+							필수 힐러 · 치유성
+						</span>
+
+						<span class="raid-legend-item raid-role-support">
+							버퍼 · 호법성
+						</span>
+
+						<span class="raid-legend-item raid-role-dealer">
+							딜러 · 기타 직업
+						</span>
+
+					</section>
+
+
+					<!-- 로딩 / 상태 -->
+					<section
+						id="raid-status"
+						class="raid-status"
+						aria-live="polite"
+					>
+						공대 데이터를 불러오고 있습니다.
+					</section>
+
+
+					<!--
+						실제 던전 / 공대 / 파티 표는
+						raid.js가 이 안에 자동 생성합니다.
+					-->
+					<main
+						id="raid-root"
+						class="raid-root"
+						hidden
+					>
+					</main>
+
+
+					<!-- 오류 표시 -->
+					<section
+						id="raid-error"
+						class="raid-error box"
+						hidden
+					>
+
+						<h2>
+							공대 데이터를 불러오지 못했습니다.
+						</h2>
+
+						<p id="raid-error-message">
+							잠시 후 새로고침하거나 관리자에게 알려주세요.
+						</p>
+
+					</section>
+
+
+					<noscript>
+
+						<section class="box raid-error">
+
+							<h2>
+								JavaScript가 필요합니다.
+							</h2>
+
+							<p>
+								공대표를 표시하려면 브라우저에서 JavaScript를 활성화해주세요.
+							</p>
+
+						</section>
+
+					</noscript>
+
+				</div>
+
+			</div>
+
+
+			<!-- Footer -->
+			<footer id="footer">
+
+				<div class="inner">
+
+					<section>
+
+						<h2>
+							FOLLOW
+						</h2>
+
+						<ul class="icons">
+
+							<li>
+								<a
+									href="https://github.com/r4e000"
+									class="icon brands style2 fa-github"
+								>
+									<span class="label">
+										GitHub
+									</span>
+								</a>
+							</li>
+
+							<li>
+								<a
+									href="mailto:hax@kakao.com"
+									class="icon solid style2 fa-envelope"
+								>
+									<span class="label">
+										이메일
+									</span>
+								</a>
+							</li>
+
+						</ul>
+
+					</section>
+
+
+					<ul class="copyright">
+
+						<li>
+							&copy; HAX. All rights reserved
+						</li>
+
+						<li>
+							Design Template Provided:
+							<a href="http://html5up.net">
+								HTML5 UP
+							</a>
+						</li>
+
+					</ul>
+
+				</div>
+
+			</footer>
+
+		</div>
+
+
+		<!--
+			캐릭터 이름에 마우스를 올렸을 때
+			raid.js가 이 요소에 정보를 채웁니다.
+		-->
+		<div
+			id="raid-tooltip"
+			class="raid-tooltip"
+			role="tooltip"
+			hidden
+		>
+		</div>
+
+
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+
+		<!-- 공대표 전용 -->
+		<script src="assets/js/raid.js"></script>
+
+	</body>
+</html>
