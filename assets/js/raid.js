@@ -31,6 +31,8 @@
 
   let snapshot = null;
 
+  let activeMember = null;
+
 
   const root =
     document.getElementById(
@@ -128,7 +130,9 @@
   function formatDate(value) {
 
     if (!value) {
+
       return "-";
+
     }
 
 
@@ -280,6 +284,14 @@
       );
 
 
+    /*
+     * 카드 전체에서
+     * 캐릭터 이름을 찾을 수 있도록 저장
+     */
+    member.dataset.character =
+      slot.name;
+
+
     member.classList.add(
       "raid-role-" + role
     );
@@ -306,6 +318,9 @@
       "button";
 
 
+    /*
+     * 키보드 접근용으로 버튼에도 유지
+     */
     button.dataset.character =
       slot.name;
 
@@ -614,6 +629,10 @@
     root.hidden =
       false;
 
+
+    errorBox.hidden =
+      true;
+
   }
 
 
@@ -652,14 +671,110 @@
   }
 
 
-  function showTooltip(button) {
+  function positionTooltip(member) {
+
+    if (
+      !member ||
+      tooltip.hidden
+    ) {
+
+      return;
+
+    }
+
+
+    const rect =
+      member.getBoundingClientRect();
+
+
+    const tooltipRect =
+      tooltip.getBoundingClientRect();
+
+
+    const margin = 12;
+
+
+    let left =
+      rect.left +
+      rect.width / 2 -
+      tooltipRect.width / 2;
+
+
+    let top =
+      rect.top -
+      tooltipRect.height -
+      margin;
+
+
+    if (left < margin) {
+
+      left =
+        margin;
+
+    }
+
+
+    if (
+      left +
+      tooltipRect.width >
+      window.innerWidth -
+      margin
+    ) {
+
+      left =
+        window.innerWidth -
+        tooltipRect.width -
+        margin;
+
+    }
+
+
+    /*
+     * 카드 위에 공간이 없으면
+     * 카드 아래에 표시
+     */
+    if (top < margin) {
+
+      top =
+        rect.bottom +
+        margin;
+
+    }
+
+
+    tooltip.style.left =
+      Math.round(left) +
+      "px";
+
+
+    tooltip.style.top =
+      Math.round(top) +
+      "px";
+
+  }
+
+
+  function showTooltip(member) {
 
     const name =
-      button.dataset.character;
+      member.dataset.character;
+
+
+    if (!name) {
+
+      return;
+
+    }
+
+
+    activeMember =
+      member;
 
 
     const character =
-      snapshot.characters[name];
+      snapshot.characters[
+        name
+      ];
 
 
     tooltip.replaceChildren();
@@ -749,67 +864,24 @@
       false;
 
 
-    const rect =
-      button.getBoundingClientRect();
+    requestAnimationFrame(
+      () => {
 
+        positionTooltip(
+          member
+        );
 
-    const tooltipRect =
-      tooltip.getBoundingClientRect();
-
-
-    let left =
-      rect.left +
-      rect.width / 2 -
-      tooltipRect.width / 2;
-
-
-    let top =
-      rect.top -
-      tooltipRect.height -
-      12;
-
-
-    if (left < 12) {
-
-      left = 12;
-
-    }
-
-
-    if (
-      left +
-      tooltipRect.width >
-      window.innerWidth - 12
-    ) {
-
-      left =
-        window.innerWidth -
-        tooltipRect.width -
-        12;
-
-    }
-
-
-    if (top < 12) {
-
-      top =
-        rect.bottom +
-        12;
-
-    }
-
-
-    tooltip.style.left =
-      left + "px";
-
-
-    tooltip.style.top =
-      top + "px";
+      }
+    );
 
   }
 
 
   function hideTooltip() {
+
+    activeMember =
+      null;
+
 
     tooltip.hidden =
       true;
@@ -817,21 +889,49 @@
   }
 
 
+  /*
+   * ==================================================
+   * 카드 전체 마우스오버
+   * ==================================================
+   */
+
+
   root.addEventListener(
     "mouseover",
     event => {
 
-      const button =
+      const member =
         event.target.closest(
-          ".raid-member-button"
+          ".raid-member[data-character]"
         );
 
 
-      if (button) {
+      if (!member) {
 
-        showTooltip(button);
+        return;
 
       }
+
+
+      /*
+       * 같은 카드 내부 요소끼리 이동할 때는
+       * 툴팁을 다시 띄우지 않음
+       */
+      if (
+        event.relatedTarget &&
+        member.contains(
+          event.relatedTarget
+        )
+      ) {
+
+        return;
+
+      }
+
+
+      showTooltip(
+        member
+      );
 
     }
   );
@@ -841,35 +941,61 @@
     "mouseout",
     event => {
 
-      const button =
+      const member =
         event.target.closest(
-          ".raid-member-button"
+          ".raid-member[data-character]"
         );
 
 
-      if (button) {
+      if (!member) {
 
-        hideTooltip();
+        return;
 
       }
+
+
+      /*
+       * 카드 내부에서
+       * 이름 → 빈 공간처럼 이동하는 건
+       * 실제 mouseleave가 아님
+       */
+      if (
+        event.relatedTarget &&
+        member.contains(
+          event.relatedTarget
+        )
+      ) {
+
+        return;
+
+      }
+
+
+      hideTooltip();
 
     }
   );
 
 
+  /*
+   * 키보드 접근
+   */
+
   root.addEventListener(
     "focusin",
     event => {
 
-      const button =
+      const member =
         event.target.closest(
-          ".raid-member-button"
+          ".raid-member[data-character]"
         );
 
 
-      if (button) {
+      if (member) {
 
-        showTooltip(button);
+        showTooltip(
+          member
+        );
 
       }
 
@@ -879,23 +1005,137 @@
 
   root.addEventListener(
     "focusout",
-    hideTooltip
+    event => {
+
+      const member =
+        event.target.closest(
+          ".raid-member[data-character]"
+        );
+
+
+      if (!member) {
+
+        return;
+
+      }
+
+
+      if (
+        event.relatedTarget &&
+        member.contains(
+          event.relatedTarget
+        )
+      ) {
+
+        return;
+
+      }
+
+
+      hideTooltip();
+
+    }
   );
 
+
+  /*
+   * 모바일 터치용
+   */
 
   root.addEventListener(
     "click",
     event => {
 
-      const button =
+      const member =
         event.target.closest(
-          ".raid-member-button"
+          ".raid-member[data-character]"
         );
 
 
-      if (button) {
+      if (!member) {
 
-        showTooltip(button);
+        return;
+
+      }
+
+
+      if (
+        activeMember === member &&
+        !tooltip.hidden
+      ) {
+
+        hideTooltip();
+
+        return;
+
+      }
+
+
+      showTooltip(
+        member
+      );
+
+    }
+  );
+
+
+  /*
+   * 화면 크기나 스크롤 위치가 변하면
+   * 툴팁 위치 재계산
+   */
+
+  window.addEventListener(
+    "resize",
+    () => {
+
+      if (
+        activeMember &&
+        !tooltip.hidden
+      ) {
+
+        positionTooltip(
+          activeMember
+        );
+
+      }
+
+    }
+  );
+
+
+  window.addEventListener(
+    "scroll",
+    () => {
+
+      if (
+        activeMember &&
+        !tooltip.hidden
+      ) {
+
+        positionTooltip(
+          activeMember
+        );
+
+      }
+
+    },
+    true
+  );
+
+
+  /*
+   * ESC로 툴팁 닫기
+   */
+
+  document.addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        event.key === "Escape"
+      ) {
+
+        hideTooltip();
 
       }
 
@@ -913,8 +1153,10 @@
           "?v=" +
           Date.now(),
           {
+
             cache:
               "no-store"
+
           }
         );
 
