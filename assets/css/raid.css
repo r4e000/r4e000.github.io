@@ -681,3 +681,38 @@
 .raid-member-button.is-name-short {
   letter-spacing: 0.12em;
 }
+
+/* 900K 이상 본캐 */
+
+.raid-member.is-main-character {
+  position: relative;
+
+  border-color:
+    rgba(185, 151, 76, 0.48);
+
+  box-shadow:
+    inset 0 -2px 0
+    rgba(185, 151, 76, 0.28);
+}
+
+
+.raid-member.is-main-character::after {
+  content: "본캐";
+
+  position: absolute;
+
+  top: 2px;
+  right: 4px;
+
+  color:
+    rgba(145, 112, 45, 0.72);
+
+  font-size: 0.48rem;
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: -0.04em;
+
+  pointer-events: none;
+}
