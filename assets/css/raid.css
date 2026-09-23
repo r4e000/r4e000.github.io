@@ -638,41 +638,38 @@
 
 
 /* 5~7글자 */
-
 .raid-member-button.is-name-long {
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   letter-spacing: -0.04em;
 }
 
 
 /* 8~11글자 */
-
 .raid-member-button.is-name-very-long {
-  font-size: 0.62rem;
-  letter-spacing: -0.06em;
+  font-size: 0.76rem;
+  letter-spacing: -0.07em;
 }
 
 
 /* 12글자 이상 */
-
 .raid-member-button.is-name-xlong {
-  font-size: 0.52rem;
-  letter-spacing: -0.08em;
+  font-size: 0.66rem;
+  letter-spacing: -0.09em;
 }
 
 /* 긴 닉네임일수록 카드 좌우 여백을 더 사용 */
 
 .raid-member.has-name-long {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
+  padding-left: 0.18rem;
+  padding-right: 0.18rem;
 }
 
 .raid-member.has-name-very-long {
-  padding-left: 0.12rem;
-  padding-right: 0.12rem;
+  padding-left: 0.04rem;
+  padding-right: 0.04rem;
 }
 
 .raid-member.has-name-xlong {
-  padding-left: 0.03rem;
-  padding-right: 0.03rem;
+  padding-left: 0;
+  padding-right: 0;
 }
