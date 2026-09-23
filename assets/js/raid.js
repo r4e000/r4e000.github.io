@@ -7,6 +7,10 @@
     "data/raid-snapshot.json";
 
 
+  const OWNER_STORAGE_KEY =
+    "raid-selected-owner";
+
+
   const JOB_ROLE = {
 
     "수호성": "tank",
@@ -67,6 +71,18 @@
   const tooltip =
     document.getElementById(
       "raid-tooltip"
+    );
+
+
+  const ownerSelect =
+    document.getElementById(
+      "raid-owner-select"
+    );
+
+
+  const ownerSummary =
+    document.getElementById(
+      "raid-owner-summary"
     );
 
 
@@ -284,12 +300,16 @@
       );
 
 
-    /*
-     * 카드 전체에서
-     * 캐릭터 이름을 찾을 수 있도록 저장
-     */
     member.dataset.character =
       slot.name;
+
+
+    if (character?.owner) {
+
+      member.dataset.owner =
+        character.owner;
+
+    }
 
 
     member.classList.add(
@@ -318,9 +338,6 @@
       "button";
 
 
-    /*
-     * 키보드 접근용으로 버튼에도 유지
-     */
     button.dataset.character =
       slot.name;
 
@@ -592,6 +609,239 @@
   }
 
 
+  function getOwners() {
+
+    return Array.from(
+      new Set(
+        Object.values(
+          snapshot.characters
+        )
+          .map(
+            character =>
+              String(
+                character.owner || ""
+              ).trim()
+          )
+          .filter(Boolean)
+      )
+    )
+      .sort(
+        (a, b) =>
+          a.localeCompare(
+            b,
+            "ko"
+          )
+      );
+
+  }
+
+
+  function populateOwnerSelect() {
+
+    if (!ownerSelect) {
+
+      return;
+
+    }
+
+
+    ownerSelect.replaceChildren();
+
+
+    const allOption =
+      document.createElement(
+        "option"
+      );
+
+
+    allOption.value =
+      "";
+
+
+    allOption.textContent =
+      "전체 보기";
+
+
+    ownerSelect.appendChild(
+      allOption
+    );
+
+
+    const owners =
+      getOwners();
+
+
+    owners.forEach(
+      owner => {
+
+        const option =
+          document.createElement(
+            "option"
+          );
+
+
+        option.value =
+          owner;
+
+
+        option.textContent =
+          owner;
+
+
+        ownerSelect.appendChild(
+          option
+        );
+
+      }
+    );
+
+
+    ownerSelect.disabled =
+      false;
+
+
+    let savedOwner =
+      "";
+
+
+    try {
+
+      savedOwner =
+        localStorage.getItem(
+          OWNER_STORAGE_KEY
+        ) || "";
+
+    } catch (error) {
+
+      savedOwner =
+        "";
+
+    }
+
+
+    if (
+      savedOwner &&
+      owners.includes(
+        savedOwner
+      )
+    ) {
+
+      ownerSelect.value =
+        savedOwner;
+
+    }
+
+  }
+
+
+  function applyOwnerHighlight() {
+
+    if (!ownerSelect) {
+
+      return;
+
+    }
+
+
+    const selectedOwner =
+      ownerSelect.value;
+
+
+    const members =
+      root.querySelectorAll(
+        ".raid-member[data-character]"
+      );
+
+
+    let matchCount = 0;
+
+
+    members.forEach(
+      member => {
+
+        member.classList.remove(
+          "is-owner-match",
+          "is-owner-dim"
+        );
+
+
+        if (!selectedOwner) {
+
+          return;
+
+        }
+
+
+        if (
+          member.dataset.owner ===
+          selectedOwner
+        ) {
+
+          member.classList.add(
+            "is-owner-match"
+          );
+
+
+          matchCount++;
+
+        } else {
+
+          member.classList.add(
+            "is-owner-dim"
+          );
+
+        }
+
+      }
+    );
+
+
+    if (ownerSummary) {
+
+      if (!selectedOwner) {
+
+        ownerSummary.textContent =
+          "오너를 선택하면 해당 캐릭터를 강조합니다.";
+
+      } else {
+
+        ownerSummary.textContent =
+          selectedOwner +
+          " · 현재 공대표에서 " +
+          matchCount +
+          "개 캐릭터 강조 중";
+
+      }
+
+    }
+
+
+    try {
+
+      if (selectedOwner) {
+
+        localStorage.setItem(
+          OWNER_STORAGE_KEY,
+          selectedOwner
+        );
+
+      } else {
+
+        localStorage.removeItem(
+          OWNER_STORAGE_KEY
+        );
+
+      }
+
+    } catch (error) {
+
+      // 저장 실패는 무시
+
+    }
+
+  }
+
+
   function renderSnapshot() {
 
     root.replaceChildren();
@@ -632,6 +882,12 @@
 
     errorBox.hidden =
       true;
+
+
+    populateOwnerSelect();
+
+
+    applyOwnerHighlight();
 
   }
 
@@ -691,7 +947,8 @@
       tooltip.getBoundingClientRect();
 
 
-    const margin = 12;
+    const margin =
+      12;
 
 
     let left =
@@ -729,10 +986,6 @@
     }
 
 
-    /*
-     * 카드 위에 공간이 없으면
-     * 카드 아래에 표시
-     */
     if (top < margin) {
 
       top =
@@ -889,13 +1142,6 @@
   }
 
 
-  /*
-   * ==================================================
-   * 카드 전체 마우스오버
-   * ==================================================
-   */
-
-
   root.addEventListener(
     "mouseover",
     event => {
@@ -913,10 +1159,6 @@
       }
 
 
-      /*
-       * 같은 카드 내부 요소끼리 이동할 때는
-       * 툴팁을 다시 띄우지 않음
-       */
       if (
         event.relatedTarget &&
         member.contains(
@@ -954,11 +1196,6 @@
       }
 
 
-      /*
-       * 카드 내부에서
-       * 이름 → 빈 공간처럼 이동하는 건
-       * 실제 mouseleave가 아님
-       */
       if (
         event.relatedTarget &&
         member.contains(
@@ -976,10 +1213,6 @@
     }
   );
 
-
-  /*
-   * 키보드 접근
-   */
 
   root.addEventListener(
     "focusin",
@@ -1038,10 +1271,6 @@
   );
 
 
-  /*
-   * 모바일 터치용
-   */
-
   root.addEventListener(
     "click",
     event => {
@@ -1079,10 +1308,22 @@
   );
 
 
-  /*
-   * 화면 크기나 스크롤 위치가 변하면
-   * 툴팁 위치 재계산
-   */
+  if (ownerSelect) {
+
+    ownerSelect.addEventListener(
+      "change",
+      () => {
+
+        hideTooltip();
+
+
+        applyOwnerHighlight();
+
+      }
+    );
+
+  }
+
 
   window.addEventListener(
     "resize",
@@ -1122,10 +1363,6 @@
     true
   );
 
-
-  /*
-   * ESC로 툴팁 닫기
-   */
 
   document.addEventListener(
     "keydown",
