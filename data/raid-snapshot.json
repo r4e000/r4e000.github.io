@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T05:51:50.710Z",
+  "generatedAt": "2026-09-24T06:34:14.776Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1079,27 +1079,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "베이비걸",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아이스아메리카노",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
                   "name": "아니에스",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "심또깡",
                   "emphasis": false
                 },
                 {
@@ -1109,7 +1089,27 @@
                 },
                 {
                   "slot": "",
+                  "name": null,
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
                   "name": "여한",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "심또깡",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "베이비걸",
                   "emphasis": false
                 },
                 {
@@ -1119,7 +1119,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "아이스아메리카노",
                   "emphasis": false
                 }
               ]
@@ -1154,7 +1154,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "쥬시쿨",
                   "emphasis": false
                 }
               ]
@@ -1174,7 +1174,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "쥬시쿨",
+                  "name": null,
                   "emphasis": false
                 },
                 {
