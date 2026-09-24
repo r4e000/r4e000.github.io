@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T06:34:30.649Z",
+  "generatedAt": "2026-09-24T09:56:59.876Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -179,9 +179,9 @@
     },
     "설상": {
       "server": "지켈",
-      "combatPower": 817110,
+      "combatPower": 975000,
       "job": "살성",
-      "updatedAt": "2026-09-23T07:53:18.797Z",
+      "updatedAt": "2026-09-24T09:56:07.059Z",
       "owner": "설상"
     },
     "트랙터": {
@@ -347,9 +347,9 @@
     },
     "베이비걸": {
       "server": "브리트라",
-      "combatPower": 806807,
+      "combatPower": 1005697,
       "job": "검성",
-      "updatedAt": "2026-09-23T07:53:00.260Z",
+      "updatedAt": "2026-09-24T09:56:07.956Z",
       "owner": "베이비걸"
     },
     "꿀도리": {
