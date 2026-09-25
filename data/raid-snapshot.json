@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-24T09:56:59.876Z",
+  "generatedAt": "2026-09-25T07:56:42.513Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -184,11 +184,11 @@
       "updatedAt": "2026-09-24T09:56:07.059Z",
       "owner": "설상"
     },
-    "트랙터": {
+    "트랙": {
       "server": "지켈",
-      "combatPower": 42168,
-      "job": "정령성",
-      "updatedAt": "2026-09-23T01:53:18.613Z",
+      "combatPower": 904418,
+      "job": "검성",
+      "updatedAt": "2026-09-24T09:57:54.728Z",
       "owner": "설상"
     },
     "설부": {
@@ -1114,7 +1114,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "설부",
+                  "name": "기로로",
                   "emphasis": false
                 },
                 {
@@ -1169,7 +1169,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "설상",
+                  "name": "트랙",
                   "emphasis": false
                 },
                 {
