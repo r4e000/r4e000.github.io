@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-26T03:13:58.254Z",
+  "generatedAt": "2026-09-26T03:15:10.143Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -412,7 +412,7 @@
   "dungeons": [
     {
       "id": "rudra-main1-sub4",
-      "title": "[루드라 본1부4]",
+      "title": "[루드라 본1부4: 침식 이후]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
@@ -745,7 +745,7 @@
     },
     {
       "id": "erosion-main1-sub4",
-      "title": "[침식 본1부4]",
+      "title": "[침식 본1부4: 무스펠 이후]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
@@ -1078,7 +1078,7 @@
     },
     {
       "id": "muspel-main1-sub1",
-      "title": "[무스펠 본1부1]",
+      "title": "[무스펠 본1부1: 9월27일 19시]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
@@ -1216,7 +1216,7 @@
     },
     {
       "id": "deltras-fixed",
-      "title": "[델트라스]",
+      "title": "[델트라스: 9월26일 19시]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
