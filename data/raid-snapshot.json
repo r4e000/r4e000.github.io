@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T09:27:16.816Z",
+  "generatedAt": "2026-09-27T09:47:14.249Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1242,12 +1242,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "이웃",
+                  "name": "베이비걸",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "아이스아메리카노",
+                  "name": "여한",
                   "emphasis": false
                 }
               ]
@@ -1257,17 +1257,17 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "여한",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
                   "name": "심또깡",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "베이비걸",
+                  "name": "아이스아메리카노",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "이웃",
                   "emphasis": false
                 },
                 {
