@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T09:55:14.034Z",
+  "generatedAt": "2026-09-27T12:09:37.787Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1215,77 +1215,12 @@
     },
     {
       "id": "muspel-main1-sub1",
-      "title": "[무스펠 본1부1: 9월27일 19시]",
+      "title": "[무스펠 본1부1: 10월4일 19시]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
         {
           "label": "[1공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "차별",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "머핀",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아니에스",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "심또깡",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아이스아메리카노",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "베이비걸",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "여한",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "이웃",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "기로로",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "투온치유",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[2공대]",
           "parties": [
             {
               "partyNumber": 1,
@@ -1348,12 +1283,77 @@
               ]
             }
           ]
+        },
+        {
+          "label": "[2공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "차별",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "머핀",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아니에스",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "심또깡",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아이스아메리카노",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "베이비걸",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "여한",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "이웃",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "기로로",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "투온치유",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
         }
       ]
     },
     {
       "id": "deltras-fixed",
-      "title": "[델트라스: 9월26일 19시]",
+      "title": "[델트라스: 10월3일 19시]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
