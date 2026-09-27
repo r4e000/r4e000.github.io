@@ -29,6 +29,21 @@ test('keeps empty raids and sheet order without manufacturing missing numbers', 
   assert.ok(result.dungeons[0].raids[0].parties.every(p => p.slots.every(s => s.name === null)));
 });
 
+test('preserves legacy emphasis, configured dungeon IDs and missing dates', () => {
+  const row = raid(1);
+  row[2] = '*테스트*';
+  const characterRows = [header, ['테스트', '서버', 950000, '수호성', '', '오너']];
+  const result = buildRaidSnapshot([title('루드라'), row], characterRows, {
+    dungeonIds: {'루드라': 'rudra-main1-sub4'}
+  });
+  assert.equal(result.dungeons[0].id, 'rudra-main1-sub4');
+  assert.deepEqual(result.dungeons[0].raids[0].parties[0].slots[0], {
+    slot: '', name: '테스트', emphasis: true
+  });
+  assert.equal(result.characters['테스트'].updatedAt, null);
+  assert.equal(result.characters['테스트'].owner, '오너');
+});
+
 test('supports reordered DB headers, explicit extra parties and stable IDs', () => {
   const reordered = db.map(row => row.slice().reverse());
   const result = buildRaidSnapshot([title('루드라'), raid(1)], reordered, {

@@ -10,6 +10,48 @@ function raidDungeonName(title) {
     .split(/\s+본\d+|[:：]/)[0].trim();
 }
 
+function parseRaidCharacterCell_(value) {
+  const raw = raidText(value);
+  const emphasis = /^\*.*\*$/.test(raw);
+  return {
+    name: emphasis ? raw.replace(/^\*+|\*+$/g, "").trim() : raw,
+    emphasis
+  };
+}
+
+function buildRaidCharacters(characterRows) {
+  if (!Array.isArray(characterRows)) throw new Error("캐릭터DB의 행 배열이 필요합니다.");
+  const header = (characterRows[0] || []).map(raidText);
+  const index = {};
+  ["닉네임", "서버", "전투력", "직업", "갱신시각", "캐릭터 오너"].forEach(name => {
+    index[name] = header.indexOf(name);
+    if (index[name] < 0) throw new Error("캐릭터DB 헤더 누락: " + name);
+  });
+  const characters = Object.create(null);
+  characterRows.slice(1).forEach(row => {
+    const name = raidText(row[index["닉네임"]]);
+    if (!name) return;
+    if (Object.prototype.hasOwnProperty.call(characters, name)) {
+      throw new Error("캐릭터DB 닉네임 중복: " + name);
+    }
+    const combatPower = Number(raidText(row[index["전투력"]]).replace(/,/g, ""));
+    if (!Number.isFinite(combatPower) || combatPower < 0) {
+      throw new Error("전투력은 원본 숫자 값이어야 합니다: " + name);
+    }
+    const updated = row[index["갱신시각"]];
+    const date = updated instanceof Date ? updated : (updated ? new Date(updated) : null);
+    characters[name] = {
+      server: raidText(row[index["서버"]]),
+      combatPower,
+      job: raidText(row[index["직업"]]),
+      updatedAt: date && Number.isFinite(date.getTime()) ? date.toISOString() : null,
+      owner: raidText(row[index["캐릭터 오너"]])
+    };
+  });
+  if (!Object.keys(characters).length) throw new Error("캐릭터DB가 비어 있습니다.");
+  return characters;
+}
+
 /** Read labelled rows, never fixed row offsets or a maximum raid count.
  * Column indexes are zero-based; H is a separator, not a player slot.
  */
@@ -29,34 +71,7 @@ function buildRaidSnapshot(raidRows, characterRows, options) {
     throw new Error("슬롯 열은 중복되지 않는 열 번호여야 합니다.");
   }
 
-  const header = (characterRows[0] || []).map(raidText);
-  const index = {};
-  ["닉네임", "서버", "전투력", "직업", "갱신시각", "캐릭터 오너"].forEach(name => {
-    index[name] = header.indexOf(name);
-    if (index[name] < 0) throw new Error("캐릭터DB 헤더 누락: " + name);
-  });
-  const characters = Object.create(null);
-  characterRows.slice(1).forEach(row => {
-    const name = raidText(row[index["닉네임"]]);
-    if (!name) return;
-    if (Object.prototype.hasOwnProperty.call(characters, name)) {
-      throw new Error("캐릭터DB 닉네임 중복: " + name);
-    }
-    const rawPower = row[index["전투력"]];
-    const combatPower = Number(raidText(rawPower).replace(/,/g, ""));
-    if (!Number.isFinite(combatPower) || combatPower < 0) {
-      throw new Error("전투력은 원본 숫자 값이어야 합니다: " + name);
-    }
-    const updated = row[index["갱신시각"]];
-    characters[name] = {
-      server: raidText(row[index["서버"]]),
-      combatPower,
-      job: raidText(row[index["직업"]]),
-      updatedAt: updated instanceof Date ? updated.toISOString() : raidText(updated),
-      owner: raidText(row[index["캐릭터 오너"]])
-    };
-  });
-  if (!Object.keys(characters).length) throw new Error("캐릭터DB가 비어 있습니다.");
+  const characters = buildRaidCharacters(characterRows);
 
   const previous = options.previousSnapshot || {};
   const dungeons = [];
@@ -77,11 +92,10 @@ function buildRaidSnapshot(raidRows, characterRows, options) {
         label,
         parties: partyColumns.map((columns, partyIndex) => ({
           partyNumber: partyIndex + 1,
-          slots: columns.map(column => ({
-            slot: "",
-            name: raidText(row[column]) || null,
-            emphasis: false
-          }))
+          slots: columns.map(column => {
+            const parsed = parseRaidCharacterCell_(row[column]);
+            return { slot: "", name: parsed.name || null, emphasis: parsed.emphasis };
+          })
         }))
       });
     } else if (/^\[.+\]$/.test(label)) {
@@ -91,7 +105,7 @@ function buildRaidSnapshot(raidRows, characterRows, options) {
       dungeonNames.add(name);
       const old = (previous.dungeons || []).find(item => raidDungeonName(item.title) === name);
       dungeon = {
-        id: old ? old.id : "dungeon-" + encodeURIComponent(name),
+        id: (options.dungeonIds && options.dungeonIds[name]) || (old ? old.id : "dungeon-" + encodeURIComponent(name)),
         title: label,
         partySize: Math.max.apply(null, partyColumns.map(columns => columns.length)),
         partyCount: partyColumns.length,
@@ -114,5 +128,5 @@ function buildRaidSnapshot(raidRows, characterRows, options) {
 }
 
 if (typeof module !== "undefined" && module.exports) {
-  module.exports = { buildRaidSnapshot };
+  module.exports = { buildRaidSnapshot, buildRaidCharacters, parseRaidCharacterCell_ };
 }
