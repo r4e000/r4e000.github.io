@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T09:48:37.771Z",
+  "generatedAt": "2026-09-27T09:55:14.034Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1242,7 +1242,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "베이비걸",
+                  "name": "심또깡",
                   "emphasis": false
                 },
                 {
@@ -1257,7 +1257,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "심또깡",
+                  "name": "베이비걸",
                   "emphasis": false
                 },
                 {
@@ -1327,7 +1327,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "트랙",
+                  "name": "신",
                   "emphasis": false
                 },
                 {
@@ -1337,7 +1337,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "신",
+                  "name": "트랙",
                   "emphasis": false
                 },
                 {
