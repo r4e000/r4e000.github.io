@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:21:31.095Z",
+  "generatedAt": "2026-10-03T01:31:26.898Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -895,7 +895,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "아이스모카",
                   "emphasis": false
                 },
                 {
@@ -930,7 +930,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "반하얀",
                   "emphasis": false
                 },
                 {
@@ -1025,7 +1025,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "아이스모카",
+                  "name": "류아린",
                   "emphasis": false
                 },
                 {
@@ -1060,7 +1060,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "루아린",
                   "emphasis": false
                 },
                 {
@@ -1125,7 +1125,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "루아린",
                   "emphasis": false
                 },
                 {
@@ -1248,7 +1248,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "웨펀",
+                  "name": "파트너",
                   "emphasis": false
                 },
                 {
@@ -1263,7 +1263,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "바린이",
+                  "name": "반하얀",
                   "emphasis": false
                 },
                 {
@@ -1283,7 +1283,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "신",
+                  "name": "자몽후추",
                   "emphasis": false
                 },
                 {
@@ -1358,12 +1358,77 @@
                 },
                 {
                   "slot": "",
-                  "name": "기로로",
+                  "name": "설상부캐",
                   "emphasis": false
                 },
                 {
                   "slot": "",
                   "name": "투온치유",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[3공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "웨펀",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "바린이",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "클로델",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "이서불주먹",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "루아린",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "췩췩",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "신",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "투온부캐",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "기로로",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "시간이쥐깍쥐깍흐른다",
                   "emphasis": false
                 }
               ]
@@ -1436,7 +1501,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "루아린",
                   "emphasis": false
                 }
               ]
