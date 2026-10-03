@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-27T12:09:37.787Z",
+  "generatedAt": "2026-10-03T01:21:31.095Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
-      "combatPower": 966943,
+      "combatPower": 993201,
       "job": "궁성",
-      "updatedAt": "2026-09-23T01:52:55.129Z",
+      "updatedAt": "2026-10-03T01:21:08.446Z",
       "owner": "한성"
     },
     "웨펀": {
@@ -39,9 +39,9 @@
     },
     "머핀": {
       "server": "이스할겐",
-      "combatPower": 966599,
+      "combatPower": 1039238,
       "job": "치유성",
-      "updatedAt": "2026-09-23T01:52:59.435Z",
+      "updatedAt": "2026-10-03T01:21:09.125Z",
       "owner": "머핀"
     },
     "머글": {
@@ -305,9 +305,9 @@
     },
     "바린이": {
       "server": "에레슈키갈",
-      "combatPower": 992713,
+      "combatPower": 1017587,
       "job": "정령성",
-      "updatedAt": "2026-09-23T01:53:33.807Z",
+      "updatedAt": "2026-10-03T01:21:09.334Z",
       "owner": "바린이"
     },
     "자몽후추": {
@@ -368,9 +368,9 @@
     },
     "여한": {
       "server": "이스라펠",
-      "combatPower": 915795,
+      "combatPower": 920190,
       "job": "살성",
-      "updatedAt": "2026-09-23T01:53:41.783Z",
+      "updatedAt": "2026-10-03T01:21:10.150Z",
       "owner": "여한"
     },
     "무인": {
@@ -414,6 +414,27 @@
       "job": "치유성",
       "updatedAt": "2026-09-26T09:27:43.029Z",
       "owner": ""
+    },
+    "루아린": {
+      "server": "지켈",
+      "combatPower": 969953,
+      "job": "치유성",
+      "updatedAt": "2026-10-03T01:21:10.350Z",
+      "owner": "루아린"
+    },
+    "류아린": {
+      "server": "지켈",
+      "combatPower": 507052,
+      "job": "호법성",
+      "updatedAt": "2026-10-03T01:21:10.548Z",
+      "owner": "루아린"
+    },
+    "반하얀": {
+      "server": "지켈",
+      "combatPower": 734888,
+      "job": "정령성",
+      "updatedAt": "2026-10-03T01:21:10.754Z",
+      "owner": "루아린"
     }
   },
   "dungeons": [
