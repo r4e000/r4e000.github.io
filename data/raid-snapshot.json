@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:32:21.933Z",
+  "generatedAt": "2026-10-03T01:33:15.631Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1313,7 +1313,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "차별",
+                  "name": "웨펀",
                   "emphasis": false
                 },
                 {
@@ -1378,7 +1378,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "웨펀",
+                  "name": "차별",
                   "emphasis": false
                 },
                 {
