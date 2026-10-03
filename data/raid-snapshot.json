@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:40:43.088Z",
+  "generatedAt": "2026-10-03T01:41:21.752Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1263,7 +1263,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "반하얀",
+                  "name": "신",
                   "emphasis": false
                 },
                 {
@@ -1278,17 +1278,17 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "꿀도리",
+                  "name": "췩췩",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "자몽후추",
+                  "name": "바린이",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "투온힐러",
+                  "name": "루아린",
                   "emphasis": false
                 },
                 {
@@ -1358,77 +1358,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "설상부캐",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "투온치유",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[3공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "차별",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "바린이",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아니부캐",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "이서불주먹",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "루아린",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "췩췩",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "신",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "투온부캐",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
                   "name": "기로로",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "시간이쥐깍쥐깍흐른다",
+                  "name": "반하얀",
                   "emphasis": false
                 }
               ]
