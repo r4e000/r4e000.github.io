@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:33:15.631Z",
+  "generatedAt": "2026-10-03T01:34:37.880Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1236,7 +1236,7 @@
     },
     {
       "id": "muspel-main1-sub1",
-      "title": "[무스펠 본1부1: 10월4일 19시]",
+      "title": "[무스펠 본1부1: 델트라스 이후]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
@@ -1388,7 +1388,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "클로델",
+                  "name": "아니부캐",
                   "emphasis": false
                 },
                 {
@@ -1439,7 +1439,7 @@
     },
     {
       "id": "deltras-fixed",
-      "title": "[델트라스: 10월3일 19시]",
+      "title": "[델트라스: 10월5일(미정 변동 가능)]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
