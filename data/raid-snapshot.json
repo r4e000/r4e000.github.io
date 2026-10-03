@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:36:52.208Z",
+  "generatedAt": "2026-10-03T01:40:43.088Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1248,7 +1248,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "파트너",
+                  "name": "차별",
                   "emphasis": false
                 },
                 {
