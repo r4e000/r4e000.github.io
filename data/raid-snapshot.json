@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-03T01:41:21.752Z",
+  "generatedAt": "2026-10-04T09:10:08.200Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -435,6 +435,13 @@
       "job": "정령성",
       "updatedAt": "2026-10-03T01:21:10.754Z",
       "owner": "루아린"
+    },
+    "트부": {
+      "server": "지켈",
+      "combatPower": 413245,
+      "job": "검성",
+      "updatedAt": "2026-10-04T09:09:11.000Z",
+      "owner": "설상"
     }
   },
   "dungeons": [
@@ -990,7 +997,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "설부",
+                  "name": "트부",
                   "emphasis": false
                 },
                 {
