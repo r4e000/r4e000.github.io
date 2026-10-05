@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-04T09:10:08.200Z",
+  "generatedAt": "2026-10-05T09:51:54.946Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1243,7 +1243,7 @@
     },
     {
       "id": "muspel-main1-sub1",
-      "title": "[무스펠 본1부2: 델트라스 이후]",
+      "title": "[무스펠 본1부1: 델트라스 이후]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
