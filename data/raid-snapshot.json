@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T10:05:28.800Z",
+  "generatedAt": "2026-10-06T23:56:20.240Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -447,7 +447,7 @@
   "dungeons": [
     {
       "id": "rudra-main1-sub4",
-      "title": "[루드라 본2부4: 침식 이후]",
+      "title": "[루드라 본1부4: 침식 이후]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
@@ -459,12 +459,17 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "별빛",
+                  "name": "리볼버",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "쥬시쿨",
+                  "name": "오라이",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": null,
                   "emphasis": false
                 },
                 {
@@ -476,10 +481,265 @@
                   "slot": "",
                   "name": "루아린",
                   "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "라인폴트",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "별빛",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "베이비걸",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "샤르",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "왓더버억",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[2공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "웨펀",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "특별",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아이스아메리카노",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "류아린",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "이서불주먹",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "알티나",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "여한",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "꿀도리",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "샤로",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[3공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "빈티지",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "무인",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "샤신",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "반하얀",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "머핀",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아니에스",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아이스모카",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "유지별",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": null,
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[4공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "파트너",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "신",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "비류아린",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": null,
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "심또깡",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "쥬시쿨",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "미스틴",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "시간이쥐깍쥐깍흐른다",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[5공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "박하탄",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아이스카푸치노",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "사랑니",
+                  "emphasis": false
                 },
                 {
                   "slot": "",
                   "name": "클로제",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "샤",
                   "emphasis": false
                 }
               ]
@@ -494,12 +754,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "샤",
+                  "name": null,
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "특별",
+                  "name": null,
                   "emphasis": false
                 },
                 {
@@ -515,13 +775,26 @@
               ]
             }
           ]
-        },
+        }
+      ]
+    },
+    {
+      "id": "erosion-main1-sub4",
+      "title": "[침식 본1부4: 무스펠 이후]",
+      "partySize": 5,
+      "partyCount": 2,
+      "raids": [
         {
-          "label": "[2공대]",
+          "label": "[1공대]",
           "parties": [
             {
               "partyNumber": 1,
               "slots": [
+                {
+                  "slot": "",
+                  "name": "빈티지",
+                  "emphasis": false
+                },
                 {
                   "slot": "",
                   "name": "아니에스",
@@ -529,17 +802,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "파트너",
+                  "name": "바린이",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "아이스카푸치노",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "루아린",
+                  "name": "반하얀",
                   "emphasis": false
                 },
                 {
@@ -554,22 +822,87 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "여한",
+                  "name": "아이스모카",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "꿀도리",
+                  "name": "반하얀",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "심또깡",
+                  "name": "상단",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "신",
+                  "name": "샤르",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "유지별",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[2공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "리볼버",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "설상",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "별빛",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "류아린",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "클로제",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
+                {
+                  "slot": "",
+                  "name": "민초맛녹차",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "아이스아메리카노",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "왓더버억",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "샤",
                   "emphasis": false
                 },
                 {
@@ -589,7 +922,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "별빛",
+                  "name": "웨펀",
                   "emphasis": false
                 },
                 {
@@ -599,12 +932,12 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "루아린",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "류아린",
+                  "name": null,
                   "emphasis": false
                 },
                 {
@@ -619,385 +952,12 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "차별",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "왓더버억",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "무인",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "샤로",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[4공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "베이비걸",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "이서불주먹",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "오라이",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "반하얀",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "머핀",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "빈티지",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "알티나",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "신",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[5공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "아니에스",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "리볼버",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "유지별",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "비류아린",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "샤르",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "여한",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아이스아메리카노",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "사랑니",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[6공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "베이비걸",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "샤신",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "머핀",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "웨펀",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "라인폴트",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아이스모카",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "박하탄",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "erosion-main1-sub4",
-      "title": "[침식 본2부4: 무스펠 이후]",
-      "partySize": 5,
-      "partyCount": 2,
-      "raids": [
-        {
-          "label": "[1공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "베이비걸",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "알티나",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "신",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "머핀",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "설상",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "파트너",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "이서불주먹",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "아이스모카",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "민초맛녹차",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[2공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "별빛",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "쥬시쿨",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
                   "name": "이웃",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "반하얀",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "샤로",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "차별",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "라인폴트",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "왓더버억",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "오라이",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "기로로",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[3공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "아니에스",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "빈티지",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "트부",
+                  "name": "샤신",
                   "emphasis": false
                 },
                 {
@@ -1007,37 +967,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "샤르",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "베이비걸",
+                  "name": "박하탄",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "바린이",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "유지별",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "류아린",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": null,
+                  "name": "암산",
                   "emphasis": false
                 }
               ]
@@ -1052,7 +987,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "아니에스",
+                  "name": "파트너",
                   "emphasis": false
                 },
                 {
@@ -1062,142 +997,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "리볼버",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "루아린",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "시간이쥐깍쥐깍흐른다",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "바린이",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "쥬시쿨",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "암산",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "신",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "박하탄",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[5공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "자몽후추",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "여한",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "심또깡",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "루아린",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "머핀",
-                  "emphasis": false
-                }
-              ]
-            },
-            {
-              "partyNumber": 2,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "설상",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "웨펀",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "샤",
+                  "name": "베이비걸",
                   "emphasis": false
                 },
                 {
                   "slot": "",
                   "name": null,
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "클로제",
-                  "emphasis": false
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "label": "[6공대]",
-          "parties": [
-            {
-              "partyNumber": 1,
-              "slots": [
-                {
-                  "slot": "",
-                  "name": "별빛",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "꿀도리",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "샤신",
-                  "emphasis": false
-                },
-                {
-                  "slot": "",
-                  "name": "상단",
                   "emphasis": false
                 },
                 {
@@ -1212,19 +1017,69 @@
               "slots": [
                 {
                   "slot": "",
+                  "name": "녹차소금",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "알티나",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "심또깡",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "신",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "기로로",
+                  "emphasis": false
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "[5공대]",
+          "parties": [
+            {
+              "partyNumber": 1,
+              "slots": [
+                {
+                  "slot": "",
                   "name": "차별",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "아이스아메리카노",
+                  "name": "머핀",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "녹차소금",
+                  "name": "자몽후추",
                   "emphasis": false
                 },
+                {
+                  "slot": "",
+                  "name": "라인폴트",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "이서불주먹",
+                  "emphasis": false
+                }
+              ]
+            },
+            {
+              "partyNumber": 2,
+              "slots": [
                 {
                   "slot": "",
                   "name": null,
@@ -1232,7 +1087,22 @@
                 },
                 {
                   "slot": "",
-                  "name": "미스틴",
+                  "name": "오라이",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "샤로",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "꿀도리",
+                  "emphasis": false
+                },
+                {
+                  "slot": "",
+                  "name": "설부",
                   "emphasis": false
                 }
               ]
@@ -1285,7 +1155,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "췩췩",
+                  "name": "베이비걸",
                   "emphasis": false
                 },
                 {
@@ -1350,7 +1220,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "베이비걸",
+                  "name": "췩췩",
                   "emphasis": false
                 },
                 {
@@ -1381,7 +1251,7 @@
     },
     {
       "id": "deltras-fixed",
-      "title": "[델트라스: 10월 7일 20시 30분]",
+      "title": "[델트라스: 9월26일 19시]",
       "partySize": 5,
       "partyCount": 2,
       "raids": [
