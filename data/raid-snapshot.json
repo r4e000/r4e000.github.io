@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-06T07:25:07.909Z",
+  "generatedAt": "2026-10-06T10:05:28.800Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1295,7 +1295,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "루아린",
+                  "name": "반하얀",
                   "emphasis": false
                 },
                 {
@@ -1370,7 +1370,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "반하얀",
+                  "name": "루아린",
                   "emphasis": false
                 }
               ]
@@ -1438,7 +1438,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "투온궁성",
+                  "name": null,
                   "emphasis": false
                 },
                 {
