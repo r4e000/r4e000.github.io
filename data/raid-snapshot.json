@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-07T03:37:01.365Z",
+  "generatedAt": "2026-10-07T03:37:21.535Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -469,7 +469,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "아이스카푸치노",
                   "emphasis": false
                 },
                 {
@@ -664,7 +664,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "아이스카푸치노",
+                  "name": null,
                   "emphasis": false
                 },
                 {
