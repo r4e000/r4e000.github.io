@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-11T03:51:21.714Z",
+  "generatedAt": "2026-10-11T04:13:34.971Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1125,12 +1125,12 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "웨펀",
+                  "name": "차별",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "머글",
+                  "name": "머핀",
                   "emphasis": false
                 },
                 {
@@ -1145,7 +1145,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "쥬시쿨",
+                  "name": "아이스아메리카노",
                   "emphasis": false
                 }
               ]
@@ -1155,7 +1155,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "베이비걸",
+                  "name": "췩췩",
                   "emphasis": false
                 },
                 {
@@ -1190,12 +1190,12 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "차별",
+                  "name": "웨펀",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "머핀",
+                  "name": "머글",
                   "emphasis": false
                 },
                 {
@@ -1210,7 +1210,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "아이스아메리카노",
+                  "name": "쥬시쿨",
                   "emphasis": false
                 }
               ]
@@ -1220,7 +1220,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "췩췩",
+                  "name": "베이비걸",
                   "emphasis": false
                 },
                 {
