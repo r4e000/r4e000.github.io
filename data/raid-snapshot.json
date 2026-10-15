@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T00:47:27.894Z",
+  "generatedAt": "2026-10-15T00:58:54.944Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1140,7 +1140,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "라인폴트",
+                  "name": "설상",
                   "emphasis": false
                 },
                 {
@@ -1170,12 +1170,12 @@
                 },
                 {
                   "slot": "",
-                  "name": "설상",
+                  "name": "미스틴",
                   "emphasis": false
                 },
                 {
                   "slot": "",
-                  "name": "반하얀",
+                  "name": "루아린",
                   "emphasis": false
                 }
               ]
@@ -1220,7 +1220,7 @@
               "slots": [
                 {
                   "slot": "",
-                  "name": "미스틴",
+                  "name": "라인폴트",
                   "emphasis": false
                 },
                 {
@@ -1275,7 +1275,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "반하얀",
                   "emphasis": false
                 }
               ]
@@ -1305,7 +1305,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "루아린",
+                  "name": null,
                   "emphasis": false
                 }
               ]
