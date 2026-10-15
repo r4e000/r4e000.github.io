@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-15T00:58:54.944Z",
+  "generatedAt": "2026-10-15T01:01:18.090Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -221,14 +221,14 @@
     },
     "샤": {
       "server": "이스할겐",
-      "combatPower": 461180,
+      "combatPower": 495161,
       "job": "정령성",
       "updatedAt": "2026-09-23T01:53:23.170Z",
       "owner": "샤"
     },
     "신": {
       "server": "이스할겐",
-      "combatPower": 386565,
+      "combatPower": 623151,
       "job": "검성",
       "updatedAt": "2026-09-23T01:53:24.191Z",
       "owner": "샤"
@@ -1175,7 +1175,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "루아린",
+                  "name": "반하얀",
                   "emphasis": false
                 }
               ]
@@ -1275,7 +1275,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "반하얀",
+                  "name": null,
                   "emphasis": false
                 }
               ]
@@ -1305,7 +1305,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "루아린",
                   "emphasis": false
                 }
               ]
