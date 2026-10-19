@@ -1,24 +1,24 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-19T00:17:21.688Z",
+  "generatedAt": "2026-10-19T00:18:16.340Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
-      "combatPower": 993201,
+      "combatPower": 1065423,
       "job": "궁성",
       "updatedAt": "2026-10-03T01:21:08.446Z",
       "owner": "한성"
     },
     "웨펀": {
       "server": "이스할겐",
-      "combatPower": 611969,
+      "combatPower": 694531,
       "job": "검성",
       "updatedAt": "2026-09-23T01:52:55.992Z",
       "owner": "한성"
     },
     "파트너": {
       "server": "이스할겐",
-      "combatPower": 570347,
+      "combatPower": 601231,
       "job": "마도성",
       "updatedAt": "2026-09-23T01:52:56.846Z",
       "owner": "한성"
@@ -32,21 +32,21 @@
     },
     "리볼버": {
       "server": "이스할겐",
-      "combatPower": 524570,
+      "combatPower": 549153,
       "job": "권성",
       "updatedAt": "2026-09-23T01:52:58.593Z",
       "owner": "한성"
     },
     "머핀": {
       "server": "이스할겐",
-      "combatPower": 1039238,
+      "combatPower": 1049513,
       "job": "치유성",
       "updatedAt": "2026-10-03T01:21:09.125Z",
       "owner": "머핀"
     },
     "머글": {
       "server": "이스할겐",
-      "combatPower": 568851,
+      "combatPower": 638456,
       "job": "치유성",
       "updatedAt": "2026-09-23T01:53:00.296Z",
       "owner": "머핀"
