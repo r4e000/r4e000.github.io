@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-18T10:31:19.877Z",
+  "generatedAt": "2026-10-19T00:17:21.688Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -408,12 +408,12 @@
       "updatedAt": "2026-09-26T03:13:28.020Z",
       "owner": "투온"
     },
-    "뵈뵈": {
-      "server": "다미누",
-      "combatPower": 945032,
-      "job": "치유성",
+    "비류아린": {
+      "server": "지켈",
+      "combatPower": 263942,
+      "job": "수호성",
       "updatedAt": "2026-09-26T09:27:43.029Z",
-      "owner": ""
+      "owner": "루아린"
     },
     "루아린": {
       "server": "지켈",
