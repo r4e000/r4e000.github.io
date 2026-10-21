@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-10-21T01:05:52.451Z",
+  "generatedAt": "2026-10-21T23:10:06.280Z",
   "characters": {
     "차별": {
       "server": "이스할겐",
@@ -1170,7 +1170,7 @@
                 },
                 {
                   "slot": "",
-                  "name": "백서연",
+                  "name": "미스틴",
                   "emphasis": false
                 },
                 {
@@ -1275,7 +1275,7 @@
                 },
                 {
                   "slot": "",
-                  "name": null,
+                  "name": "백서연",
                   "emphasis": false
                 }
               ]
